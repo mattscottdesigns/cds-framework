@@ -1,0 +1,20 @@
+ul.filter{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+
+    li{
+        padding: .5rem;
+    }
+
+    .filter-heading{
+        font-weight: 600;
+        padding-bottom: 0;
+        font-size: .8rem;
+        text-transform: uppercase;
+        &:not(:first-of-type){
+            margin-top: .5rem;
+        }
+    }
+}

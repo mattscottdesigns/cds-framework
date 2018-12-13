@@ -1,0 +1,34 @@
+.slideout-element{
+    position: fixed;
+    z-index: 2;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    background: $gray-900;
+    color: #fff;
+}
+
+.slideout-panel{
+    position: relative;
+}
+
+.slideout-element,
+.slideout-panel{
+    transition: left transition("md") , right transition("md") ;
+}
+
+body.slideout-active{
+    overflow: hidden;
+}
+
+
+@include media-breakpoint-up("md"){
+    .slideout-active{
+   
+        .slideout-element{
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    
+}

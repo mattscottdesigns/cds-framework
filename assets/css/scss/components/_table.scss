@@ -1,0 +1,5 @@
+table .thead-primary th {
+    color: #fff;
+    background-color: $primary;
+    border-color: darken($primary, 7%);
+}

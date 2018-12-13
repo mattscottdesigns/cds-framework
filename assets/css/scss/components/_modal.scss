@@ -1,0 +1,51 @@
+.modal {
+    hr {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .close {
+        font-size: 2rem;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .modal-content {
+        box-shadow: 0px 0px 60px $gray-700;
+    }
+}
+
+.modal-backdrop {
+    background-color: $gray-900;
+}
+
+.modal-backdrop.show {
+    opacity: .8;
+}
+
+.modal.modal-simple {
+
+    .modal-header,
+    .modal-footer,
+    .modal-content {
+        border: 0;
+    }
+}
+
+.modal.modal-transparent {
+    hr {
+        border-color: #fff;
+    }
+
+    .close,
+    .modal-content {
+        color: #fff !important;
+    }
+
+    .modal-content {
+        background: transparent;
+        border: 0;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "cds-framework",
+  "version": "1.0.0",
+  "description": "Convention Data Services front end framework",
+  "main": "index.js",
+  "scripts": {
+    "scss-compile": "node-sass --include-path --source-map assets/css --output-style compressed assets/css/scss/main.scss   assets/css/main.css",
+    "scss-watch": "node-sass --include-path --recursive --watch --source-map assets/css --output-style compressed assets/css/scss/main.scss   assets/css/main.css"
+  },
+  "author": "Matthew Scott",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.1.3",
+    "node-sass": "^4.10.0"
+  }
+}
