@@ -5,9 +5,7 @@
 body {
     font-size: 1rem;
     font-family: $font-family-sans-serif;
-    @media(max-width: breakpoint-max("sm")) {
-        font-size: 1.1rem;
-    }
+ 
 }
 
 h1,

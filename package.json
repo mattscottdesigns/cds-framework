@@ -4,8 +4,8 @@
   "description": "Convention Data Services front end framework",
   "main": "index.js",
   "scripts": {
-    "scss-compile": "node-sass --include-path --source-map assets/css --output-style compressed assets/css/scss/main.scss   assets/css/main.css",
-    "scss-watch": "node-sass --include-path --recursive --watch --source-map assets/css --output-style compressed assets/css/scss/main.scss   assets/css/main.css"
+    "scss-compile": "node-sass --include-path --source-map assets/css --output-style compressed assets/scss/main.scss   assets/css/main.css",
+    "scss-watch": "node-sass --include-path --recursive --watch --source-map assets/css --output-style compressed assets/scss/main.scss   assets/css/main.css"
   },
   "author": "Matthew Scott",
   "license": "ISC",
