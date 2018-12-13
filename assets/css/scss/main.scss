@@ -1,15 +1,8 @@
-.cds-framework {
-    @import 'variables';
-    @import 'bootstrap';
-    @import 'helpers/functions';
-    @import 'helpers/animate';
-    @import 'global/fonts';
-    @import 'global/typography';
-    @import 'components/grid';
-    @import 'components/slideout';
-    @import 'components/modal';
-    @import 'components/nav'; 
-    @import 'components/flatpickr';
-    @import 'components/filter';
-    @import 'components/table';
+@import "initialize";
+@import "variables";
+
+.cds-framework{
+    @import "bootstrap/bootstrap";
+    @import "cds/cds";
 }
+ 
