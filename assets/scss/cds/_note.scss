@@ -1,0 +1,21 @@
+
+.note{
+    display: flex;
+    align-items: center;
+}
+
+.note p{
+    margin: 0;
+}
+
+.note-version,
+.note-release,
+.note-actions{
+    text-align: center;
+}
+
+.note-version,
+.note-release{
+    min-width: 120px;
+    text-align: center;
+}

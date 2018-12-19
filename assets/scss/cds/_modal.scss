@@ -8,6 +8,10 @@
         font-size: 2rem;
     }
 
+    .modal-header {
+        border-radius: .3rem;
+    }
+
     .modal-body {
         padding: 1.5rem;
     }
@@ -36,12 +40,12 @@
 
 .modal.modal-transparent {
     hr {
-        border-color: #fff;
+        border-color: $white;
     }
 
     .close,
     .modal-content {
-        color: #fff !important;
+        color: $white !important;
     }
 
     .modal-content {

@@ -1,0 +1,7 @@
+.btn{
+    @include font-base;
+}
+
+.btn.btn-light{
+    background-color: $gray-300;
+}

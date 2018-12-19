@@ -1,12 +1,7 @@
-$transitions: (
-    "xs": .1s,
-    "sm": .2s,
-    "md": .3s,
-    "lg": .6s,
-    "xl": 1s
-);
 
-
+//
+// Color system
+//
 
 $white:    #fff;
 $gray-100: #f8f9fa;
@@ -18,21 +13,60 @@ $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
+$black:    #000;
 
-$black:   #000;
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+
 $blue:    #007bff;
 $indigo:  #6610f2;
 $purple:  #6f42c1;
 $pink:    #e83e8c;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
+$red:     #e6261f;
+$orange:  #eb7532;
+$yellow:  #f7d038;
 $green:   #28a745;
 $teal:    #20c997;
 $cyan:    #17a2b8;
 
-$primary:       #0166cb;
-$secondary:     #009999;
+$colors: ();
+
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       #004fa0;
+$secondary:     #20a58d;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
@@ -40,10 +74,21 @@ $danger:        $red;
 $light:         $gray-100;
 $dark:          #424651;
 
-$font-family-sans-serif:      'Gotham Narrow Book', sans-serif;
-$headings-font-family:        'Gotham', sans-serif;
-$body-color:                   $gray-800;
-$enable-rounded:               true;
+$theme-colors: ();
+
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
 
 $transitions: (
     "xs": .1s,
@@ -51,4 +96,31 @@ $transitions: (
     "md": .3s,
     "lg": .6s,
     "xl": 1s
-)
+);
+
+$font-weights: (
+    "xs": 100,
+    "sm": 200,
+    "md": 400,
+    "lg": 600,
+    "xl": 800
+);
+
+$box-shadows: (
+    "xs": 0px 0px 0px,
+    "sm": 200,
+    "md": 400,
+    "lg": 600,
+    "xl": 800
+);
+
+$font-family-sans-serif:      'Gotham Narrow Book', sans-serif;
+$headings-font-family:        'Gotham XNarrow', sans-serif;
+$body-color:                  $gray-800;
+$component-active-bg:         theme-color("secondary");
+$link-color:                  theme-color("secondary") !default;
+
+
+
+
+
