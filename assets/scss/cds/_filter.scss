@@ -10,14 +10,14 @@ ul.filter {
         padding: .5rem;
     }
 
-    li:not(.filter-heading) {
-        margin-bottom: .5rem;
-    }
 
     .filter-heading {
         @extend .h6;
         @include font-small;
+        margin-bottom: 0;
+        margin-top: .5rem;
         font-weight: 600;
         padding-bottom: 0;
+        cursor: pointer;
     }
 }
