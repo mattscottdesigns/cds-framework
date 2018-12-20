@@ -1,4 +1,4 @@
-.slideout-element{
+.slideout-slide{
     position: fixed;
     z-index: 2;
     overflow: auto;
@@ -8,27 +8,22 @@
     color: #fff;
 }
 
-.slideout-panel{
+.slideout-content{
     position: relative;
 }
 
-.slideout-element,
-.slideout-panel{
+.slideout-slide,
+.slideout-content{
     transition: left transition("md") , right transition("md") ;
 }
 
-body.slideout-active{
-    overflow: hidden;
-}
-
-
 @include media-breakpoint-up("md"){
     .slideout-active{
-   
-        .slideout-element{
+        .slideout-slide{
             opacity: 0;
             z-index: -1;
         }
     }
     
 }
+

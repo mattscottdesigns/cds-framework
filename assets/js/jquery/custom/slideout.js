@@ -1,16 +1,15 @@
 $.fn.slideout = function (options) {
     'use strict';
 
-    var element = this;
-    var body = $("body");
+    var slideout = this;
     var defaultState = {
         "open": false,
     };
     var defaultOptions = {
+        "content": $(".slideout-content"),
         "direction": "left",
         "push": false,
-        "panel": $(".slideout-panel"),
-        "width": 250,
+        "width": 260,
     };
 
     var Slideout = function (options) {
@@ -19,93 +18,73 @@ $.fn.slideout = function (options) {
         this.defaults = defaultOptions;
         this.state = defaultState;
         this.settings = $.extend(defaultOptions, options);
-        this.element = element.addClass("slideout-element");
-        this.panel = this.settings.panel.addClass("slideout-panel");
+        this.slideout = slideout.addClass("slideout-slide");
+        this.content = this.settings.content.addClass("slideout-content");
 
-        this.render();
+        this.init();
     };
 
     Slideout.prototype = {
 
+        init: function () {
+            if(this.settings.toggle){
+                $(this.settings.toggle).on("click", this.toggle.bind(this));
+            }
+
+            this.slideout.css({ "width": this.settings.width });
+
+            $(window).on("resize", this.close.bind(this));
+            $(window).on("click", this.hide.bind(this));
+
+            return this.render();
+        },
+
+        hide: function(e){
+            var target = $(e.target);
+            if (target.closest(this.slideout).length == 0 && target.closest(this.settings.toggle).length == 0) {
+                this.close();
+            }
+
+            return this
+        },
+
         open: function () {
             this.state.open = true;
-            return this.render();
+            this.render();
         },
 
         close: function () {
             this.state.open = false;
-            return this.render();
+            this.render();
         },
 
         toggle: function () {
             this.state.open = !this.state.open;
-            return this.render();
+            this.render();
         },
 
-        render: function (nextState) {
-
-            var state = nextState || this.state;
+        render: function () {
+            var state = this.state;
             var settings = this.settings;
-            var element = this.element;
-            var panel = this.panel;
-
             var open = state.open;
             var push = settings.push;
-            var content = settings.content;
             var direction = settings.direction;
             var width = settings.width;
-            var renderer = {};
-
-
-            renderer.init = function () {
-                body.addClass("slideout");
-                element.css({
-                    "width": width
-                });
-                return this
+            var styles = {
+                "slideout": {},
+                "content": {},
             }
 
-            renderer.handleOpen = function () {
-                var styles = {};
+            open
+                ? styles.slideout[direction] = 0
+                : styles.slideout[direction] = -width;
 
-                if (open) {
-                    body.addClass("slideout-active");
-                    styles[direction] = 0;
-                } else {
-                    body.removeClass("slideout-active");
-                    styles[direction] = -width;
-                }
+            push && open 
+                ? styles.content[direction] = width 
+                : styles.content[direction] = 0;
 
-                element.css(styles);
-
-                return this
-            }
-
-            renderer.handlePush = function () {
-                var styles = {};
-
-                if (push && open) {
-                    styles[direction] = width;
-                } else {
-                    styles[direction] = 0;
-                }
-
-                panel.css(styles);
-
-                return this
-            }
-
-            renderer.handleContent = function () {
-                if (content && open) {
-                    element.html(content)
-                }
-                return this
-            }
-
-            renderer.init()
-                .handleOpen()
-                .handlePush()
-                .handleContent();
+            this.slideout.css(styles.slideout);
+            this.content.css(styles.content);
 
             return this;
         },

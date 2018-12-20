@@ -2,27 +2,18 @@
     @include font-heading;
 }
 
-.table .thead-primary th {
-    color: #fff;
-    background-color: $primary;
-    border-color: darken($primary, 7%);
-}
-
-.table .thead-secondary th {
-    color: #fff;
-    background-color: $secondary;
-    border-color: darken($secondary, 7%);
-}
-
-.table .thead-dark th {
-    color: #fff;
-    background-color: $dark;
-    border-color: darken($dark, 7%);
-}
-
 .table.table-center{
     td,th{
         text-align: center;
         vertical-align: middle;
     }
 }
+
+@each $color, $value in $theme-colors {
+    .table .thead-#{$color} th {
+        color: #fff;
+        background-color: $value;
+        border-color: darken($value, 7%);
+    }
+}
+

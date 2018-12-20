@@ -8,16 +8,11 @@
         font-size: 2rem;
     }
 
-    .modal-header {
-        border-radius: .3rem;
-    }
-
-    .modal-body {
-        padding: 1.5rem;
-    }
-
     .modal-content {
-        box-shadow: 0px 0px 60px $gray-700;
+ 
+        .modal-body {
+            padding: 1.5rem;
+        }
     }
 }
 
@@ -29,27 +24,23 @@
     opacity: .8;
 }
 
-.modal.modal-simple {
+@each $color, $value in $theme-colors {
+    .modal-#{$color} {
+        .modal-header {
+            background-color: $value;
+            border: 5px solid $white;
+            border-radius: .5rem;
+            color: $white;
+        }
 
-    .modal-header,
-    .modal-footer,
-    .modal-content {
-        border: 0;
-    }
-}
+        .close {
+            color: $white;
 
-.modal.modal-transparent {
-    hr {
-        border-color: $white;
-    }
-
-    .close,
-    .modal-content {
-        color: $white !important;
-    }
-
-    .modal-content {
-        background: transparent;
-        border: 0;
+            &:not(:disabled):not(.disabled) {
+                @include hover-focus {
+                    color: $white;
+                }
+            }
+        }
     }
 }

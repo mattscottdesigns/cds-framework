@@ -2,7 +2,7 @@
 .note{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+
 }
 
 .note p{
@@ -12,26 +12,24 @@
 .note-version,
 .note-release,
 .note-actions{
+    flex: 1;
+    flex-grow: 0;
+    padding: 0 .5rem;
     text-align: center;
 }
 
 .note-data{
     flex: 1;
-    min-width: 300px;
+    flex-basis: 250px;
 }
 
 .note-version,
 .note-release{
-    flex: 1;
-    flex-grow: 0;
     flex-basis: 120px;
-    text-align: center;
 }
 
 .note-data{
-    h6{
-        margin-bottom: .15rem;
-    }
+
     order: 1;
 }
 

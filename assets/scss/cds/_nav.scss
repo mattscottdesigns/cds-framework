@@ -1,3 +1,5 @@
+
+
 nav.nav,
 nav.nav .container {
     display: flex;
@@ -6,7 +8,8 @@ nav.nav .container {
     color: $dark;
     padding: 0;
     margin: 0 auto;
-    padding: 0rem 2rem;
+
+    height: 5rem;
 
 
     .nav-name {
@@ -14,26 +17,16 @@ nav.nav .container {
         padding: 0 1rem;
     }
 
-    .nav-brand {
-        padding-right: 1rem;
-    }
 
     .nav-toggle {
         padding: 1rem;
+        padding-right: 0;
         display: none;
         cursor: pointer;
     }
 
-    .nav-brand {
-        border-right: 1px solid $gray-500
-    }
-
     .nav-links {
         flex-direction: row;
-
-        li {
-            padding: 1.5rem 1rem;
-        }
     }
 
     .nav-links li:hover {
@@ -41,9 +34,6 @@ nav.nav .container {
     }
 
     @media(max-width: breakpoint-max("sm")) {
-        &{
-            padding: 0 .5rem;
-        }
 
         .nav-links {
             display: none;
@@ -58,15 +48,23 @@ nav.nav .container {
 
 }
 
+nav.nav{
+    padding: 0 1.5rem;
+}
+
+nav.nav .container{
+    padding: 0;
+}
+
 .nav-links {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     padding: 0;
     margin: 0;
     list-style-type: none;
 
     li {
-        padding: 1.5rem 1rem;
+        padding: 1rem;
     }
 }
+

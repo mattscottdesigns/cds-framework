@@ -1,23 +1,26 @@
 ul.filter {
-    list-style-type: none;
     padding: 1.25rem;
     margin: 0;
     background-color: $gray-100;
     border: 1px solid $gray-300;
     border-radius: .5rem;
+    list-style-type: none;
 
     li {
         padding: .5rem;
     }
 
-
     .filter-heading {
-        @extend .h6;
-        @include font-small;
+        @extend .font-body;
+        text-transform: uppercase;
+        font-size: .8rem;
         margin-bottom: 0;
-        margin-top: .5rem;
-        font-weight: 600;
         padding-bottom: 0;
+        font-weight: 300;
         cursor: pointer;
+    }
+
+    .filter-heading:not(:first-of-type) {
+        margin-top: 1rem;
     }
 }
