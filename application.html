@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" href="assets/images/favicon-192x192.png" sizes="192x192" />
-	<title>Page Name</title>
+	<title>Application Template</title>
 </head>
 
 <body class="layout">
@@ -16,21 +16,38 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-	<aside class="sidenav">
-
+	
+	<aside>
+		<ul class="nav-links flex-column">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link #1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link #2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link #3</a>
+			</li>
+		</ul>
 	</aside>
-
+	  
 	<main>
 		<header>
 			<nav class="nav">
 				<div class="nav-brand">
-					<img src="assets/images/favicon-192x192.png" width="40" height="40" alt="">
+					<img src="assets/images/favicon-192x192.png" alt="">
 				</div>
 				<div class="nav-name">Application Name</div>
-				<ul class="nav-links">
-					<li>Link #1</li>
-					<li>Link #2</li>
-					<li>Link #3</li>
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link #1</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link #2</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link #3</a>
+					</li>
 				</ul>
 				<a class="nav-toggle">
 					<i class="fas fa-bars fa-2x"></i>
@@ -39,10 +56,10 @@
 		</header>
 
 		<section class="container">
-
+			
 			<div class="row align-items-center">
 				<div class="col-md-9">
-					<h1 data-toggle="tooltip" data-placement="bottom" title="This is a tooltip">Hello, World!</h1>
+					<h1>Hello, World!</h1>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, <a href="">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco  laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
@@ -245,6 +262,8 @@
 				</div>
 			</div>
 
+			
+
 			<!-- Modal -->
 			<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
@@ -318,13 +337,13 @@
 
 
 	<script>
-		var slideout = $(".sidenav").slideout({
+
+		var slideout = $("aside").slideout({
 			"content": $("main"),
 			"push": true,
 			"direction": "right",
 			"toggle": $(".nav-toggle"),
 		});
-
 
 		$("input[type='date']").flatpickr();
 		$('[data-toggle="tooltip"]').tooltip()

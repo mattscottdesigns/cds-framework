@@ -6,21 +6,21 @@ ul.filter {
     border-radius: .5rem;
     list-style-type: none;
 
-    li {
-        padding: .5rem;
-    }
-
     .filter-heading {
-        @extend .font-body;
+        font: $font-family-base;
         text-transform: uppercase;
-        font-size: .8rem;
+        font-size: .75rem;
         margin-bottom: 0;
         padding-bottom: 0;
-        font-weight: 300;
+        font-weight: 600;
         cursor: pointer;
     }
 
     .filter-heading:not(:first-of-type) {
         margin-top: 1rem;
     }
+}
+
+ul.filter>li {
+    padding: .5rem;
 }

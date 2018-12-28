@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "compile": "node-sass --include-path --source-map assets/css --output-style compressed assets/scss/main.scss   assets/css/main.css",
-    "watch": "node-sass --include-path --recursive --watch --source-map assets/css --output-style compressed assets/scss/main.scss   assets/css/main.css"
+    "watch": "node-sass --include-path --recursive --watch --source-map assets/css --output-style compressed assets/scss/main.scss   assets/css/main.css",
+    "prefix": "postcss -c postcss.json"
   },
   "author": "Matthew Scott",
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^4.1.3",
-    "node-sass": "^4.10.0"
+    "node-sass": "^4.10.0",
+    "postcss-cli": "^6.1.0"
   }
 }
