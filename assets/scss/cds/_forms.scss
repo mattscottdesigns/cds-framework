@@ -1,0 +1,22 @@
+.form-required{ 
+    label{
+        font-weight: 800;
+        position: relative;
+    }
+    label:after{
+        font-family: $font-awesome;
+        content: "*";
+        display: block;
+        position: absolute;
+        color: $red;
+        font-weight: 800;
+        top: .5rem;
+        right: -.75rem;
+        line-height: 0;
+    }
+}
+
+textarea{
+    min-height: 6rem;
+}
+ 

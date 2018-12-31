@@ -1,11 +1,2 @@
 @import "bootstrap/functions";
 @import "bootstrap/mixins";
-
-html{
-    height: 100%;
-}
-
-body{
-    min-height: 100%;
-    -ms-overflow-style: scrollbar;
-}

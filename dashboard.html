@@ -17,40 +17,45 @@
   <![endif]-->
 
 	<aside>
-        <nav class="nav">
+        <nav class="navbar">
             
 		</nav>
-		<ul class="nav-links">
-			<li class="nav-header">Main Menu</li>
-			<li>
-				<i class="fas fa-home"></i>Link #1
-				<ul class="nav-dropdown">
-					<li>Dropdown #1</li>
-					<li>Dropdown #2</li>
-					<li>Dropdown #3</li>
-				</ul>
+		<ul class="nav flex-column">
+			<li class="nav-header">
+				Main Menu
 			</li>
-			<li>
-				<i class="fas fa-chart-pie"></i>Link #2
-				<ul class="nav-dropdown">
-					<li>Dropdown #1</li>
-				</ul>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas fa-star nav-icon"></i>Link #1</a>
 			</li>
-			<li><i class="fas fa-user"></i>Link #3</li>
-			<li class="nav-header">Other Menu</li>
-			<li><i class="fas fa-star"></i>Link #4</li>
-			<li><i class="fas fa-envelope"></i>Link #5</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas fa-star nav-icon"></i>Link #2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas fa-star nav-icon"></i>Link #3</a>
+			</li>
+			<li class="nav-header">
+				Tools
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas fa-star nav-icon"></i>Link #1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas fa-star nav-icon"></i>Link #2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas fa-star nav-icon"></i>Link #3</a>
+			</li>
 		</ul>
 		
 	</aside>
 
 	<main>
 
-        <nav class="nav">
-            <a class="nav-toggle p-0 text-white">
+        <nav class="navbar">
+            <a class="navbar-toggle p-0 text-white">
                 <i class="fas fa-bars fa-2x"></i>
             </a>
-            <div class="nav-user">
+            <div class="navbar-user">
                 <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-caret-down"></i>
                 </button>
@@ -270,7 +275,7 @@
 			"content": $("main"),
 			"push": true,
 			"direction": "left",
-			"toggle": $(".nav-toggle"),
+			"toggle": $(".navbar-toggle"),
 		});
 
 	</script>
