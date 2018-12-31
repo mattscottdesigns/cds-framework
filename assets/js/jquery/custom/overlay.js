@@ -1,3 +1,5 @@
+/* global $ */
+
 (function () {
   $.fn.overlay = function () {
     var element = this
