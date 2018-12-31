@@ -1,7 +1,7 @@
 body {
-    @include font-base;
-    font-size: 1rem;
-    color: $gray-700;
+	@include font-base;
+	font-size: 1rem;
+	color: $gray-700;
 }
 
 h1,
@@ -16,75 +16,73 @@ h6,
 .h4,
 .h5,
 .h6 {
-    @include font-heading;
-    font-weight: font-weight("lg");
+	@include font-heading;
+	font-weight: font-weight("lg");
 }
-
 
 h1,
 .h1 {
-    letter-spacing: -.1rem;
+	letter-spacing: -0.1rem;
 }
 
 h2,
 .h2 {
-    letter-spacing: -.075rem;
+	letter-spacing: -0.075rem;
 }
 
 h3,
 .h3 {
-    letter-spacing: -.05rem;
+	letter-spacing: -0.05rem;
 }
 
 h4,
 .h4 {
-    letter-spacing: -.025rem;
-    font-weight: 500;
+	letter-spacing: -0.025rem;
+	font-weight: 500;
 }
 
 h5,
 .h5 {
-    letter-spacing: -.015rem;
-    font-weight: 500;
-    font-size: 1.35rem;
+	letter-spacing: -0.015rem;
+	font-weight: 500;
+	font-size: 1.35rem;
 }
 
 h6,
 .h6 {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .font-heading {
-    @include font-heading;
+	@include font-heading;
 }
 
 .font-body {
-    @include font-base;
+	@include font-base;
 }
 
 .font-inherit {
-    font: inherit;
+	font: inherit;
 }
 
-.font-thin{
-    font-weight: 300;
+.font-thin {
+	font-weight: 300;
 }
-
 
 @each $color, $value in $colors {
-    .text-#{$color} {
-        color: $value;
-    }
-    .bg-#{$color}{
-        background-color: $value;
-    }
+	.text-#{$color} {
+		color: $value;
+	}
+	.bg-#{$color} {
+		background-color: $value;
+	}
 }
 
 @each $color, $value in $theme-colors {
-    .text-#{$color} {
-        color: $value;
-    }
-    .bg-#{$color}{
-        background-color: $value;
-    }
+	.text-#{$color} {
+		color: $value;
+	}
+	.bg-#{$color} {
+		background-color: $value;
+	}
 }

@@ -1,96 +1,93 @@
 ul.tile {
-    display: flex;
-    align-items: strech;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+	display: flex;
+	align-items: strech;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
 }
 
-ul.tile>li {
-    flex: 1;
-    flex-basis: calc(100% - 1.5rem);
-    min-width: 220px;
-    background-color: $gray-100;
-    border: 1px solid $gray-400;
-    border-radius: .33rem;
-    padding: 2rem;
-    margin: .75rem;
-    transition: border-color transition("md"), background-color transition("md");
+ul.tile > li {
+	flex: 1;
+	flex-basis: calc(100% - 1.5rem);
+	min-width: 220px;
+	background-color: $gray-100;
+	border: 1px solid $gray-400;
+	border-radius: 0.33rem;
+	padding: 2rem;
+	margin: 0.75rem;
+	transition: border-color transition("md"), background-color transition("md");
 
-    .tile-icon {
-        opacity: .75;
-        font-size: 3rem;
-        margin: 0 !important;
-    }
+	.tile-icon {
+		opacity: 0.75;
+		font-size: 3rem;
+		margin: 0 !important;
+	}
 
-    .tile-text {
-        color: $gray-600;
-        margin-left: -1rem;
-        margin-right: -1rem;
-    }
+	.tile-text {
+		color: $gray-600;
+		margin-left: -1rem;
+		margin-right: -1rem;
+	}
 
-    @each $color,
-    $value in $colors {
-        &.tile-hover-#{$color}:hover {
-            border-color: transparentize($value, .60);
-            background-color: transparentize($value, .90);
-            cursor: pointer;
-        }
-    }
+	@each $color, $value in $colors {
+		&.tile-hover-#{$color}:hover {
+			border-color: transparentize($value, 0.6);
+			background-color: transparentize($value, 0.9);
+			cursor: pointer;
+		}
+	}
 
-    @each $color,
-    $value in $theme-colors {
-        &.tile-hover-#{$color}:hover {
-            border-color: transparentize($value, .60);
-            background-color: transparentize($value, .90);
-            cursor: pointer;
-        }
-    }
+	@each $color, $value in $theme-colors {
+		&.tile-hover-#{$color}:hover {
+			border-color: transparentize($value, 0.6);
+			background-color: transparentize($value, 0.9);
+			cursor: pointer;
+		}
+	}
 }
 
 ul.tile.tile-2 {
-    li {
-        flex-basis: calc(50% - 1.5rem);
-    }
+	li {
+		flex-basis: calc(50% - 1.5rem);
+	}
 }
 
 ul.tile.tile-3 {
-    li {
-        flex-basis: calc(33.333% - 1.5rem);
-    }
+	li {
+		flex-basis: calc(33.333% - 1.5rem);
+	}
 }
 
 ul.tile.tile-4 {
-    li {
-        flex-basis: calc(25% - 1.5rem);
-    }
+	li {
+		flex-basis: calc(25% - 1.5rem);
+	}
 }
 
-ul.tile.tile-basic>li {
-
-    border-color: transparent;
-    background: none;
-    box-shadow: none !important;
-    padding: 0;
+ul.tile.tile-basic > li {
+	border-color: transparent;
+	background: none;
+	box-shadow: none !important;
+	padding: 0;
 }
 
-ul.tile.tile-center>li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ul.tile.tile-center > li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 ul.tile.tile-center-v li {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-ul.tile.tile-center-h>li {
-    justify-content: center;
+ul.tile.tile-center-h > li {
+	justify-content: center;
 }
 
-ul.tile.tile-compact>li {
-    margin: 0;
-    border-radius: 0;
+ul.tile.tile-compact > li {
+	margin: 0;
+	border-radius: 0;
 }

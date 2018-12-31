@@ -1,46 +1,45 @@
 .modal {
-    hr {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
+	hr {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
 
-    .close {
-        font-size: 2rem;
-    }
+	.close {
+		font-size: 2rem;
+	}
 
-    .modal-content {
- 
-        .modal-body {
-            padding: 1.5rem;
-        }
-    }
+	.modal-content {
+		.modal-body {
+			padding: 1.5rem;
+		}
+	}
 }
 
 .modal-backdrop {
-    background-color: $gray-900;
+	background-color: $gray-900;
 }
 
 .modal-backdrop.show {
-    opacity: .8;
+	opacity: 0.8;
 }
 
 @each $color, $value in $theme-colors {
-    .modal-#{$color} {
-        .modal-header {
-            background-color: $value;
-            border: 5px solid $white;
-            border-radius: .5rem;
-            color: $white;
-        }
+	.modal-#{$color} {
+		.modal-header {
+			background-color: $value;
+			border: 5px solid $white;
+			border-radius: 0.5rem;
+			color: $white;
+		}
 
-        .close {
-            color: $white;
+		.close {
+			color: $white;
 
-            &:not(:disabled):not(.disabled) {
-                @include hover-focus {
-                    color: $white;
-                }
-            }
-        }
-    }
+			&:not(:disabled):not(.disabled) {
+				@include hover-focus {
+					color: $white;
+				}
+			}
+		}
+	}
 }

@@ -1,17 +1,17 @@
-.slideout-slide{
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    bottom: 0;
-    background: $gray-900;
-    color: #fff;
+.slideout-slide {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	background: $gray-900;
+	color: #fff;
 }
 
-.slideout-content{
-    position: relative;
+.slideout-content {
+	position: relative;
 }
 
 .slideout-slide,
-.slideout-content{
-    transition: left transition("md"), right transition("md") ;
+.slideout-content {
+	transition: left transition("md"), right transition("md");
 }
