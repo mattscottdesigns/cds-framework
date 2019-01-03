@@ -1,445 +1,615 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="cds-framework" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" href="assets/images/favicon-192x192.png" sizes="192x192" />
+		<title>Application Template</title>
+	</head>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" href="assets/images/favicon-192x192.png" sizes="192x192" />
-	<title>Application Template</title>
-</head>
+	<body class="template template-application">
+		<!--[if lte IE 10]>
+			<p class="browserupgrade">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="https://browsehappy.com/">upgrade your browser</a> to improve
+				your experience and security.
+			</p>
+		<![endif]-->
 
-<body class="layout">
-
-	<!--[if lte IE 10]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-
-	<aside>
-		<ul class="nav flex-column">
-			<li class="nav-item">
-				<a class="nav-link" href="#">Link #1</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Link #2</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Link #3</a>
-			</li>
-		</ul>
-	</aside>
-
-	<main>
-		<header>
-			<nav class="navbar">
-				<div class="navbar-brand">
-					<img src="assets/images/favicon-192x192.png" alt="">
-				</div>
-				<div class="navbar-title">Application Name</div>
-				<ul class="nav">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link #1</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link #2</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link #3</a>
-					</li>
-				</ul>
-				<a class="navbar-toggle">
-					<i class="fas fa-bars fa-2x"></i>
-				</a>
-			</nav>
-		</header>
-
-		<section class="container">
-
-			<div class="row align-items-center">
-				<div class="col-md-9">
-					<h1>Hello, World!</h1>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, <a href="">sed do eiusmod tempor incididunt</a> ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-						ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-						nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-						est laborum.
-					</p>
-				</div>
-				<div class="col-md-3 text-center">
-					<button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#modal">
-						Show Modal
-					</button>
-				</div>
-			</div>
-
-			<button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#create">
-				Create Note
-			</button>
-
-			<div class="row mt-5">
-				<div class="col-md-5 col-lg-4 mb-5">
-					<ul class="filter shadow-sm">
-						<li class="filter-heading">Product</li>
-						<li>
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customCheck1">
-								<label class="custom-control-label" for="customCheck1">Showpro</label>
-							</div>
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customCheck2">
-								<label class="custom-control-label" for="customCheck2">Exhibitor Portal</label>
-							</div>
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customCheck3">
-								<label class="custom-control-label" for="customCheck3">Event Admin</label>
-							</div>
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customCheck4">
-								<label class="custom-control-label" for="customCheck4">Payment Processor</label>
-							</div>
+		<aside>
+			<ul class="nav flex-column">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link #1</a>
+					<ul class="nav flex-row">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sub Link #1</a>
 						</li>
-						<li class="filter-heading">Release Date</li>
-						<li>
-							<div class="row no-gutters">
-								<div class="col-6 pr-2"><input class="form-control" type="date" /></div>
-								<div class="col-6 pl-2"><input class="form-control" type="date" /></div>
-							</div>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sub Link #2</a>
 						</li>
-						<li class="filter-heading">Active Date</li>
-						<li>
-							<div class="row no-gutters">
-								<div class="col-6 pr-2"><input class="form-control" type="date" /></div>
-								<div class="col-6 pl-2"><input class="form-control" type="date" /></div>
-							</div>
-						</li>
-						<li class="filter-heading">Version</li>
-						<li><input class="form-control" type="text" /></li>
-						<li class="filter-heading">Search</li>
-						<li><input class="form-control" type="text" /></li>
-						<li><button class="btn btn-secondary btn-block mt-3">Reset</button></li>
-					</ul>
-
-				</div>
-				<div class="col-md-7 col-lg-8">
-					<table class="table table-center">
-						<thead class="thead-dark">
-							<tr>
-								<th class="text-left" scope="col">Product</th>
-								<th scope="col">Version</th>
-								<th scope="col">Released</th>
-								<th class="d-none d-md-table-cell" scope="col">Start</th>
-								<th class="d-none d-md-table-cell" scope="col">End</th>
-								<th scope="col"></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="text-left">Showpro</td>
-								<td>1.0</td>
-								<td>12/4/18</td>
-								<td class="d-none d-md-table-cell">1/1/18</td>
-								<td class="d-none d-md-table-cell">1/1/19</td>
-								<td>
-									<div class="dropdown">
-										<button class="btn btn-light btn-sm" type="button" data-toggle="dropdown" data-boundary="window"
-										 data-boundary="window"><i class="fas fa-caret-down"></i></button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#create">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="text-left">Exhibitor Portal</td>
-								<td>2.1</td>
-								<td>3/30/18</td>
-								<td class="d-none d-md-table-cell">1/1/18</td>
-								<td class="d-none d-md-table-cell">1/1/19</td>
-								<td>
-									<div class="dropdown">
-										<button class="btn btn-light btn-sm" type="button" data-toggle="dropdown" data-boundary="window"
-										 data-boundary="window"><i class="fas fa-caret-down"></i></button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#create">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="text-left">Event Admin</td>
-								<td>1.37</td>
-								<td>9/23/18</td>
-								<td class="d-none d-md-table-cell">1/1/18</td>
-								<td class="d-none d-md-table-cell">1/1/19</td>
-								<td>
-									<div class="dropdown">
-										<button class="btn btn-light btn-sm" type="button" data-toggle="dropdown" data-boundary="window"><i class="fas fa-caret-down"></i></button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#create">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-
-					<ul class="list-group list-group-flush mt-5">
-						<li class="list-group-item">
-							<div class="note">
-								<div class="note-data">
-									<h6>Showpro</h6>
-									<p>This is a summary of what this release note is about.</p>
-								</div>
-								<div class="note-version">
-									<small>VERSION</small>
-									<h5>1.0</h5>
-								</div>
-								<div class="note-release">
-									<small>RELEASED</small>
-									<h5>12/4/18</h5>
-								</div>
-								<div class="note-actions">
-									<div class="dropdown">
-										<button class="btn btn-light btn-sm" type="button" data-toggle="dropdown" data-boundary="window"><i class="fas fa-caret-down"></i></button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#create">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item">
-							<div class="note">
-								<div class="note-data">
-									<h6>Exhibitor Portal</h6>
-									<p>This will be the summary of what this release note is about.</p>
-								</div>
-								<div class="note-version">
-									<small>VERSION</small>
-									<h5>2.1</h5>
-								</div>
-								<div class="note-release">
-									<small>RELEASED</small>
-									<h5>3/30/18</h5>
-								</div>
-								<div class="note-actions">
-									<div class="dropdown">
-										<button class="btn btn-light btn-sm" type="button" data-toggle="dropdown" data-boundary="window"><i class="fas fa-caret-down"></i></button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#create">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="list-group-item">
-							<div class="note">
-								<div class="note-data">
-									<h6>Event Admin</h6>
-									<p>This is a summary of what this release note is about.</p>
-								</div>
-								<div class="note-version">
-									<small>VERSION</small>
-									<h5>1.37</h5>
-								</div>
-								<div class="note-release">
-									<small>RELEASED</small>
-									<h5>9/23/18</h5>
-								</div>
-								<div class="note-actions">
-									<div class="dropdown">
-										<button class="btn btn-light btn-sm" type="button" data-toggle="dropdown" data-boundary="window"><i class="fas fa-caret-down"></i></button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#"  data-toggle="modal" data-target="#create">Edit</a>
-											<a class="dropdown-item" href="#">Delete</a>
-										</div>
-									</div>
-								</div>
-							</div>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sub Link #3</a>
 						</li>
 					</ul>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">Link #2</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Link #3</a></li>
+			</ul>
+		</aside>
+
+		<main>
+			<header>
+				<nav class="navbar">
+					<div class="navbar-brand">
+						<img src="assets/images/favicon-192x192.png" alt="" />
+					</div>
+					<div class="navbar-title">Application Name</div>
+					<ul class="nav flex-row">
+						<li class="nav-item">
+							<a class="nav-link nav-dropdown-down" href="#">Link #1</a>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a class="nav-link" href="#">Sub Link #1</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Sub Link #2</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Sub Link #3</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Link #2</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Link #3</a></li>
+					</ul>
+					<a class="navbar-toggle"> <i class="fas fa-bars fa-2x"></i> </a>
+				</nav>
+			</header>
+
+			<section class="container">
+				<div class="row align-items-center">
+					<div class="col-md-9">
+						<h1>Hello, World!</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+							<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate
+							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+							occaecat cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.
+						</p>
+					</div>
+					<div class="col-md-3 text-center">
+						<button
+							type="button"
+							class="btn btn-primary btn-modal"
+							data-toggle="modal"
+							data-target="#modal"
+						>
+							Show Modal
+						</button>
+					</div>
 				</div>
-			</div>
 
+				<button
+					type="button"
+					class="btn btn-primary btn-modal"
+					data-toggle="modal"
+					data-target="#create"
+				>
+					Create Note
+				</button>
 
+				<div class="row mt-5">
+					<div class="col-md-5 col-lg-4 mb-5">
+						<ul class="filter shadow-sm">
+							<li class="filter-heading">Product</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input
+										type="checkbox"
+										class="custom-control-input"
+										id="customCheck1"
+									/>
+									<label class="custom-control-label" for="customCheck1"
+										>Showpro</label
+									>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input
+										type="checkbox"
+										class="custom-control-input"
+										id="customCheck2"
+									/>
+									<label class="custom-control-label" for="customCheck2"
+										>Exhibitor Portal</label
+									>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input
+										type="checkbox"
+										class="custom-control-input"
+										id="customCheck3"
+									/>
+									<label class="custom-control-label" for="customCheck3"
+										>Event Admin</label
+									>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input
+										type="checkbox"
+										class="custom-control-input"
+										id="customCheck4"
+									/>
+									<label class="custom-control-label" for="customCheck4"
+										>Payment Processor</label
+									>
+								</div>
+							</li>
+							<li class="filter-heading">Release Date</li>
+							<li>
+								<div class="row no-gutters">
+									<div class="col-6 pr-2">
+										<input class="form-control" type="date" />
+									</div>
+									<div class="col-6 pl-2">
+										<input class="form-control" type="date" />
+									</div>
+								</div>
+							</li>
+							<li class="filter-heading">Active Date</li>
+							<li>
+								<div class="row no-gutters">
+									<div class="col-6 pr-2">
+										<input class="form-control" type="date" />
+									</div>
+									<div class="col-6 pl-2">
+										<input class="form-control" type="date" />
+									</div>
+								</div>
+							</li>
+							<li class="filter-heading">Version</li>
+							<li><input class="form-control" type="text" /></li>
+							<li class="filter-heading">Search</li>
+							<li><input class="form-control" type="text" /></li>
+							<li>
+								<button class="btn btn-secondary btn-block mt-3">Reset</button>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-7 col-lg-8">
+						<table class="table table-center">
+							<thead class="thead-dark">
+								<tr>
+									<th class="text-left" scope="col">Product</th>
+									<th scope="col">Version</th>
+									<th scope="col">Released</th>
+									<th class="d-none d-md-table-cell" scope="col">Start</th>
+									<th class="d-none d-md-table-cell" scope="col">End</th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-left">Showpro</td>
+									<td>1.0</td>
+									<td>12/4/18</td>
+									<td class="d-none d-md-table-cell">1/1/18</td>
+									<td class="d-none d-md-table-cell">1/1/19</td>
+									<td>
+										<div class="dropdown">
+											<button
+												class="btn btn-light btn-sm"
+												type="button"
+												data-toggle="dropdown"
+												data-boundary="window"
+												data-boundary="window"
+											>
+												<i class="fas fa-caret-down"></i>
+											</button>
+											<div class="dropdown-menu">
+												<a
+													class="dropdown-item"
+													href="#"
+													data-toggle="modal"
+													data-target="#create"
+													>Edit</a
+												>
+												<a class="dropdown-item" href="#">Delete</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-left">Exhibitor Portal</td>
+									<td>2.1</td>
+									<td>3/30/18</td>
+									<td class="d-none d-md-table-cell">1/1/18</td>
+									<td class="d-none d-md-table-cell">1/1/19</td>
+									<td>
+										<div class="dropdown">
+											<button
+												class="btn btn-light btn-sm"
+												type="button"
+												data-toggle="dropdown"
+												data-boundary="window"
+												data-boundary="window"
+											>
+												<i class="fas fa-caret-down"></i>
+											</button>
+											<div class="dropdown-menu">
+												<a
+													class="dropdown-item"
+													href="#"
+													data-toggle="modal"
+													data-target="#create"
+													>Edit</a
+												>
+												<a class="dropdown-item" href="#">Delete</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-left">Event Admin</td>
+									<td>1.37</td>
+									<td>9/23/18</td>
+									<td class="d-none d-md-table-cell">1/1/18</td>
+									<td class="d-none d-md-table-cell">1/1/19</td>
+									<td>
+										<div class="dropdown">
+											<button
+												class="btn btn-light btn-sm"
+												type="button"
+												data-toggle="dropdown"
+												data-boundary="window"
+											>
+												<i class="fas fa-caret-down"></i>
+											</button>
+											<div class="dropdown-menu">
+												<a
+													class="dropdown-item"
+													href="#"
+													data-toggle="modal"
+													data-target="#create"
+													>Edit</a
+												>
+												<a class="dropdown-item" href="#">Delete</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 
-			<!-- Modal -->
-			<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h3 class="modal-title">What's New</h3>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<div>
-								<h5>Version 1.5</h5>
-								<p>12/10/2018</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-									et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-									aliquip
-									ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-									eu fugiat nulla pariatur.</p>
-								<ul>
-									<li>Lorem ipsum dolor sit amet</li>
-									<li>Anim id est laborum</li>
-									<li>Duis aute irure dolor in reprehenderit</li>
-									<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat</li>
-									<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</li>
-								</ul>
+						<ul class="list-group list-group-flush mt-5">
+							<li class="list-group-item">
+								<div class="note">
+									<div class="note-data">
+										<h6>Showpro</h6>
+										<p>This is a summary of what this release note is about.</p>
+									</div>
+									<div class="note-version">
+										<small>VERSION</small>
+										<h5>1.0</h5>
+									</div>
+									<div class="note-release">
+										<small>RELEASED</small>
+										<h5>12/4/18</h5>
+									</div>
+									<div class="note-actions">
+										<div class="dropdown">
+											<button
+												class="btn btn-light btn-sm"
+												type="button"
+												data-toggle="dropdown"
+												data-boundary="window"
+											>
+												<i class="fas fa-caret-down"></i>
+											</button>
+											<div class="dropdown-menu">
+												<a
+													class="dropdown-item"
+													href="#"
+													data-toggle="modal"
+													data-target="#create"
+													>Edit</a
+												>
+												<a class="dropdown-item" href="#">Delete</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<div class="note">
+									<div class="note-data">
+										<h6>Exhibitor Portal</h6>
+										<p>
+											This will be the summary of what this release note is
+											about.
+										</p>
+									</div>
+									<div class="note-version">
+										<small>VERSION</small>
+										<h5>2.1</h5>
+									</div>
+									<div class="note-release">
+										<small>RELEASED</small>
+										<h5>3/30/18</h5>
+									</div>
+									<div class="note-actions">
+										<div class="dropdown">
+											<button
+												class="btn btn-light btn-sm"
+												type="button"
+												data-toggle="dropdown"
+												data-boundary="window"
+											>
+												<i class="fas fa-caret-down"></i>
+											</button>
+											<div class="dropdown-menu">
+												<a
+													class="dropdown-item"
+													href="#"
+													data-toggle="modal"
+													data-target="#create"
+													>Edit</a
+												>
+												<a class="dropdown-item" href="#">Delete</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item">
+								<div class="note">
+									<div class="note-data">
+										<h6>Event Admin</h6>
+										<p>This is a summary of what this release note is about.</p>
+									</div>
+									<div class="note-version">
+										<small>VERSION</small>
+										<h5>1.37</h5>
+									</div>
+									<div class="note-release">
+										<small>RELEASED</small>
+										<h5>9/23/18</h5>
+									</div>
+									<div class="note-actions">
+										<div class="dropdown">
+											<button
+												class="btn btn-light btn-sm"
+												type="button"
+												data-toggle="dropdown"
+												data-boundary="window"
+											>
+												<i class="fas fa-caret-down"></i>
+											</button>
+											<div class="dropdown-menu">
+												<a
+													class="dropdown-item"
+													href="#"
+													data-toggle="modal"
+													data-target="#create"
+													>Edit</a
+												>
+												<a class="dropdown-item" href="#">Delete</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Modal -->
+				<div
+					class="modal fade"
+					id="modal"
+					tabindex="-1"
+					role="dialog"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3 class="modal-title">What's New</h3>
+								<button
+									type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"
+								>
+									<span aria-hidden="true">&times;</span>
+								</button>
 							</div>
-							<hr />
-							<div>
-								<h5>Version 1.4</h5>
-								<p>12/8/2018</p>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-									totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
-									sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-									consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+							<div class="modal-body">
+								<div>
+									<h5>Version 1.5</h5>
+									<p>12/10/2018</p>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										Duis aute irure dolor in reprehenderit in voluptate velit
+										esse cillum dolore eu fugiat nulla pariatur.
+									</p>
+									<ul>
+										<li>Lorem ipsum dolor sit amet</li>
+										<li>Anim id est laborum</li>
+										<li>Duis aute irure dolor in reprehenderit</li>
+										<li>
+											Ut enim ad minim veniam, quis nostrud exercitation ullamco
+											laboris nisi ut aliquip ex ea commodo consequat
+										</li>
+										<li>
+											Sed ut perspiciatis unde omnis iste natus error sit
+											voluptatem
+										</li>
+									</ul>
+								</div>
+								<hr />
+								<div>
+									<h5>Version 1.4</h5>
+									<p>12/8/2018</p>
+									<p>
+										Sed ut perspiciatis unde omnis iste natus error sit
+										voluptatem accusantium doloremque laudantium, totam rem
+										aperiam, eaque ipsa quae ab illo inventore veritatis et
+										quasi architecto beatae vitae dicta sunt explicabo. Nemo
+										enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+										aut fugit, sed quia consequuntur magni dolores eos qui
+										ratione voluptatem sequi nesciunt.
+									</p>
+								</div>
+								<hr />
+								<div>
+									<h5>Version 1.37</h5>
+									<p>12/4/2018</p>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+										ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									</p>
+								</div>
 							</div>
-							<hr />
-							<div>
-								<h5>Version 1.37</h5>
-								<p>12/4/2018</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-									et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-									aliquip
-									ex ea commodo consequat.</p>
+							<div class="modal-footer text-center">
+								<button type="button" class="btn" data-dismiss="modal">
+									Close
+								</button>
+								<button type="button" class="btn btn-primary">Dismiss</button>
 							</div>
-						</div>
-						<div class="modal-footer text-center">
-							<button type="button" class="btn" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Dismiss</button>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Modal -->
-			<div class="modal fade" id="create" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h3 class="modal-title">Release Note</h3>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<form action="">
-								<div class="form-group form-required">
-									<label for="">Product</label>
-									<select class="form-control"></select>
-								</div>
+				<!-- Modal -->
+				<div
+					class="modal fade"
+					id="create"
+					tabindex="-1"
+					role="dialog"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3 class="modal-title">Release Note</h3>
+								<button
+									type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"
+								>
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form action="">
+									<div class="form-group form-required">
+										<label for="">Product</label>
+										<select class="form-control"></select>
+									</div>
 
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group form-required">
-											<label for="">Version</label>
-											<input type="text" class="form-control" />
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group form-required">
+												<label for="">Version</label>
+												<input type="text" class="form-control" />
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group form-required">
+												<label for="">Release Date</label>
+												<input type="date" class="form-control" />
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group form-required">
+												<label for="">Audience</label>
+												<input type="text" class="form-control" />
+											</div>
 										</div>
 									</div>
-									<div class="col-md-4">
-										<div class="form-group form-required">
-											<label for="">Release Date</label>
-											<input type="date" class="form-control" />
+
+									<div class="form-group form-required">
+										<label for="">Summary</label>
+										<input type="text" class="form-control" />
+									</div>
+
+									<div class="form-group form-required">
+										<label for="">Release Notes</label>
+										<textarea class="form-control"></textarea>
+									</div>
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="">Display Start</label>
+												<input type="date" class="form-control" />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="">Display End</label>
+												<input type="date" class="form-control" />
+											</div>
 										</div>
 									</div>
-									<div class="col-md-4">
-										<div class="form-group form-required">
-											<label for="">Audience</label>
-											<input type="text" class="form-control" />
-										</div>
-									</div>
-								</div>
-
-
-								<div class="form-group form-required">
-									<label for="">Summary</label>
-									<input type="text" class="form-control" />
-								</div>
-
-								<div class="form-group form-required">
-									<label for="">Release Notes</label>
-									<textarea class="form-control"></textarea>
-								</div>
-
-								
-								
-	
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="">Display Start</label>
-											<input type="date" class="form-control" />
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="">Display End</label>
-											<input type="date" class="form-control" />
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer text-center">
-							<button type="button" class="btn" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Dismiss</button>
+								</form>
+							</div>
+							<div class="modal-footer text-center">
+								<button type="button" class="btn" data-dismiss="modal">
+									Close
+								</button>
+								<button type="button" class="btn btn-primary">Dismiss</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<footer></footer>
+			<footer></footer>
+		</main>
 
-	</main>
+		<script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
+		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
+		<script src="assets/js/jquery/plugins/datatables.min.js"></script>
+		<script src="assets/js/jquery/custom/slideout.js"></script>
+		<script src="assets/js/jquery/custom/overlay.js"></script>
+		<script src="assets/js/jquery/custom/affix.js"></script>
+		<script src="assets/js/jquery/custom/scroll.js"></script>
+		<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
-	<script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
-	<script src="assets/js/jquery/plugins/flatpickr.js"></script>
-	<script src="assets/js/jquery/plugins/datatables.min.js"></script>
-	<script src="assets/js/jquery/custom/slideout.js"></script>
-	<script src="assets/js/jquery/custom/overlay.js"></script>
-	<script src="assets/js/jquery/custom/affix.js"></script>
-	<script src="assets/js/jquery/custom/scroll.js"></script>
-	<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+		<script>
+			var slideout = $("aside").slideout({
+				content: $("main"),
+				push: true,
+				direction: "left",
+				toggle: $(".navbar-toggle"),
+			});
 
+			$("input[type='date']").flatpickr();
+			$('[data-toggle="tooltip"]').tooltip();
 
-	<script>
-		var slideout = $("aside").slideout({
-			"content": $("main"),
-			"push": true,
-			"direction": "right",
-			"toggle": $(".navbar-toggle"),
-		});
-
-		$("input[type='date']").flatpickr();
-		$('[data-toggle="tooltip"]').tooltip()
-
-		// $("table").DataTable({
-		// 	"bPaginate": false,
-		// 	"bLengthChange": false,
-		// 	"bFilter": false,
-		// 	"bInfo": false,
-		// 	"bAutoWidth": false
-		// });
-	</script>
-
-</body>
-
+			// $("table").DataTable({
+			// 	"bPaginate": false,
+			// 	"bLengthChange": false,
+			// 	"bFilter": false,
+			// 	"bInfo": false,
+			// 	"bAutoWidth": false
+			// });
+		</script>
+	</body>
 </html>
