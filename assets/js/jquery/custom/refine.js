@@ -1,30 +1,41 @@
 /* global jQuery */
 
-(function($, window) {
+(function($) {
 	"use strict";
 
-	var pluginName = "pluginName";
+	var pluginName = "refine";
 	var defaultState = {};
 	var defaultOptions = {};
 
 	function Plugin(element, options) {
+		options = options || {};
 		this.element = element;
 		this.settings = $.extend({}, defaultOptions, options);
 		this._defaults = defaultOptions;
 		this._name = pluginName;
 		this.state = defaultState;
 
+		this.source = $(element);
+		this.targets = options.targets || $("[data-refine]");
+
 		this.init();
 	}
 
 	$.extend(Plugin.prototype, {
 		init: function() {
-			var check = 0;
-			$(window).on("scroll", function() {
-				window.scrollY > check
-					? console.log("down", window.scrollY)
-					: console.log("up", window.scrollY);
-				check = window.scrollY;
+			var targets = this.targets;
+			var source = this.source;
+
+			source.on("change keyup", function(e) {
+				var value = e.target.value;
+
+				var matches = targets.filter(function(index, el) {
+					var data = $(el).data("refine");
+					return data.indexOf(value) === -1;
+				});
+
+				targets.show();
+				matches.hide();
 			});
 		},
 	});
@@ -36,5 +47,4 @@
 			}
 		});
 	};
-
-})(jQuery, window);
+})(jQuery);

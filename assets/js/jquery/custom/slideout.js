@@ -1,103 +1,111 @@
-/* global $ */
+/* global jQuery */
 
-(function () {
-  $.fn.slideout = function (options) {
-    'use strict'
+(function($, window) {
+	"use strict";
 
-    var defaultState = {
-      open: false
-    }
+	var pluginName = "slideout";
 
-    var defaultOptions = {
-      content: $('.slideout-content'),
-      direction: 'left',
-      push: false,
-      width: 260
-    }
+	var defaultState = {
+		open: false,
+	};
 
-    var Slideout = function (element, options) {
-      options = options || {}
-      this.defaults = defaultOptions
-      this.state = defaultState
-      this.settings = $.extend(defaultOptions, options)
-      this.slideout = element.addClass('slideout-slide')
-      this.content = this.settings.content.addClass('slideout-content')
+	var defaultOptions = {
+		content: $(".slideout-content"),
+		direction: "left",
+		push: false,
+		width: 260,
+	};
 
-      return this.init()
-    }
+	function Plugin(element, options) {
+		this.element = element;
+		this.settings = $.extend({}, defaultOptions, options);
+		this._defaults = defaultOptions;
+		this._name = pluginName;
 
-    $.extend(Slideout.prototype, {
-      init: function () {
-        this.close = this.close.bind(this)
-        this.hide = this.hide.bind(this)
-        this.toggle = this.toggle.bind(this)
+		this.state = defaultState;
+		this.settings = $.extend(defaultOptions, options);
+		this.slideout = $(element).addClass("slideout-slide");
+		this.content = this.settings.content.addClass("slideout-content");
 
-        $(window).on('resize', this.close)
-        $(window).on('click', this.hide)
+		this.init();
+	}
 
-        if (this.settings.toggle) {
-          $(this.settings.toggle).on('click', this.toggle)
-        }
+	$.extend(Plugin.prototype, {
+		init: function() {
+			this.close = this.close.bind(this);
+			this.hide = this.hide.bind(this);
+			this.toggle = this.toggle.bind(this);
 
-        return this.render()
-      },
+			$(window).on("resize", this.close);
+			$(window).on("click", this.hide);
 
-      hide: function (e) {
-        var target = $(e.target)
-        if (
-          target.closest(this.slideout).length === 0 &&
-          target.closest(this.settings.toggle).length === 0
-        ) {
-          this.close()
-        }
+			if (this.settings.toggle) {
+				$(this.settings.toggle).on("click", this.toggle);
+			}
 
-        return this
-      },
+			this.render();
+		},
 
-      open: function () {
-        this.state.open = true
-        return this.render()
-      },
+		hide: function(e) {
+			var target = $(e.target);
+			if (
+				target.closest(this.slideout).length === 0 &&
+				target.closest(this.settings.toggle).length === 0
+			) {
+				this.close();
+			}
 
-      close: function () {
-        this.state.open = false
-        return this.render()
-      },
+			return this;
+		},
 
-      toggle: function () {
-        this.state.open = !this.state.open
-        return this.render()
-      },
+		open: function() {
+			this.state.open = true;
+			return this.render();
+		},
 
-      render: function () {
-        var state = this.state
-        var settings = this.settings
-        var open = state.open
-        var push = settings.push
-        var direction = settings.direction
-        var width = settings.width
-        var styles = {
-          slideout: {},
-          content: {}
-        }
+		close: function() {
+			this.state.open = false;
+			return this.render();
+		},
 
-        open
-          ? (styles.slideout[direction] = 0)
-          : (styles.slideout[direction] = -width)
+		toggle: function() {
+			this.state.open = !this.state.open;
+			return this.render();
+		},
 
-        push && open
-          ? (styles.content[direction] = width)
-          : (styles.content[direction] = 0)
+		render: function() {
+			var state = this.state;
+			var settings = this.settings;
+			var open = state.open;
+			var push = settings.push;
+			var direction = settings.direction;
+			var width = settings.width;
+			var styles = {
+				slideout: {},
+				content: {},
+			};
 
-        styles.slideout.width = width
+			open
+				? (styles.slideout[direction] = 0)
+				: (styles.slideout[direction] = -width);
+			push && open
+				? (styles.content[direction] = width)
+				: (styles.content[direction] = 0);
 
-        this.slideout.css(styles.slideout)
-        this.content.css(styles.content)
+			styles.slideout.width = width;
 
-        return this
-      }
-    })
+			this.slideout.css(styles.slideout);
+			this.content.css(styles.content);
 
-    return new Slideout(this, options)
-  }
-})()
+			return this;
+		},
+	});
+
+	$.fn[pluginName] = function(options) {
+		return this.each(function() {
+			if (!$.data(this, "plugin_" + pluginName)) {
+				$.data(this, "plugin_" + pluginName, new Plugin(this, options));
+			}
+		});
+	};
+})(jQuery, window);
