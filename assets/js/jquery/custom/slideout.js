@@ -13,14 +13,14 @@
 		content: $(".slideout-content"),
 		direction: "left",
 		push: false,
-		width: 260,
+		width: 275,
 	};
 
 	function Plugin(element, options) {
+		this._name = pluginName;
+		this._defaults = defaultOptions;
 		this.element = element;
 		this.settings = $.extend({}, defaultOptions, options);
-		this._defaults = defaultOptions;
-		this._name = pluginName;
 
 		this.state = defaultState;
 		this.settings = $.extend(defaultOptions, options);

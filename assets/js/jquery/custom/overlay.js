@@ -8,10 +8,10 @@
 	var defaultOptions = {};
 
 	function Plugin(element, options) {
+		this._name = pluginName;
+		this._defaults = defaultOptions;
 		this.element = element;
 		this.settings = $.extend({}, defaultOptions, options);
-		this._defaults = defaultOptions;
-		this._name = pluginName;
 		this.state = defaultState;
 
 		this.init();

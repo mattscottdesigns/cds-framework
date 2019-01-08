@@ -12,6 +12,6 @@
       "ignore": ["after-comment"]
     } ],
     "unit-whitelist": ["em", "rem", "%", "s", "px"],
-    "at-rule-no-unknown": null,
+    "at-rule-no-unknown": null
   }
 }

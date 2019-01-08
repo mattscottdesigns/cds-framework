@@ -99,15 +99,24 @@
 			<header></header>
 
 			<section class="container">
+                                
 				<div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Refine</h3>
+                        <hr />
+                        <input type="text" class="refine form-control" />
+                    </div>
+                </div>
+                
+				<div class="card" data-refine="typeahead suggest">
 					<div class="card-body">
 						<h3 class="card-title">Typeahead</h3>
 						<hr />
 						<input type="text" class="typeahead form-control" />
 					</div>
-				</div>
+                </div>
 
-				<div class="card" data-refine="jumbotron">
+				<div class="card" data-refine="jumbotron action">
 					<div class="card-body">
 						<h3 class="card-title">Jumbotron</h3>
 						<hr />
@@ -311,19 +320,70 @@
 					</div>
 				</div>
 
-				<div class="card" data-refine="forms">
+				<div class="card" data-refine="fieldset">
 					<div class="card-body">
-						<h3 class="card-title">Forms</h3>
+						<h3 class="card-title">Fieldset</h3>
 						<hr />
 						<form action="">
 							<fieldset class="fieldset">
-								<legend>Sample Legend</legend>
+								
 								<div class="form-group form-required">
 									<label for="">Sample Label</label>
 									<input type="text" class="form-control" />
 								</div>
 							</fieldset>
 						</form>
+					</div>
+				</div>
+
+				<div class="card" data-refine="image thumbnail">
+					<div class="card-body">
+						<h3 class="card-title">Image Thumbnail</h3>
+						<hr />
+						<ul class="tile tile-basic tile-3">
+                            <li>
+                                <div class="card text-center">
+                                    <h5 class="card-header">
+                                        Uploadedfilename
+                                    </h5>
+                                    <div class="card-body">
+                                        <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
+                                        <div>200 x 200</div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-danger btn-sm">Remove</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card text-center">
+                                    <h5 class="card-header">
+                                        Uploadedfilename
+                                    </h5>
+                                    <div class="card-body">
+                                        <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
+                                        <div>200 x 200</div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-danger btn-sm">Remove</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card text-center">
+                                    <h5 class="card-header">
+                                        Uploadedfilename
+                                    </h5>
+                                    <div class="card-body">
+                                        <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
+                                        <div>200 x 200</div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-danger btn-sm">Remove</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
 					</div>
 				</div>
 
@@ -503,7 +563,7 @@
 				}
 			);
 
-			$(".typeahead").refine();
+			$(".refine").refine();
 		</script>
 	</body>
 </html>

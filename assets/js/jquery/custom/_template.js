@@ -1,4 +1,5 @@
 /* global jQuery */
+/* eslint no-unused-vars: off */
 
 (function($, window, document, undefined) {
 	"use strict";
@@ -8,11 +9,11 @@
 	var defaultOptions = {};
 
 	function Plugin(element, options) {
-		this.element = element;
-		this.settings = $.extend({}, defaultOptions, options);
-		this._defaults = defaultOptions;
 		this._name = pluginName;
+		this._defaults = defaultOptions;
+		this.element = element;
 		this.state = defaultState;
+		this.settings = $.extend({}, defaultOptions, options);
 
 		this.init();
 	}

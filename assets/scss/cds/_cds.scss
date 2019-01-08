@@ -23,4 +23,13 @@
 @import "forms";
 @import "typeahead";
 @import "fieldset";
- 
+@import "slick";
+@import "slick-theme";
+
+.slick-slide{
+    margin: 10px;
+}
+.slick-slide img{
+    width:100%;
+    border: 2px solid #fff;
+  }

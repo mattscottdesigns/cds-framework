@@ -65,6 +65,24 @@ ul.tile.tile-4 {
 	}
 }
 
+ul.tile.tile-static-2{
+    li{
+        max-width: calc(50% - 1.5rem);
+    }
+}
+
+ul.tile.tile-static-3{
+    li{
+        max-width: calc(33.333% - 1.5rem);
+    }
+}
+
+ul.tile.tile-static-4{
+    li{
+        max-width: calc(25% - 1.5rem);
+    }
+}
+
 ul.tile.tile-basic > li {
 	border-color: transparent;
 	background: none;

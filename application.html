@@ -72,6 +72,7 @@
 			</header>
 
 			<section class="container">
+				
 				<div class="row align-items-center">
 					<div class="col-md-9">
 						<h1>Hello, World!</h1>
@@ -585,11 +586,12 @@
 
 		<script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
 		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
-		<script src="assets/js/jquery/plugins/datatables.min.js"></script>
+		<script src="assets/js/jquery/plugins/datatables.js"></script>
 		<script src="assets/js/jquery/custom/slideout.js"></script>
 		<script src="assets/js/jquery/custom/overlay.js"></script>
 		<script src="assets/js/jquery/custom/affix.js"></script>
 		<script src="assets/js/jquery/custom/scroll.js"></script>
+		<script src="assets/js/jquery/plugins/slick.js"></script>
 		<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 		<script>
@@ -600,7 +602,13 @@
 				toggle: $(".navbar-toggle"),
 			});
 
-			$("input[type='date']").flatpickr();
+			$("input[type='date']").flatpickr({
+				enableCalendar: false,
+				enableTime: true,
+				altInput: true,
+				altFormat: "F j, Y",
+				dateFormat: "Y-m-d",
+			});
 			$('[data-toggle="tooltip"]').tooltip();
 
 			// $("table").DataTable({

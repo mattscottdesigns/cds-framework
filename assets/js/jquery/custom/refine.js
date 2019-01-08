@@ -9,10 +9,10 @@
 
 	function Plugin(element, options) {
 		options = options || {};
+		this._name = pluginName;
+		this._defaults = defaultOptions;
 		this.element = element;
 		this.settings = $.extend({}, defaultOptions, options);
-		this._defaults = defaultOptions;
-		this._name = pluginName;
 		this.state = defaultState;
 
 		this.source = $(element);
@@ -27,10 +27,10 @@
 			var source = this.source;
 
 			source.on("change keyup", function(e) {
-				var value = e.target.value;
+				var value = e.target.value.toLowerCase();
 
 				var matches = targets.filter(function(index, el) {
-					var data = $(el).data("refine");
+					var data = $(el).data("refine").toLowerCase();
 					return data.indexOf(value) === -1;
 				});
 
