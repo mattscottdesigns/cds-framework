@@ -4,12 +4,10 @@ body.template {
 	display: -ms-flexbox; /* TWEENER - IE 10 */
 	display: -webkit-flex; /* NEW - Chrome */
 	display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	overflow-x: hidden;
+    overflow-x: hidden;
 
 	aside {
-		width: 260px;
 		background: $gray-100;
-		z-index: 4;
 		transition: all transition("md");
 	}
 
@@ -25,9 +23,6 @@ body.template {
 		transition: all transition("md");
 	}
 
-	section {
-		flex: 1;
-	}
 }
 
 body.template.template-dashboard {
@@ -35,34 +30,22 @@ body.template.template-dashboard {
 		box-shadow: $box-shadow-sm;
 		background: $white;
 
-		nav {
-			justify-content: center;
-			background: lighten($primary, 5%);
-			padding: 0;
-		}
-
 		@media (min-width: breakpoint-min("md")) {
 			position: relative;
 			left: 0 !important;
 			transition: none;
 		}
-	}
+    }
+
+    header .nav-link{
+        color: $white;
+    }
+
+    header .nav-dropdown .nav-link{
+        color: $dark;
+    }
 
 	main {
 		background: $gray-200;
-
-		nav {
-			background: $primary;
-
-			.nav-user > .btn {
-				@extend .btn-primary;
-				background: lighten($primary, 5%);
-				border: 0;
-
-				&:hover {
-					background: lighten($primary, 10%);
-				}
-			}
-		}
 	}
 }

@@ -69,7 +69,8 @@ h6,
 @each $color, $value in $colors {
 	.text-#{$color} {
 		color: $value;
-	}
+    }
+    
 	.bg-#{$color} {
 		background-color: $value;
 	}
@@ -78,7 +79,8 @@ h6,
 @each $color, $value in $theme-colors {
 	.text-#{$color} {
 		color: $value;
-	}
+    }
+    
 	.bg-#{$color} {
 		background-color: $value;
 	}

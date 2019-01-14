@@ -4,8 +4,10 @@
   "description": "Convention Data Services front end framework",
   "main": "index.js",
   "scripts": {
-    "compile": "node-sass --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.css",
-    "watch": "node-sass --include-path --recursive --watch --source-map true --output-style compressed assets/scss/main.scss assets/css/main.css"
+    "scss:compile": "node-sass --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.css",
+    "scss:watch": "node-sass --include-path --recursive --watch --source-map true assets/scss/main.scss assets/css/main.css",
+    "start": "npm run scss:compile && npm run scss:watch",
+    "build": "npm run scss:compile"
   },
   "author": "Matthew Scott",
   "license": "ISC",
