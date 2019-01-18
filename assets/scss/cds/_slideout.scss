@@ -1,17 +1,26 @@
-.slideout-slide {
-	position: fixed;
-	z-index: 2;
-	top: 0;
-	bottom: 0;
-	background: $gray-900;
-	color: #fff;
+// .slideout-slide{
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     background: $white;
+// }
+
+.slideout-slide{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #111;
+
 }
 
-.slideout-content {
-	position: relative;
+.slideout-content{
+
 }
+
 
 .slideout-slide,
-.slideout-content {
-	transition: left transition("md"), right transition("md");
+.slideout-content{
+    transition: margin transition("sm");
 }

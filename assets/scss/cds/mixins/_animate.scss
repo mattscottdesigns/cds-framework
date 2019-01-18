@@ -2,3 +2,28 @@
 	@extend .animated;
 	@extend .#{$animation};
 }
+
+@mixin nav-variant($color,$value){
+    .nav-#{$color} {
+		background-color: $value;
+		color: color-yiq(
+			$value
+        ); // Returns an appropriately contrasting color for the provided value
+        
+        .nav-link.active{
+            color: color-yiq(
+                $value
+            );
+
+            background: rgba(color-yiq(
+                $value
+            ), .1); // Returns an appropriately contrasting color for the provided value
+
+            .nav-icon{
+                color: color-yiq(
+                    $value
+                );
+            }
+        }
+	}
+}

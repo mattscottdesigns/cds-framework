@@ -87,7 +87,8 @@ $theme-colors: map-merge(
 	"danger": $danger,
 	"light": $light,
 	"dark": $dark,
-	"darker": $darker,
+    "darker": $darker,
+    "white": $white
 ),
 $theme-colors
 );
@@ -114,3 +115,4 @@ $font-awesome: "Font Awesome 5 Free";
 $body-color: $gray-800;
 $component-active-bg: theme-color("primary");
 $link-color: theme-color("secondary") !default;
+$slideout-width: 275px;

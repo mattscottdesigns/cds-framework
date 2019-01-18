@@ -9,3 +9,6 @@
 @mixin font-small {
 	font-size: 0.9rem;
 }
+@each $color, $value in $theme-colors {
+	
+}

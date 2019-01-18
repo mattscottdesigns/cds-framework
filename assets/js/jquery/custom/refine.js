@@ -28,7 +28,6 @@
 
 			source.on("change keyup", function(e) {
 				var value = e.target.value.toLowerCase();
-
 				var matches = targets.filter(function(index, el) {
 					var data = $(el).data("refine").toLowerCase();
 					return data.indexOf(value) === -1;

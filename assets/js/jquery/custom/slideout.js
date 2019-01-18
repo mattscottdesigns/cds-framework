@@ -3,17 +3,15 @@
 (function($, window) {
 	"use strict";
 
-	var pluginName = "slideout";
-
-	var defaultState = {
-		open: false,
-	};
-
+    var pluginName = "slideout";
+    
 	var defaultOptions = {
 		content: $(".slideout-content"),
-		direction: "left",
-		push: false,
-		width: 275,
+        direction: "left",
+        open: false,
+        width: 275,
+        breakpoint: 768,
+        responsive: false
 	};
 
 	function Plugin(element, options) {
@@ -22,27 +20,45 @@
 		this.element = element;
 		this.settings = $.extend({}, defaultOptions, options);
 
-		this.state = defaultState;
 		this.settings = $.extend(defaultOptions, options);
 		this.slideout = $(element).addClass("slideout-slide");
-		this.content = this.settings.content.addClass("slideout-content");
-
+        this.content = this.settings.content.addClass("slideout-content");
+        
 		this.init();
 	}
 
 	$.extend(Plugin.prototype, {
 		init: function() {
-			this.close = this.close.bind(this);
-			this.hide = this.hide.bind(this);
-			this.toggle = this.toggle.bind(this);
+            var settings= this.settings;
+			var close = this.close.bind(this);
+			var hide = this.hide.bind(this);
+            var toggle  = this.toggle.bind(this);
+            var open = this.open.bind(this);
 
-			$(window).on("resize", this.close);
-			$(window).on("click", this.hide);
+            if(settings.responsive && $(window).width() > settings.breakpoint){
+                open();
+            }else{
+                close();
+            }
 
-			if (this.settings.toggle) {
-				$(this.settings.toggle).on("click", this.toggle);
-			}
+            $(window).on("resize", function(){
+                if(settings.responsive && $(window).width() < settings.breakpoint){
+                    close();
+                }
+            })
 
+            $(window).on("click", function(e){
+                if($(window).width() < settings.breakpoint){
+                    hide(e);
+                }
+            });
+
+            if(settings.toggle){
+                settings.toggle.on("click", function(){
+                    toggle();
+                })
+            }
+            
 			this.render();
 		},
 
@@ -59,40 +75,43 @@
 		},
 
 		open: function() {
-			this.state.open = true;
+			this.settings.open = true;
 			return this.render();
 		},
 
 		close: function() {
-			this.state.open = false;
+            this.settings.open = false;
 			return this.render();
 		},
 
 		toggle: function() {
-			this.state.open = !this.state.open;
+			this.settings.open = !this.settings.open;
 			return this.render();
 		},
 
 		render: function() {
-			var state = this.state;
 			var settings = this.settings;
-			var open = state.open;
-			var push = settings.push;
-			var direction = settings.direction;
 			var width = settings.width;
 			var styles = {
 				slideout: {},
 				content: {},
-			};
+            };
 
-			open
-				? (styles.slideout[direction] = 0)
-				: (styles.slideout[direction] = -width);
-			push && open
-				? (styles.content[direction] = width)
-				: (styles.content[direction] = 0);
+            if( settings.open ){
+                styles.slideout.marginLeft = 0;
+                styles.content.marginLeft = width;
+            }else{
+                styles.slideout.marginLeft = -width;
+                styles.content.marginLeft = 0;
+            }
 
-			styles.slideout.width = width;
+            if( settings.open && $(window).width() < settings.breakpoint ){
+                styles.content.marginRight = -width;
+            }
+
+            if( settings.open && $(window).width() > settings.breakpoint ){
+                styles.content.marginRight = 0;
+            }
 
 			this.slideout.css(styles.slideout);
 			this.content.css(styles.content);

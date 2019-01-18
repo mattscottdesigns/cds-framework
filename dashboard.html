@@ -12,7 +12,7 @@
 		<title>Dashboard Template</title>
 	</head>
 
-	<body class="template template-dashboard">
+	<body>
 		<!--[if lte IE 10]>
 			<p class="browserupgrade">
 				You are using an <strong>outdated</strong> browser. Please
@@ -21,475 +21,483 @@
 			</p>
 		<![endif]-->
 
-		<aside>
-			<nav class="nav nav-dashboard"></nav>
+		<div class="template template-dashboard">
+			<aside>
+				<div>
+					<ul class="nav nav-primary-light"></ul>
 
-			<ul class="nav flex-column nav-hover">
-				<li class="nav-item nav-header">Main Menu</li>
-				<li class="nav-item">
-					<a class="nav-link"><i class="fas fa-star nav-icon"></i>Link #1</a>
-					<ul class="nav nav-left nav-dropdown flex-column">
-						<li class="nav-item">
-							<a class="nav-link" href="#">Sub Link #1</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Sub Link #2</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Sub Link #3</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#"
-						><i class="fas fa-star nav-icon"></i>Link #2</a
-					>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#"
-						><i class="fas fa-star nav-icon"></i>Link #3</a
-					>
-				</li>
-				<li class="nav-item nav-header">Tools</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#"
-						><i class="fas fa-star nav-icon"></i>Link #1</a
-					>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#"
-						><i class="fas fa-star nav-icon"></i>Link #2</a
-					>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#"
-						><i class="fas fa-star nav-icon"></i>Link #3</a
-					>
-				</li>
-			</ul>
-		</aside>
-
-		<main>
-			<header>
-				<ul class="nav nav-dashboard">
-					<li class="nav-item">
-						<a class="nav-toggle nav-link">
-							<i class="fas fa-bars fa-2x"></i>
-						</a>
-                    </li>
-                    <li class="nav-item flex-fill d-none d-md-block">
-                        <ul class="nav nav-hover">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Active</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Disabled</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle">Link #1</a>
-                                <ul class="nav nav-top nav-dropdown flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Sub Link #1</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Sub Link #2</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Sub Link #3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-					<li class="nav-item nav-link dropdown">
-                        <a
-                            class="btn bg-primary-light text-white"
-							data-toggle="dropdown"
-							data-boundary="window"
-							href="#"
-						><i class="fas fa-caret-down"></i></a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-						</div>
-					</li>
-				</ul>
-			</header>
-
-			<section class="container">
-				<div class="card">
-					<div class="card-body">
-						<h3 class="card-title">Refine</h3>
-						<hr />
-						<input type="text" class="refine form-control" />
-					</div>
-				</div>
-
-				<div class="card" data-refine="typeahead suggest">
-					<div class="card-body">
-						<h3 class="card-title">Typeahead</h3>
-						<hr />
-						<input type="text" class="typeahead form-control" />
-					</div>
-				</div>
-
-				<div class="card" data-refine="jumbotron action">
-					<div class="card-body">
-						<h3 class="card-title">Jumbotron</h3>
-						<hr />
-						<div class="jumbotron text-center">
-							<div class="jumbotron-background"></div>
-							<div class="jumbotron-image"></div>
-							<div class="jumbotron-body">
-								<h1 class="">Hello, world!</h1>
-								<p class="lead">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="card" data-refine="grid">
-					<div class="card-body">
-						<h3 class="card-title">Grid</h3>
-						<hr />
-						<div class="row">
-							<div class="col-md-4">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-								<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
-							</div>
-							<div class="col-md-4">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-								<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
-							</div>
-							<div class="col-md-4">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-								<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="card" data-refine="tiles">
-					<div class="card-body">
-						<h3 class="card-title">Tiles</h3>
-						<hr />
-						<ul class="tile tile-3 text-center">
-							<li class="tile-hover-yellow">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-cart-plus text-yellow"></i>
-									</div>
-									<h5 class="tile-title">Additional Licenses</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore.
-									</div>
-								</div>
-							</li>
-							<li class="tile-hover-dark">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-download text-dark"></i>
-									</div>
-									<h5 class="tile-title">Downloads</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore.
-									</div>
-								</div>
-							</li>
-							<li class="tile-hover-green">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-mobile-alt text-green"></i>
-									</div>
-									<h5 class="tile-title">Devices & Licenses</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore.
-									</div>
-								</div>
-							</li>
-							<li class="tile-hover-orange">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-question-circle text-orange"></i>
-									</div>
-									<h5 class="tile-title">Custom Sales Qualifiers</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore et dolore magna.
-									</div>
-								</div>
-							</li>
-							<li class="tile-hover-purple">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-comments text-purple"></i>
-									</div>
-									<h5 class="tile-title">Text Message Service</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore.
-									</div>
-								</div>
-							</li>
-							<li class="tile-hover-red">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-book text-red"></i>
-									</div>
-									<h5 class="tile-title">Literature Fulfillment</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore.
-									</div>
-								</div>
-							</li>
-							<li class="tile-hover-purple">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-envelope text-purple"></i>
-									</div>
-									<h5 class="tile-title">Email Follow-Up</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore.
-									</div>
-								</div>
-							</li>
-							<li class="tile-hover-teal">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-user-tie text-teal"></i>
-									</div>
-									<h5 class="tile-title">VIP Alerts</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore.
-									</div>
-								</div>
-							</li>
-							<li class="tile-hover-blue">
-								<div class="tile-body">
-									<div class="tile-icon">
-										<i class="fas fa-chart-pie text-blue"></i>
-									</div>
-									<h5 class="tile-title">Dashboard</h5>
-									<div class="tile-text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore.
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="card" data-refine="basic tiles">
-					<div class="card-body">
-						<h3 class="card-title">Basic Tiles</h3>
-						<hr />
-						<ul class="tile tile-3 tile-basic">
-							<li>
-								<div>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate
-									velit esse cillum dolore eu fugiat nulla pariatur.
-								</div>
-							</li>
-							<li>
-								<div>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate
-									velit esse cillum dolore eu fugiat nulla pariatur.
-								</div>
-							</li>
-							<li>
-								<div>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate
-									velit esse cillum dolore eu fugiat nulla pariatur.
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="card" data-refine="fieldset">
-					<div class="card-body">
-						<h3 class="card-title">Fieldset</h3>
-						<hr />
-						<form action="">
-							<fieldset class="fieldset fieldset-border">
-								<legend>Legend</legend>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. Duis aute irure dolor in reprehenderit in voluptate
-									velit esse cillum dolore eu fugiat nulla pariatur.
-								</p>
-								<div class="form-group form-required">
-									<label for="">Sample Label</label>
-									<input type="text" class="form-control" />
-								</div>
-							</fieldset>
-						</form>
-					</div>
-				</div>
-				<!-- 
-				<div class="card" data-refine="image thumbnail">
-					<div class="card-body">
-						<h3 class="card-title">Image Thumbnail</h3>
-						<hr />
-						<ul class="tile tile-basic tile-3">
-                            <li>
-                                <div class="card text-center">
-                                    <h5 class="card-header">
-                                        Uploadedfilename
-                                    </h5>
-                                    <div class="card-body">
-                                        <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
-                                        <div>200 x 200</div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="#" class="btn btn-danger btn-sm">Remove</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="card text-center">
-                                    <h5 class="card-header">
-                                        Uploadedfilename
-                                    </h5>
-                                    <div class="card-body">
-                                        <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
-                                        <div>200 x 200</div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="#" class="btn btn-danger btn-sm">Remove</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="card text-center">
-                                    <h5 class="card-header">
-                                        Uploadedfilename
-                                    </h5>
-                                    <div class="card-body">
-                                        <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
-                                        <div>200 x 200</div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="#" class="btn btn-danger btn-sm">Remove</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-					</div>
-				</div> -->
-
-				<div class="row" data-refine="grid tiles">
-					<div class="col-lg-8">
-						<div class="card">
-							<div class="card-body">
-								<h3 class="card-title">Grid + Tiles</h3>
-								<hr />
-								<ul class="tile tile-2 tile-basic">
-									<li>
-										<div>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											<a href="">sed do eiusmod tempor incididunt</a> ut labore
-											et dolore magna aliqua. Ut enim ad minim veniam, quis
-											nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-											commodo consequat. Duis aute irure dolor in reprehenderit
-											in voluptate velit esse cillum dolore eu fugiat nulla
-											pariatur.
-										</div>
+					<ul class="nav nav-sm nav-pills flex-column p-2">
+						<li class="nav-item nav-header">Main Menu</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								data-toggle="collapse"
+								data-target="#dropdown-1"
+								href="#"
+								role="button"
+								aria-haspopup="true"
+								aria-expanded="false"
+								><i class="fas fa-star nav-icon"></i>Link #1</a
+							>
+							<div id="dropdown-1" class="collapse">
+								<ul class="nav flex-column pl-4">
+									<li class="nav-item">
+										<a class="nav-link" href="#">Sub Link #1</a>
 									</li>
-									<li>
-										<div>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											<a href="">sed do eiusmod tempor incididunt</a> ut labore
-											et dolore magna aliqua. Ut enim ad minim veniam, quis
-											nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-											commodo consequat. Duis aute irure dolor in reprehenderit
-											in voluptate velit esse cillum dolore eu fugiat nulla
-											pariatur.
-										</div>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Sub Link #2</a>
 									</li>
-									<li>
-										<div>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											<a href="">sed do eiusmod tempor incididunt</a> ut labore
-											et dolore magna aliqua. Ut enim ad minim veniam, quis
-											nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-											commodo consequat. Duis aute irure dolor in reprehenderit
-											in voluptate velit esse cillum dolore eu fugiat nulla
-											pariatur.
-										</div>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Sub Link #3</a>
 									</li>
 								</ul>
 							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="card">
-							<div class="card-body">
-								<h5 class="card-title">Heading</h5>
-								<hr />
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-								<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-body">
-								<h5 class="card-title">Heading</h5>
-								<hr />
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-								<a href="">sed do eiusmod tempor incididunt</a> ut labore et
-								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
-							</div>
-						</div>
-					</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#"
+								><i class="fas fa-star nav-icon"></i>Link #2</a
+							>
+						</li>
+						<li class="nav-item nav-header">Tools</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"
+								><i class="fas fa-star nav-icon"></i>Link #1</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"
+								><i class="fas fa-star nav-icon"></i>Link #2</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"
+								><i class="fas fa-star nav-icon"></i>Link #3</a
+							>
+						</li>
+					</ul>
 				</div>
-			</section>
+			</aside>
 
-			<footer></footer>
-		</main>
+			<main>
+				<header>
+					<ul class="nav nav-primary justify-content-between">
+						<li class="nav-item d-block d-md-none">
+							<a class="nav-toggle nav-link">
+								<i class="fas fa-bars fa-2x"></i>
+							</a>
+						</li>
+
+						<li class="nav-item flex-fill d-none d-md-block">
+							<ul class="nav text-white">
+								<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+								<li class="nav-item">
+									<a class="nav-link disabled" href="#">Disabled</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a
+										class="nav-link dropdown-toggle"
+										data-toggle="dropdown"
+										href="#"
+										role="button"
+										>Link #1</a
+									>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Sublink #1</a>
+										<a class="dropdown-item" href="#">Sublink #2</a>
+										<a class="dropdown-item" href="#">Sublink #3</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item nav-link dropdown">
+							<a
+								class="btn btn-sm bg-primary-light text-white"
+								data-toggle="dropdown"
+								data-boundary="window"
+								href="#"
+								><i class="fas fa-caret-down"></i
+							></a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+					</ul>
+				</header>
+
+				<section class="container">
+					<div class="card">
+						<div class="card-body">
+							<h3 class="card-title">Refine</h3>
+							<hr />
+							<input type="text" class="refine form-control" />
+						</div>
+					</div>
+
+					<div class="card" data-refine="typeahead suggest">
+						<div class="card-body">
+							<h3 class="card-title">Typeahead</h3>
+							<hr />
+							<input type="text" class="typeahead form-control" />
+						</div>
+					</div>
+
+					<div class="card" data-refine="jumbotron action">
+						<div class="card-body">
+							<h3 class="card-title">Jumbotron</h3>
+							<hr />
+							<div class="jumbotron text-center">
+								<div class="jumbotron-background"></div>
+								<div class="jumbotron-image"></div>
+								<div class="jumbotron-body">
+									<h1 class="">Hello, world!</h1>
+									<p class="lead">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card" data-refine="grid">
+						<div class="card-body">
+							<h3 class="card-title">Grid</h3>
+							<hr />
+							<div class="row">
+								<div class="col-md-4">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</div>
+								<div class="col-md-4">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</div>
+								<div class="col-md-4">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="card" data-refine="tiles">
+						<div class="card-body">
+							<h3 class="card-title">Tiles</h3>
+							<hr />
+							<ul class="tile tile-3 text-center">
+								<li class="tile-hover-yellow">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-cart-plus text-yellow"></i>
+										</div>
+										<h5 class="tile-title">Additional Licenses</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-dark">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-download text-dark"></i>
+										</div>
+										<h5 class="tile-title">Downloads</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-green">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-mobile-alt text-green"></i>
+										</div>
+										<h5 class="tile-title">Devices & Licenses</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-orange">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-question-circle text-orange"></i>
+										</div>
+										<h5 class="tile-title">Custom Sales Qualifiers</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore
+											magna.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-purple">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-comments text-purple"></i>
+										</div>
+										<h5 class="tile-title">Text Message Service</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-red">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-book text-red"></i>
+										</div>
+										<h5 class="tile-title">Literature Fulfillment</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-purple">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-envelope text-purple"></i>
+										</div>
+										<h5 class="tile-title">Email Follow-Up</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-teal">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-user-tie text-teal"></i>
+										</div>
+										<h5 class="tile-title">VIP Alerts</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-blue">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-chart-pie text-blue"></i>
+										</div>
+										<h5 class="tile-title">Dashboard</h5>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card" data-refine="basic tiles">
+						<div class="card-body">
+							<h3 class="card-title">Basic Tiles</h3>
+							<hr />
+							<ul class="tile tile-3 tile-basic">
+								<li>
+									<div>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+										<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+										exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in
+										voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									</div>
+								</li>
+								<li>
+									<div>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+										<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+										exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in
+										voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									</div>
+								</li>
+								<li>
+									<div>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+										<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+										exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in
+										voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card" data-refine="fieldset">
+						<div class="card-body">
+							<h3 class="card-title">Fieldset</h3>
+							<hr />
+							<form action="">
+								<fieldset class="fieldset fieldset-border">
+									<legend>Legend</legend>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+										<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+										exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in
+										voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									</p>
+									<div class="form-group form-required">
+										<label for="">Sample Label</label>
+										<input type="text" class="form-control" />
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<!-- 
+                            <div class="card" data-refine="image thumbnail">
+                                <div class="card-body">
+                                    <h3 class="card-title">Image Thumbnail</h3>
+                                    <hr />
+                                    <ul class="tile tile-basic tile-3">
+                                        <li>
+                                            <div class="card text-center">
+                                                <h5 class="card-header">
+                                                    Uploadedfilename
+                                                </h5>
+                                                <div class="card-body">
+                                                    <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
+                                                    <div>200 x 200</div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <a href="#" class="btn btn-danger btn-sm">Remove</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card text-center">
+                                                <h5 class="card-header">
+                                                    Uploadedfilename
+                                                </h5>
+                                                <div class="card-body">
+                                                    <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
+                                                    <div>200 x 200</div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <a href="#" class="btn btn-danger btn-sm">Remove</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card text-center">
+                                                <h5 class="card-header">
+                                                    Uploadedfilename
+                                                </h5>
+                                                <div class="card-body">
+                                                    <img class="img-thumbnail mb-3" src="http://lorempixel.com/200/200/nature/">
+                                                    <div>200 x 200</div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <a href="#" class="btn btn-danger btn-sm">Remove</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+
+					<div class="row" data-refine="grid tiles">
+						<div class="col-lg-8">
+							<div class="card">
+								<div class="card-body">
+									<h3 class="card-title">Grid + Tiles</h3>
+									<hr />
+									<ul class="tile tile-2 tile-basic">
+										<li>
+											<div>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+												<a href="">sed do eiusmod tempor incididunt</a> ut
+												labore et dolore magna aliqua. Ut enim ad minim veniam,
+												quis nostrud exercitation ullamco laboris nisi ut
+												aliquip ex ea commodo consequat. Duis aute irure dolor
+												in reprehenderit in voluptate velit esse cillum dolore
+												eu fugiat nulla pariatur.
+											</div>
+										</li>
+										<li>
+											<div>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+												<a href="">sed do eiusmod tempor incididunt</a> ut
+												labore et dolore magna aliqua. Ut enim ad minim veniam,
+												quis nostrud exercitation ullamco laboris nisi ut
+												aliquip ex ea commodo consequat. Duis aute irure dolor
+												in reprehenderit in voluptate velit esse cillum dolore
+												eu fugiat nulla pariatur.
+											</div>
+										</li>
+										<li>
+											<div>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+												<a href="">sed do eiusmod tempor incididunt</a> ut
+												labore et dolore magna aliqua. Ut enim ad minim veniam,
+												quis nostrud exercitation ullamco laboris nisi ut
+												aliquip ex ea commodo consequat. Duis aute irure dolor
+												in reprehenderit in voluptate velit esse cillum dolore
+												eu fugiat nulla pariatur.
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Heading</h5>
+									<hr />
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Heading</h5>
+									<hr />
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									<a href="">sed do eiusmod tempor incididunt</a> ut labore et
+									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<footer></footer>
+			</main>
+		</div>
 
 		<script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
 		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
@@ -509,6 +517,7 @@
 				push: true,
 				direction: "left",
 				toggle: $(".nav-toggle"),
+				responsive: true,
 			});
 
 			var states = [
@@ -589,7 +598,12 @@
 				}
 			);
 
-			$(".refine").refine();
+            $(".refine").refine();
+            
+            $("aside .nav-link").on("click", function(){
+                $("aside .nav-link").removeClass("active");
+                $(this).addClass("active");
+            });
 		</script>
 	</body>
 </html>
