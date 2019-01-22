@@ -42,7 +42,9 @@
             }
 
             $(window).on("resize", function(){
-                if(settings.responsive && $(window).width() < settings.breakpoint){
+                if(settings.responsive && $(window).width() > settings.breakpoint){
+                    open();
+                }else{
                     close();
                 }
             })
@@ -58,8 +60,7 @@
                     toggle();
                 })
             }
-            
-			this.render();
+
 		},
 
 		hide: function(e) {
@@ -112,6 +113,8 @@
             if( settings.open && $(window).width() > settings.breakpoint ){
                 styles.content.marginRight = 0;
             }
+
+            styles.slideout.width = width;
 
 			this.slideout.css(styles.slideout);
 			this.content.css(styles.content);

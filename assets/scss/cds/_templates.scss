@@ -7,10 +7,9 @@
         width: $slideout-width;
         flex-shrink: 0;
         height: 100%;
-        margin-left: -100%;
         background-color: $white;
         z-index: $zindex-popover;
-        box-shadow: $box-shadow-sm;
+        box-shadow: $box-shadow;
         overflow-y: auto;
         overflow-x: hidden;
     }

@@ -24,25 +24,22 @@
 		<div class="template template-dashboard">
 			<aside>
 				<div>
-					<ul class="nav nav-primary-light"></ul>
+					<ul class="nav nav-lg nav-primary-light"></ul>
 
-					<ul class="nav nav-sm nav-pills flex-column p-2">
+					<ul class="nav nav-white flex-column">
 						<li class="nav-item nav-header">Main Menu</li>
-						<li class="nav-item dropdown">
+						<li class="nav-item">
 							<a
-								class="nav-link dropdown-toggle"
+								class="nav-link dropdown-toggle active"
 								data-toggle="collapse"
 								data-target="#dropdown-1"
 								href="#"
-								role="button"
-								aria-haspopup="true"
-								aria-expanded="false"
 								><i class="fas fa-star nav-icon"></i>Link #1</a
 							>
-							<div id="dropdown-1" class="collapse">
-								<ul class="nav flex-column pl-4">
+							<div id="dropdown-1" class="collapse show">
+								<ul class="nav nav-dropdown flex-column">
 									<li class="nav-item">
-										<a class="nav-link" href="#">Sub Link #1</a>
+										<a class="nav-link active" href="#">Sub Link #1</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" href="#">Sub Link #2</a>
@@ -54,7 +51,7 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#"
+							<a class="nav-link" href="#"
 								><i class="fas fa-star nav-icon"></i>Link #2</a
 							>
 						</li>
@@ -80,11 +77,9 @@
 
 			<main>
 				<header>
-					<ul class="nav nav-primary justify-content-between">
+					<ul class="nav nav-lg nav-primary justify-content-between">
 						<li class="nav-item d-block d-md-none">
-							<a class="nav-toggle nav-link">
-								<i class="fas fa-bars fa-2x"></i>
-							</a>
+							<a class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
 						</li>
 
 						<li class="nav-item flex-fill d-none d-md-block">
@@ -93,7 +88,7 @@
 								<li class="nav-item">
 									<a class="nav-link disabled" href="#">Disabled</a>
 								</li>
-								<li class="nav-item dropdown">
+								<li class="nav-item">
 									<a
 										class="nav-link dropdown-toggle"
 										data-toggle="dropdown"
@@ -109,9 +104,9 @@
 								</li>
 							</ul>
 						</li>
-						<li class="nav-item nav-link dropdown">
+						<li class="nav-item p-3">
 							<a
-								class="btn btn-sm bg-primary-light text-white"
+								class="nav-btn"
 								data-toggle="dropdown"
 								data-boundary="window"
 								href="#"
@@ -127,6 +122,85 @@
 				</header>
 
 				<section class="container">
+					<div class="card">
+						<div class="card-body">
+							<h3 class="card-title">Tabs & Pills</h3>
+							<hr />
+							<ul class="nav nav-tabs" id="tab-list">
+								<li class="nav-item">
+									<a
+										class="nav-link active"
+										id="home-tab"
+										data-toggle="tab"
+										href="#tab-1"
+										>Home</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										id="profile-tab"
+										data-toggle="tab"
+										href="#tab-2"
+										>Profile</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										id="contact-tab"
+										data-toggle="tab"
+										href="#tab-3"
+										>Contact</a
+									>
+								</li>
+							</ul>
+							<div class="tab-content p-3" id="pill-content">
+								<div class="tab-pane fade show active" id="tab-1">Tab #1</div>
+								<div class="tab-pane fade" id="tab-2">Tab #2</div>
+								<div class="tab-pane fade" id="tab-3">Tab #3</div>
+							</div>
+
+							<br />
+
+							<ul class="nav nav-pills" id="pill-list">
+								<li class="nav-item">
+									<a
+										class="nav-link active"
+										id="home-pill"
+										data-toggle="pill"
+										href="#pill-1"
+										>Home</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										id="profile-pill"
+										data-toggle="pill"
+										href="#pill-2"
+										>Profile</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										id="contact-pill"
+										data-toggle="pill"
+										href="#pill-3"
+										>Contact</a
+									>
+								</li>
+							</ul>
+							<div class="tab-content p-3">
+								<div class="tab-pane fade show active" id="pill-1">
+									Pill Tab #1
+								</div>
+								<div class="tab-pane fade" id="pill-2">Pill Tab #2</div>
+								<div class="tab-pane fade" id="pill-3">Pill Tab #3</div>
+							</div>
+						</div>
+					</div>
 					<div class="card">
 						<div class="card-body">
 							<h3 class="card-title">Refine</h3>
@@ -501,15 +575,15 @@
 
 		<script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
 		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
+		<script src="assets/js/jquery/plugins/datatables.js"></script>
+		<script src="assets/js/jquery/plugins/slick.js"></script>
 		<script src="assets/js/jquery/plugins/typeahead.js"></script>
-		<script src="assets/js/jquery/plugins/datatables.min.js"></script>
-		<script src="assets/js/jquery/plugins/popper.js"></script>
 		<script src="assets/js/jquery/custom/slideout.js"></script>
 		<script src="assets/js/jquery/custom/overlay.js"></script>
 		<script src="assets/js/jquery/custom/affix.js"></script>
 		<script src="assets/js/jquery/custom/scroll.js"></script>
 		<script src="assets/js/jquery/custom/refine.js"></script>
-		<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+		<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 		<script>
 			var slideout = $("aside").slideout({
@@ -598,12 +672,70 @@
 				}
 			);
 
-            $(".refine").refine();
-            
-            $("aside .nav-link").on("click", function(){
-                $("aside .nav-link").removeClass("active");
-                $(this).addClass("active");
-            });
+			$(".refine").refine();
+
+			var nav = {
+				main: function() {
+					$(".nav:not(.nav-dropdown) > .nav-item > .nav-link").on(
+						"click",
+						function(e) {
+							$(this)
+								.closest(".nav")
+								.find(".nav-link")
+								.removeClass("active");
+							$(this).addClass("active");
+							$(".collapse.show").collapse("hide");
+						}
+					);
+					return this;
+				},
+				dropdown: function() {
+					$(".nav.nav-dropdown > .nav-item > .nav-link").on("click", function(
+						e
+					) {
+						$(this)
+							.closest(".nav-dropdown")
+							.find(".nav-link")
+							.removeClass("active");
+						$(this).addClass("active");
+					});
+					return this;
+				},
+			};
+
+			// set active on clicked
+			// traverse dom to find out if its a dropdown
+			// find parent nav
+
+			$(".nav:not(.nav-tabs):not(.nav-pills) .nav-link").on(
+				"click",
+				function() {
+					var element = $(this);
+					var nav = element.closest(".nav");
+					var collapse = element.closest(".collapse");
+
+					var methods = {
+						setActive: function() {
+							element.addClass("active");
+
+							if (collapse.length > 0) {
+								collapse.prev().addClass("active");
+							} else {
+								$(".collapse").collapse("hide");
+							}
+							return this;
+						},
+
+						removeActive: function() {
+							nav.find(".nav-link.active").removeClass("active");
+
+							return this;
+						},
+					};
+
+					methods.removeActive().setActive();
+				}
+			);
 		</script>
 	</body>
 </html>

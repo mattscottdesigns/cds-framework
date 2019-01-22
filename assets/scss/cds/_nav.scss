@@ -1,8 +1,8 @@
 // ul.nav
 .nav {
-	position: relative;
 	color: $dark;
 	z-index: $zindex-dropdown;
+	align-items: center;
 
 	a {
 		width: 100%;
@@ -15,16 +15,14 @@
 
 	.nav-toggle {
 		cursor: pointer;
+		padding: 0.75rem 1.5rem;
 	}
 
 	.nav-header {
-		color: $dark;
-		background-color: $gray-200;
 		font-family: $headings-font-family;
 		text-transform: uppercase;
 		padding: 0.5rem 1.5rem;
 		margin-top: 2rem;
-		margin-bottom: 1rem;
 		font-weight: 800;
 	}
 
@@ -32,11 +30,20 @@
 		display: flex;
 		align-items: center;
 		padding: 0.75rem 1.5rem;
-        color: inherit;
-        
-        &.active{
-            border-radius: .25rem;
-        }
+		color: inherit;
+
+		&:hover {
+			.nav-icon {
+				@include animate("tada");
+			}
+		}
+
+		&.active {
+			.nav-icon {
+				@include animate("tada");
+				opacity: 1;
+			}
+		}
 
 		&.disabled {
 			opacity: 0.6;
@@ -46,84 +53,32 @@
 		.nav-icon,
 		.nav-link-icon {
 			margin-right: 0.5rem;
-			color: $light;
+			opacity: 0.3;
 		}
 	}
 
 	.nav-item {
 		position: relative;
 		display: flex;
-
-		.nav.nav-dropdown {
-			&.nav-left {
-				top: 0;
-				right: 200%;
-				left: auto;
-			}
-
-			&.nav-right {
-				top: 0;
-				left: 200%;
-				right: auto;
-			}
-
-			&.nav-top {
-				bottom: 200%;
-				top: auto;
-				right: 0;
-			}
-		}
-
-		&:hover {
-			> .nav.nav-dropdown.nav-left {
-				right: auto;
-				left: 100%;
-			}
-
-			> .nav.nav-dropdown.nav-right {
-				left: auto;
-				right: 100%;
-			}
-
-			> .nav.nav-dropdown.nav-top {
-				top: 100%;
-				bottom: auto;
-			}
-
-			> .nav.nav-dropdown.nav-bottom {
-				bottom: 100%;
-				top: auto;
-			}
-		}
 	}
 
 	.nav.nav-dropdown {
-		justify-content: initial !important;
-		color: $dark;
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-		position: absolute;
-		background-color: $white;
-		min-width: 260px;
-		border: 1px solid $light;
-		top: 0;
-		left: auto;
-		right: 100%;
-		z-index: $zindex-dropdown;
+		color: inherit;
+		padding: 0.75rem;
+
+		.nav-link.active {
+			border-radius: 0.25rem;
+		}
+	}
+
+	.nav-btn {
+		padding: 0.25rem 0.75rem;
+		box-shadow: $box-shadow-sm;
+		border-radius: 0.25rem;
 	}
 }
 
-.nav.nav-sm {
-	min-height: 3.5rem;
-
-	.nav-link {
-		min-height: 3.5rem;
-	}
-}
-
-.nav,
-.nav-md {
+.nav.nav-lg {
 	min-height: 4.5rem;
 
 	.nav-link {
@@ -131,18 +86,42 @@
 	}
 }
 
-.nav.nav-lg {
-	min-height: 5.5rem;
+.nav,
+.nav-md {
+	min-height: 3.5rem;
 
 	.nav-link {
-		min-height: 5.5rem;
+		min-height: 3.5rem;
 	}
 }
 
-.flex-column .nav-item {
-    flex-direction: column;
+.nav.nav-sm {
+	min-height: 2.5rem;
+
+	.nav-link {
+		min-height: 2.5rem;
+	}
+}
+
+.nav.flex-column .nav-item {
+	flex-direction: column;
+}
+
+.nav.flex-row .nav-item {
+	flex-direction: row;
+}
+
+.nav.nav-tabs,
+.nav.nav-pills{
+    .nav-link.active{
+        border-radius: .25rem;
+    }
 }
 
 @each $color, $value in $theme-colors {
-    @include nav-variant($color, $value);
+	@include nav-variant($color, $value);
+}
+
+@each $color, $value in $colors {
+	@include nav-variant($color, $value);
 }

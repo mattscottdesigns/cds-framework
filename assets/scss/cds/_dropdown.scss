@@ -1,7 +1,11 @@
 .dropdown-menu {
-	box-shadow: $box-shadow-sm;
+    box-shadow: $box-shadow-sm;
 }
 
 .dropdown-toggle:after{
     margin-left: .5rem;
+}
+
+aside .nav-item{
+    width: 100%;
 }
