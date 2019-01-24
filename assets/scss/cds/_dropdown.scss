@@ -6,6 +6,11 @@
     margin-left: .5rem;
 }
 
-aside .nav-item{
+
+.dropdown-toggle + *{
     width: 100%;
+}
+
+.dropdown-toggle{
+    color: inherit;
 }

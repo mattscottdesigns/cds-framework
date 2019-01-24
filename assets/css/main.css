@@ -9097,6 +9097,13 @@ body {
   .cds-framework .h1, .cds-framework .h2, .cds-framework .h3, .cds-framework .h4, .cds-framework .h5, .cds-framework .h6 {
     font-family: "Gotham XNarrow", sans-serif;
     font-weight: 600; }
+  .cds-framework .h1,
+  .cds-framework .h2,
+  .cds-framework .h3,
+  .cds-framework .h4,
+  .cds-framework .h5,
+  .cds-framework .h6 {
+    margin: 0; }
   .cds-framework h1, .cds-framework .h1 {
     letter-spacing: -0.1rem; }
   .cds-framework h2, .cds-framework .h2 {
@@ -9330,80 +9337,82 @@ body {
       color: #fff; }
   .cds-framework .nav {
     color: #424651;
-    z-index: 1000;
-    align-items: center; }
+    z-index: 1000; }
     .cds-framework .nav a {
       width: 100%; }
+    .cds-framework .nav .nav-space,
     .cds-framework .nav .nav-link,
     .cds-framework .nav .disabled {
       color: #424651; }
     .cds-framework .nav .nav-toggle {
-      cursor: pointer;
-      padding: 0.75rem 1.5rem; }
+      cursor: pointer; }
     .cds-framework .nav .nav-header {
       font-family: "Gotham XNarrow", sans-serif;
       text-transform: uppercase;
       padding: 0.5rem 1.5rem;
       margin-top: 2rem;
       font-weight: 800; }
+    .cds-framework .nav .nav-space,
     .cds-framework .nav .nav-link {
-      display: flex;
-      align-items: center;
       padding: 0.75rem 1.5rem;
-      color: inherit; }
-      .cds-framework .nav .nav-link.active .nav-icon {
-        opacity: 1; }
-      .cds-framework .nav .nav-link.disabled {
-        opacity: 0.6;
-        cursor: not-allowed; }
-      .cds-framework .nav .nav-link .nav-icon,
-      .cds-framework .nav .nav-link .nav-link-icon {
-        margin-right: 0.5rem;
-        opacity: 0.3; }
+      color: inherit;
+      display: flex;
+      align-items: center; }
+    .cds-framework .nav .nav-link.active .nav-icon {
+      opacity: 1; }
+    .cds-framework .nav .nav-link.disabled {
+      opacity: 0.6;
+      cursor: not-allowed; }
+    .cds-framework .nav .nav-link .nav-icon,
+    .cds-framework .nav .nav-link .nav-link-icon {
+      margin-right: 0.5rem;
+      opacity: 0.3; }
     .cds-framework .nav .nav-item {
-      position: relative;
-      display: flex; }
+      position: relative; }
     .cds-framework .nav .nav.nav-dropdown {
       color: inherit;
       padding: 0.75rem; }
       .cds-framework .nav .nav.nav-dropdown .nav-link.active {
         border-radius: 0.25rem; }
+      .cds-framework .nav .nav.nav-dropdown .nav-item {
+        width: 100%; }
     .cds-framework .nav .nav-btn {
+      display: block;
       padding: 0.25rem 0.75rem;
       box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
       border-radius: 0.25rem; }
-  .cds-framework .nav.nav-lg {
-    min-height: 4.5rem; }
-    .cds-framework .nav.nav-lg .nav-link {
-      min-height: 4.5rem; }
-  .cds-framework .nav,
-  .cds-framework .nav-md {
-    min-height: 3.5rem; }
-    .cds-framework .nav .nav-link,
-    .cds-framework .nav-md .nav-link {
-      min-height: 3.5rem; }
-  .cds-framework .nav.nav-sm {
-    min-height: 2.5rem; }
-    .cds-framework .nav.nav-sm .nav-link {
-      min-height: 2.5rem; }
-  .cds-framework .nav.flex-column .nav-item {
-    flex-direction: column; }
   .cds-framework .nav.nav-tabs .nav-link.active,
   .cds-framework .nav.nav-pills .nav-link.active {
-    border-radius: .25rem; }
+    border-radius: 0.25rem; }
+  .cds-framework .nav.nav-md {
+    min-height: 3.5rem !important; }
+    .cds-framework .nav.nav-md .nav-space,
+    .cds-framework .nav.nav-md .nav-link {
+      height: 3.5rem !important; }
+  .cds-framework .nav.nav-sm {
+    min-height: 2.5rem !important; }
+    .cds-framework .nav.nav-sm .nav-space,
+    .cds-framework .nav.nav-sm .nav-link {
+      height: 2.5rem !important; }
+  .cds-framework .nav.nav-lg {
+    min-height: 4.5rem !important; }
+    .cds-framework .nav.nav-lg .nav-space,
+    .cds-framework .nav.nav-lg .nav-link {
+      height: 4.5rem !important; }
   .cds-framework .nav-primary {
     background-color: #004fa0;
     color: #fff; }
-    .cds-framework .nav-primary .nav-link.active {
+    .cds-framework .nav-primary .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-primary .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-primary .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-primary .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-primary .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-primary .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-primary .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-primary .nav-btn {
@@ -9416,16 +9425,17 @@ body {
   .cds-framework .nav-secondary {
     background-color: #20a58d;
     color: #fff; }
-    .cds-framework .nav-secondary .nav-link.active {
+    .cds-framework .nav-secondary .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-secondary .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-secondary .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-secondary .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-secondary .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-secondary .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-secondary .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-secondary .nav-btn {
@@ -9438,16 +9448,17 @@ body {
   .cds-framework .nav-success {
     background-color: #58b43c;
     color: #fff; }
-    .cds-framework .nav-success .nav-link.active {
+    .cds-framework .nav-success .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-success .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-success .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-success .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-success .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-success .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-success .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-success .nav-btn {
@@ -9460,16 +9471,17 @@ body {
   .cds-framework .nav-info {
     background-color: #17a2b8;
     color: #fff; }
-    .cds-framework .nav-info .nav-link.active {
+    .cds-framework .nav-info .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-info .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-info .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-info .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-info .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-info .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-info .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-info .nav-btn {
@@ -9482,16 +9494,17 @@ body {
   .cds-framework .nav-warning {
     background-color: #f6c913;
     color: #fff; }
-    .cds-framework .nav-warning .nav-link.active {
+    .cds-framework .nav-warning .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-warning .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-warning .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-warning .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-warning .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-warning .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-warning .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-warning .nav-btn {
@@ -9504,16 +9517,17 @@ body {
   .cds-framework .nav-danger {
     background-color: #c2352c;
     color: #fff; }
-    .cds-framework .nav-danger .nav-link.active {
+    .cds-framework .nav-danger .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-danger .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-danger .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-danger .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-danger .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-danger .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-danger .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-danger .nav-btn {
@@ -9526,16 +9540,17 @@ body {
   .cds-framework .nav-light {
     background-color: #e9ecef;
     color: #212529; }
-    .cds-framework .nav-light .nav-link.active {
+    .cds-framework .nav-light .nav-item .nav-link.active {
       color: #212529;
-      background: rgba(33, 37, 41, 0.05); }
-      .cds-framework .nav-light .nav-link.active .nav-icon {
+      background: rgba(33, 37, 41, 0.2); }
+      .cds-framework .nav-light .nav-item .nav-link.active .nav-icon {
         color: #212529; }
+    .cds-framework .nav-light .nav-item .nav-link {
+      color: #212529; }
     .cds-framework .nav-light .nav-dropdown {
       background: linear-gradient(180deg, rgba(33, 37, 41, 0.1), rgba(33, 37, 41, 0.05)); }
       .cds-framework .nav-light .nav-dropdown .nav-link.active {
-        background: rgba(33, 37, 41, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(33, 37, 41, 0.075); }
+        background: rgba(33, 37, 41, 0.2); }
     .cds-framework .nav-light .nav-icon {
       color: rgba(33, 37, 41, 0.75); }
     .cds-framework .nav-light .nav-btn {
@@ -9548,16 +9563,17 @@ body {
   .cds-framework .nav-dark {
     background-color: #424651;
     color: #fff; }
-    .cds-framework .nav-dark .nav-link.active {
+    .cds-framework .nav-dark .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-dark .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-dark .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-dark .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-dark .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-dark .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-dark .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-dark .nav-btn {
@@ -9570,16 +9586,17 @@ body {
   .cds-framework .nav-primary-light {
     background-color: #005cba;
     color: #fff; }
-    .cds-framework .nav-primary-light .nav-link.active {
+    .cds-framework .nav-primary-light .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-primary-light .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-primary-light .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-primary-light .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-primary-light .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-primary-light .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-primary-light .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-primary-light .nav-btn {
@@ -9592,16 +9609,17 @@ body {
   .cds-framework .nav-blue {
     background-color: #245fd8;
     color: #fff; }
-    .cds-framework .nav-blue .nav-link.active {
+    .cds-framework .nav-blue .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-blue .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-blue .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-blue .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-blue .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-blue .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-blue .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-blue .nav-btn {
@@ -9614,16 +9632,17 @@ body {
   .cds-framework .nav-indigo {
     background-color: #6610f2;
     color: #fff; }
-    .cds-framework .nav-indigo .nav-link.active {
+    .cds-framework .nav-indigo .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-indigo .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-indigo .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-indigo .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-indigo .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-indigo .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-indigo .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-indigo .nav-btn {
@@ -9636,16 +9655,17 @@ body {
   .cds-framework .nav-purple {
     background-color: #6f42c1;
     color: #fff; }
-    .cds-framework .nav-purple .nav-link.active {
+    .cds-framework .nav-purple .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-purple .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-purple .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-purple .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-purple .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-purple .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-purple .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-purple .nav-btn {
@@ -9658,16 +9678,17 @@ body {
   .cds-framework .nav-pink {
     background-color: #e83e8c;
     color: #fff; }
-    .cds-framework .nav-pink .nav-link.active {
+    .cds-framework .nav-pink .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-pink .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-pink .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-pink .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-pink .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-pink .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-pink .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-pink .nav-btn {
@@ -9680,16 +9701,17 @@ body {
   .cds-framework .nav-red {
     background-color: #c2352c;
     color: #fff; }
-    .cds-framework .nav-red .nav-link.active {
+    .cds-framework .nav-red .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-red .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-red .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-red .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-red .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-red .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-red .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-red .nav-btn {
@@ -9702,16 +9724,17 @@ body {
   .cds-framework .nav-orange {
     background-color: #eb7532;
     color: #fff; }
-    .cds-framework .nav-orange .nav-link.active {
+    .cds-framework .nav-orange .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-orange .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-orange .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-orange .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-orange .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-orange .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-orange .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-orange .nav-btn {
@@ -9724,16 +9747,17 @@ body {
   .cds-framework .nav-yellow {
     background-color: #f6c913;
     color: #fff; }
-    .cds-framework .nav-yellow .nav-link.active {
+    .cds-framework .nav-yellow .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-yellow .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-yellow .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-yellow .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-yellow .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-yellow .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-yellow .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-yellow .nav-btn {
@@ -9746,16 +9770,17 @@ body {
   .cds-framework .nav-green {
     background-color: #58b43c;
     color: #fff; }
-    .cds-framework .nav-green .nav-link.active {
+    .cds-framework .nav-green .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-green .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-green .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-green .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-green .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-green .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-green .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-green .nav-btn {
@@ -9768,16 +9793,17 @@ body {
   .cds-framework .nav-teal {
     background-color: #20a58d;
     color: #fff; }
-    .cds-framework .nav-teal .nav-link.active {
+    .cds-framework .nav-teal .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-teal .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-teal .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-teal .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-teal .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-teal .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-teal .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-teal .nav-btn {
@@ -9790,16 +9816,17 @@ body {
   .cds-framework .nav-cyan {
     background-color: #17a2b8;
     color: #fff; }
-    .cds-framework .nav-cyan .nav-link.active {
+    .cds-framework .nav-cyan .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-cyan .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-cyan .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-cyan .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-cyan .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-cyan .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-cyan .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-cyan .nav-btn {
@@ -9812,16 +9839,17 @@ body {
   .cds-framework .nav-white {
     background-color: #fff;
     color: #212529; }
-    .cds-framework .nav-white .nav-link.active {
+    .cds-framework .nav-white .nav-item .nav-link.active {
       color: #212529;
-      background: rgba(33, 37, 41, 0.05); }
-      .cds-framework .nav-white .nav-link.active .nav-icon {
+      background: rgba(33, 37, 41, 0.2); }
+      .cds-framework .nav-white .nav-item .nav-link.active .nav-icon {
         color: #212529; }
+    .cds-framework .nav-white .nav-item .nav-link {
+      color: #212529; }
     .cds-framework .nav-white .nav-dropdown {
       background: linear-gradient(180deg, rgba(33, 37, 41, 0.1), rgba(33, 37, 41, 0.05)); }
       .cds-framework .nav-white .nav-dropdown .nav-link.active {
-        background: rgba(33, 37, 41, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(33, 37, 41, 0.075); }
+        background: rgba(33, 37, 41, 0.2); }
     .cds-framework .nav-white .nav-icon {
       color: rgba(33, 37, 41, 0.75); }
     .cds-framework .nav-white .nav-btn {
@@ -9834,16 +9862,17 @@ body {
   .cds-framework .nav-gray {
     background-color: #6c757d;
     color: #fff; }
-    .cds-framework .nav-gray .nav-link.active {
+    .cds-framework .nav-gray .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-gray .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-gray .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-gray .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-gray .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-gray .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-gray .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-gray .nav-btn {
@@ -9856,16 +9885,17 @@ body {
   .cds-framework .nav-gray-dark {
     background-color: #343a40;
     color: #fff; }
-    .cds-framework .nav-gray-dark .nav-link.active {
+    .cds-framework .nav-gray-dark .nav-item .nav-link.active {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05); }
-      .cds-framework .nav-gray-dark .nav-link.active .nav-icon {
+      background: rgba(255, 255, 255, 0.2); }
+      .cds-framework .nav-gray-dark .nav-item .nav-link.active .nav-icon {
         color: #fff; }
+    .cds-framework .nav-gray-dark .nav-item .nav-link {
+      color: #fff; }
     .cds-framework .nav-gray-dark .nav-dropdown {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
       .cds-framework .nav-gray-dark .nav-dropdown .nav-link.active {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.075); }
+        background: rgba(255, 255, 255, 0.2); }
     .cds-framework .nav-gray-dark .nav-icon {
       color: rgba(255, 255, 255, 0.75); }
     .cds-framework .nav-gray-dark .nav-btn {
@@ -9979,8 +10009,10 @@ body {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
   .cds-framework .dropdown-toggle:after {
     margin-left: .5rem; }
-  .cds-framework aside .nav-item {
+  .cds-framework .dropdown-toggle + * {
     width: 100%; }
+  .cds-framework .dropdown-toggle {
+    color: inherit; }
   .cds-framework ul.tile {
     display: flex;
     align-items: strech;

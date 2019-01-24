@@ -23,7 +23,7 @@
 
 		<div class="template template-application">
 			<aside class="bg-primary">
-				<ul class="nav nav-primary flex-column">
+				<ul class="nav nav-primary nav-md flex-column">
 					<li class="nav-item nav-header">Main Menu</li>
 					<li class="nav-item">
 						<a
@@ -37,7 +37,7 @@
 							><i class="fas fa-star nav-icon"></i>Link #1</a
 						>
 						<div id="collapse-1" class="collapse">
-							<ul class="nav nav-dropdown flex-column">
+							<ul class="nav nav-dropdown">
 								<li class="nav-item">
 									<a class="nav-link" href="#">Sub Link #1</a>
 								</li>
@@ -76,23 +76,24 @@
 
 			<main>
 				<header>
-					<ul class="nav nav-lg nav-light">
-						<li class="nav-item">
-							<a href="#" class="px-4">
-								<img
-									src="assets/images/favicon-192x192.png"
-									width="35"
-									height="35"
-									alt=""
-								/>
-							</a>
+					<ul class="nav nav-light align-items-center nav-lg">
+						<li class="nav-space">
+                            <img
+                                src="assets/images/favicon-192x192.png"
+                                width="35"
+                                height="35"
+                                alt=""
+                            />
 						</li>
-						<li class="nav-item flex-fill p-4">Application Name</li>
+						<li class="nav-item nav-space">
+                            Application Name
+                        </li>
+                        <li class="nav-item flex-fill"> </li>
 						<li class="nav-item d-md-none">
-							<a class="nav-toggle"> <i class="fas fa-bars fa-2x"></i> </a>
+							<a class="nav-toggle nav-space"> <i class="fas fa-bars fa-2x"></i> </a>
 						</li>
-						<li class="nav-item flex-fill d-none d-md-block">
-							<ul class="nav justify-content-end">
+						<li class="nav-item d-none d-md-block">
+							<ul class="nav">
 								<li class="nav-item">
 									<a
 										class="nav-link dropdown-toggle"
@@ -664,6 +665,9 @@
 					methods.removeActive().setActive();
 				}
 			);
+            
+            
+
 		</script>
 	</body>
 </html>
