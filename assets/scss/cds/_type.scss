@@ -20,6 +20,15 @@ h6,
 	font-weight: font-weight("lg");
 }
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	margin: 0;
+}
+
 h1,
 .h1 {
 	letter-spacing: -0.1rem;
@@ -40,10 +49,6 @@ h4,
 	letter-spacing: -0.025rem;
 }
 
-h5,
-.h5 {
-
-}
 
 h6,
 .h6 {

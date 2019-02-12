@@ -19,3 +19,15 @@
 .slideout-content{
     transition: margin transition("sm");
 }
+
+.slideout-slide:before{
+    content: '';
+    display: block;
+    position: fixed;
+    background: #000;
+    right: 0;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+
+}
