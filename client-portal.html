@@ -24,118 +24,196 @@
 		<div class="template">
 			<main>
 				<header>
-					<ul class="nav nav-primary">
-						<li class="nav-item px-4"><h4 class="m-0">Client Portal</h4></li>
-						<li class="nav-item px-2 flex-fill">
-							<select class="form-control">
-								<option value="">Home</option>
-								<option value="">Event Admin</option>
-								<option value="">Backend</option>
-								<option value="">Xpress Reports</option>
-								<option value="">Data Sense</option>
-								<option value="">eReg</option>
-							</select>
-						</li>
-						<li class="nav-item px-4 dropdown">
-							<a
-								class="dropdown-toggle text-white"
-								data-toggle="dropdown"
-								data-boundary="window"
-								href="#"
-								><i class="fas fa-user-circle fa-2x"></i
-							></a>
-							<div class="dropdown-menu p-3">
-								<a class="dropdown-item" href="#">
-									<small>Username</small>
-									<h6>mscott</h6>
-								</a>
-								<a class="dropdown-item" href="#">
-									<small>Event</small>
-									<h6>Master Medical 2018</h6>
-								</a>
-								<div class="dropdown-divider"></div>
-								<a href="" class="dropdown-item px-3">
-									<button type="button" class="btn btn-sm btn-primary">
-										Change Event
-									</button>
-									<button type="button" class="btn btn-sm btn-danger">
-										Logout
-									</button>
-								</a>
-							</div>
-						</li>
-					</ul>
+                    <div class="bg-light shadow position-relative">
+                        <div class="container">
+                            <ul class="nav nav-light nav-lg align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-space logo">
+                                        <img src="assets/images/logo.png" />
+                                    </a>
+                                </li>
+                                <li class="nav-item flex-fill"></li>
+
+                                <li class="nav-item d-none d-md-flex">
+                                    <ul class="nav nav-lg nav-light">
+                                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link dropdown-toggle"
+                                                data-toggle="dropdown"
+                                                href="#"
+                                                role="button"
+                                                >Link #1</a
+                                            >
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Sublink #1</a>
+                                                <a class="dropdown-item" href="#">Sublink #2</a>
+                                                <a class="dropdown-item" href="#">Sublink #3</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+					<div class="bg-primary">
+                        <div class="container">
+                            <ul class="nav nav-primary nav-md align-items-center py-3">
+            
+                                <li class="nav-item pl-5 pr-2 flex-fill">
+                                    <select class="form-control selectpicker" data-live-search="true">
+                                        <option value="" selected>Client Portal</option>
+                                        <option value="">Event Admin</option>
+                                        <option value="">Backend</option>
+                                        <option value="">Data Sense</option>
+                                        <option value="">eReg</option>
+                                    </select>
+                                </li>
+                                <li class="nav-item px-4 dropdown">
+                                    <a
+                                        class="dropdown-toggle text-white"
+                                        data-toggle="dropdown"
+                                        data-boundary="window"
+                                        href="#"
+                                        ><i class="fas fa-user-circle fa-2x"></i
+                                    ></a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">
+                                            <small>Username</small>
+                                            <h6>mscott</h6>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <small>Event</small>
+                                            <h6>Master Medical 2018</h6>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="" class="dropdown-item px-3">
+                                            <button type="button" class="btn btn-sm btn-primary">
+                                                Change Event
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-danger">
+                                                Logout
+                                            </button>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 				</header>
-				<section class="container">
-					<h2 class="text-center mb-4">What would you like to do?</h2>
-					<ul class="tile tile-3 text-center">
-						<li class="tile-hover-primary">
-							<div class="tile-body">
-								<div class="tile-icon">
-									<i class="fas fa-toolbox text-primary"></i>
-								</div>
-								<h5 class="tile-title">Event Admin</h5>
-								<div class="tile-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore.
-								</div>
-							</div>
-						</li>
-						<li class="tile-hover-primary">
-							<div class="tile-body">
-								<div class="tile-icon">
-									<i class="fas fa-cogs text-primary"></i>
-								</div>
-								<h5 class="tile-title">Backend</h5>
-								<div class="tile-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore.
-								</div>
-							</div>
-						</li>
-						<li class="tile-hover-primary">
-							<div class="tile-body">
-								<div class="tile-icon">
-									<i class="fas fa-chart-pie text-primary"></i>
-								</div>
-								<h5 class="tile-title">Xpress Reports</h5>
-								<div class="tile-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore.
+				<section class="container p-4 p-md-5">
+					<div class="row">
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3>Welcome to Client Portal</h3>
+                                    <hr />
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                        </div>
+						<div class="col-lg-4">
+							<div class="card">
+								<div class="card-body">
+									<h3>My Events</h3>
+									<hr />
+									<select
+										class="selectpicker form-control"
+										data-live-search="true"
+										title="Select an event..."
+									>
+										<option data-tokens="RAPID RAPD0519" data-subtext="RAPD0519"
+											>RAPID</option
+										>
+										<option
+											data-tokens="HOUSTEX HOUS0219"
+											data-subtext="HOUS0219"
+											>HOUSTEX</option
+										>
+									</select>
 								</div>
 							</div>
-						</li>
-						<li class="tile-hover-primary">
-							<div class="tile-body">
-								<div class="tile-icon">
-									<i class="fas fa-chart-line text-primary"></i>
-								</div>
-								<h5 class="tile-title">Data Sense</h5>
-								<div class="tile-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna.
-								</div>
-							</div>
-						</li>
-						<li class="tile-hover-primary">
-							<div class="tile-body">
-								<div class="tile-icon">
-									<i class="fas fa-id-badge text-primary"></i>
-								</div>
-								<h5 class="tile-title">eReg</h5>
-								<div class="tile-text">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore.
-								</div>
-							</div>
-						</li>
-					</ul>
+						</div>
+						
+					</div>
+					<div class="card">
+						<div class="card-body">
+							<ul class="tile tile-3 text-center">
+								<li class="tile-hover-primary">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-toolbox text-primary"></i>
+										</div>
+										<h4 class="tile-title">Event Admin</h4>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-primary">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-cogs text-primary"></i>
+										</div>
+										<h4 class="tile-title">Backend</h4>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-primary">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-chart-pie text-primary"></i>
+										</div>
+										<h4 class="tile-title">Xpress Reports</h4>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-primary">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-chart-line text-primary"></i>
+										</div>
+										<h4 class="tile-title">Data Sense</h4>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore
+											magna.
+										</div>
+									</div>
+								</li>
+								<li class="tile-hover-primary">
+									<div class="tile-body">
+										<div class="tile-icon">
+											<i class="fas fa-id-badge text-primary"></i>
+										</div>
+										<h4 class="tile-title">eReg</h4>
+										<div class="tile-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore.
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</section>
 				<footer></footer>
 			</main>
 		</div>
 
 		<script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
+		<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/jquery/plugins/bootstrap-select.js"></script>
 		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
 		<script src="assets/js/jquery/plugins/datatables.js"></script>
 		<script src="assets/js/jquery/custom/slideout.js"></script>
@@ -143,9 +221,6 @@
 		<script src="assets/js/jquery/custom/affix.js"></script>
 		<script src="assets/js/jquery/custom/scroll.js"></script>
 		<script src="assets/js/jquery/plugins/slick.js"></script>
-		<script src="assets/js/jquery/plugins/popper.js"></script>
-
-		<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 		<script>
 			var slideout = $("aside").slideout({
