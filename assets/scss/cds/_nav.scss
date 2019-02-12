@@ -93,34 +93,9 @@
 	}
 }
 
-
-.nav.nav-md{
-    min-height: 3.5rem !important;
-
-    .nav-space,
-    .nav-link{
-        height: 3.5rem !important;
-    }
-}
-
-.nav.nav-sm{
-    min-height: 2.5rem !important;
-
-    .nav-space,
-    .nav-link{
-        height: 2.5rem !important;
-    }
-}
-
-.nav.nav-lg{
-    min-height: 4.5rem !important;
-
-    .nav-space,
-    .nav-link{
-        height: 4.5rem !important;
-    }
-}
-
+@include nav-size-variant("sm", 2.5rem);
+@include nav-size-variant("md", 3.5rem);
+@include nav-size-variant("lg", 4.5rem);
 
 @each $color, $value in $theme-colors {
 	@include nav-variant($color, $value);

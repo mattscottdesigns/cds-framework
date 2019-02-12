@@ -63,25 +63,27 @@ $colors: map-merge(
 $colors
 );
 
-$primary: #004fa0;
+$primary: #005cb9;
 $primary-light: lighten($primary, 5%);
-$secondary: #20a58d;
+$primary-dark: darken($primary, 5%);
+$secondary: #00B7B9;
 $success: $green;
 $info: $cyan;
 $warning: $yellow;
 $danger: $red;
 $light: $gray-200;
-$dark: #424651;
-$darker: #232e39;
+$dark: #4a525f;
 
 $theme-colors: ();
 
 $theme-colors: map-merge(
 (
+    "white": $white,
     "light": $light,
 	"dark": $dark,
 	"primary": $primary,
-	"primary-light": $primary-light,
+    "primary-light": $primary-light,
+    "primary-dark": $primary-dark,
 	"secondary": $secondary,
 	"success": $success,
 	"info": $info,
@@ -115,3 +117,22 @@ $body-color: $gray-800;
 $component-active-bg: theme-color("secondary");
 $link-color: theme-color("secondary") !default;
 $slideout-width: 275px;
+
+
+$color-red-error: rgb(185, 74, 72) !default;
+$color-green-success: #28a745;
+$color-grey-arrow: rgba(204, 204, 204, 0.2) !default;
+
+$width-default: 220px !default; // 3 960px-grid columns
+
+$zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
+
+//** Placeholder text color
+$input-color-placeholder: #fff !default;
+$input-alt-color-placeholder: #fff !default;
+
+$input-padding-y-sm: .25rem !default;
+$input-padding-x-sm: .5rem !default;
+
+$input-padding-y-lg: 0.5rem !default;
+$input-padding-x-lg: 1rem !default;

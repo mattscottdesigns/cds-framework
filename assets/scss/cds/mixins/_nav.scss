@@ -1,10 +1,10 @@
 @mixin nav-variant($color, $value) {
 	.nav-#{$color} {
 		background-color: $value;
-		color: color-yiq($value);
+		color: lighten(color-yiq($value), 15%);
 
-		.nav-item {
-			.nav-link.active {
+		> .nav-item {
+			> .nav-link.active {
 				color: color-yiq($value);
 				background: rgba(color-yiq($value), 0.2);
 
@@ -13,9 +13,6 @@
 				}
 			}
 
-			.nav-link {
-				color: color-yiq($value);
-			}
 		}
 
 		.nav-dropdown {
@@ -49,4 +46,21 @@
 			}
 		}
 	}
+}
+
+
+@mixin nav-size-variant($size, $value) {
+    .nav.nav-#{$size}{
+        min-height: $value;
+        
+        .nav-space{
+            height: $value;
+        }
+ 
+        > .nav-item{
+            > .nav-link{
+                height: $value;
+            }
+        }
+    }
 }

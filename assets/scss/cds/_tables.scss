@@ -10,6 +10,10 @@
 	}
 }
 
+.table caption{
+    caption-side: top;
+}
+
 @each $color, $value in $theme-colors {
 	.table .thead-#{$color} th {
 		color: #fff;
