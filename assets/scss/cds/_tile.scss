@@ -11,8 +11,8 @@ ul.tile > li {
 	flex: 1;
 	flex-basis: calc(100% - 1.5rem);
 	min-width: 220px;
-	background-color: $gray-100;
-	border: 1px solid $gray-400;
+	background-color: lighten($gray-100, 3%);
+	border: 1px solid $gray-300;
 	border-radius: 0.33rem;
 	padding: 2rem;
 	margin: 0.75rem;
@@ -22,12 +22,6 @@ ul.tile > li {
 		opacity: 0.75;
 		font-size: 3rem;
 		margin: 0 !important;
-	}
-
-	.tile-text {
-		color: $gray-600;
-		margin-left: -1rem;
-		margin-right: -1rem;
 	}
 
 	@each $color, $value in $colors {
