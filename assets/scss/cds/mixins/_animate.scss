@@ -1,5 +1,0 @@
-@mixin animate($animation) {
-	@extend .animated;
-	@extend .#{$animation};
-}
-
