@@ -1,0 +1,23 @@
+.table th {
+	@include font-heading;
+}
+
+.table.table-center {
+	td,
+	th {
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+.table caption{
+    caption-side: top;
+}
+
+@each $color, $value in $theme-colors {
+	.table .thead-#{$color} th {
+		color: #fff;
+		background-color: $value;
+		border-color: darken($value, 7%);
+	}
+}

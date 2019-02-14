@@ -1,0 +1,16 @@
+.card {
+	box-shadow: $box-shadow-sm;
+    margin-bottom: 2rem;
+    border: 1px solid $gray-300;
+}
+
+.tile .card{
+    margin-bottom: 0;
+}
+
+.card-login{
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}

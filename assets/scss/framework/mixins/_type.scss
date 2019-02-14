@@ -1,0 +1,14 @@
+@mixin font-heading {
+	font-family: $headings-font-family;
+}
+
+@mixin font-base {
+	font-family: $font-family-base;
+}
+
+@mixin font-small {
+	font-size: 0.9rem;
+}
+@each $color, $value in $theme-colors {
+	
+}

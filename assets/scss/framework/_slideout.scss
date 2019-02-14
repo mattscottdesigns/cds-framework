@@ -1,0 +1,33 @@
+// .slideout-slide{
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     background: $white;
+// }
+
+.slideout-slide{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #111;
+
+}
+
+.slideout-slide,
+.slideout-content{
+    transition: margin transition("sm");
+}
+
+.slideout-slide:before{
+    content: '';
+    display: block;
+    position: fixed;
+    background: #000;
+    right: 0;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+
+}

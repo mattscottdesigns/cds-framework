@@ -1,0 +1,43 @@
+.note {
+	display: flex;
+	align-items: center;
+
+	p {
+		margin: 0;
+	}
+
+	.note-version,
+	.note-release,
+	.note-actions {
+		flex: 1;
+		flex-grow: 0;
+		padding: 0 0.5rem;
+		text-align: center;
+	}
+
+	.note-data {
+		flex: 1;
+		flex-basis: 250px;
+	}
+
+	.note-version,
+	.note-release {
+		flex-basis: 120px;
+	}
+
+	.note-data {
+		order: 1;
+	}
+
+	.note-version {
+		order: 2;
+	}
+
+	.note-release {
+		order: 3;
+	}
+
+	.note-actions {
+		order: 4;
+	}
+}
