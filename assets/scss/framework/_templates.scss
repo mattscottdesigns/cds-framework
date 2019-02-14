@@ -4,7 +4,7 @@
 	overflow-x: hidden;
 	min-height: 100vh;
 
-	aside {
+	> aside {
 		width: $slideout-width;
 		flex-shrink: 0;
 		height: 100%;
@@ -15,19 +15,20 @@
 		overflow-x: hidden;
 	}
 
-	main {
-		width: 100%;
+	> main {
+        width: 100%;
+        min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		background: url(../images/home-content-background.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-attachment: fixed;
-	}
-}
+        background-attachment: fixed;
 
-.template.template-dashboard {
-	main {
-		background: $light;
-	}
+        > section{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }

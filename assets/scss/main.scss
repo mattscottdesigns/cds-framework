@@ -1,7 +1,11 @@
-@import "initialize";   // Imports that are required to be called first
-@import "variables";    // All framework variables - including Bootstrap overrides
+@import "initialize";
+@import "variables";
 
 .cds-framework {
 	@import "../../node_modules/bootstrap/scss/bootstrap";
 	@import "framework/framework";
+}
+
+.cds-app{
+    @import "app/app";
 }
