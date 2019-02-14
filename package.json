@@ -19,10 +19,12 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "node-sass": "^4.11.0"
-  },
-  "dependencies": {
+    "node-sass": "^4.11.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mscott087/cds-framework.git"
   }
 }
