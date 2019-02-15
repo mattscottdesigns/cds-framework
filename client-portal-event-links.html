@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" href="assets/images/favicon-192x192.png" sizes="192x192" />
-		<title>Client Portal - Login</title>
+		<title>Client Portal - Event Links</title>
 	</head>
 
 	<body>
@@ -24,7 +24,7 @@
 		<div class="template">
 			<main>
 				<header>
-					<div class="bg-light shadow position-relative">
+					<div class="bg-light position-relative">
 						<div class="container">
 							<ul class="nav nav-light nav-lg align-items-center">
 								<li class="nav-item">
@@ -39,7 +39,7 @@
 					<div class="bg-primary">
 						<div class="container">
 							<ul class="nav nav-primary nav-lg align-items-center">
-								<li class="nav-item pl-5 pr-2 flex-fill">
+								<li class="nav-item flex-fill px-5">
 									<select
 										class="form-control selectpicker"
 										data-style="btn-white"
@@ -57,36 +57,37 @@
 											<a class="nav-link" href="#">Home</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#">Event Links</a>
+											<a class="nav-link active" href="#">Event Links</a>
 										</li>
 									</ul>
 								</li>
 								<li class="nav-item px-4 dropdown">
 									<a
-										class="text-white"
+										class="dropdown-toggle text-white"
 										data-toggle="dropdown"
 										data-boundary="window"
 										href="#"
 										><i class="fas fa-user-circle fa-2x"></i
 									></a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">
-											<small>Username</small>
-											<h6>mscott</h6>
-										</a>
-										<a class="dropdown-item" href="#">
-											<small>Event</small>
-											<h6>Master Medical 2018</h6>
-										</a>
-										<div class="dropdown-divider"></div>
-										<a href="" class="dropdown-item px-3">
-											<button type="button" class="btn btn-sm btn-primary">
-												Change Event
-											</button>
-											<button type="button" class="btn btn-sm btn-danger">
-												Logout
-											</button>
-										</a>
+									<div class="dropdown-menu p-0">
+										<div class="card m-0">
+											<div class="card-body">
+												<div class="mb-2">
+													<small>Username</small>
+													<h6>mscott</h6>
+												</div>
+												<div class="mb-4">
+													<small>Event</small>
+													<h6>Master Medical 2018</h6>
+												</div>
+												<button type="button" class="btn btn-sm btn-primary">
+													Change Event
+												</button>
+												<button type="button" class="btn btn-sm btn-danger">
+													Logout
+												</button>
+											</div>
+										</div>
 									</div>
 								</li>
 							</ul>
@@ -98,107 +99,96 @@
 					<div class="container p-5">
 						<div class="card">
 							<div class="card-body">
-								<table class="table">
-									<thead class="thead-dark">
-										<tr>
-											<th>Type</th>
-											<th>Url</th>
-											<th></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Attendee</td>
-											<td>
-												<a href="" class="text-break"
-													>www.xpressreg.net/register/base1217/attendee/start.asp</a
-												>
-											</td>
-											<td>
-												<i
-													class="far fa-copy"
-													data-toggle="tooltip"
-													title="Click to copy URL"
-												></i>
-											</td>
-										</tr>
-										<tr>
-											<td>Exhibitor</td>
-											<td>
-												<a href="" class="text-break"
-													>www.xpressreg.net/register/base1217/exhibitor/start.asp</a
-												>
-											</td>
-											<td>
-												<i
-													class="far fa-copy"
-													data-toggle="tooltip"
-													title="Click to copy URL"
-												></i>
-											</td>
-										</tr>
-										<tr>
-											<td>Resource Center</td>
-											<td>
-												<a href="" class="text-break"
-													>www.xpressreg.net/register/base1217/rrc/start.asp</a
-												>
-											</td>
-											<td>
-												<i
-													class="far fa-copy"
-													data-toggle="tooltip"
-													title="Click to copy URL"
-												></i>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-body">
-								<ul class="tile tile-3 text-center">
-									<li>
-										<div class="tile-body">
-											<h4 class="tile-title">Attendee</h4>
-											<p class="tile-text">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											</p>
-											<input
-												type="text"
-												class="form-control"
-												value="www.xpressreg.net/register/base1217/attendee/start.asp"
-											/>
-										</div>
-									</li>
-									<li>
-										<div class="tile-body">
-											<h4 class="tile-title">Exhibitor</h4>
-											<p class="tile-text">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											</p>
-											<input
-												type="text"
-												class="form-control"
-												value="www.xpressreg.net/register/base1217/exhibitor/start.asp"
-											/>
-										</div>
-									</li>
-									<li>
-										<div class="tile-body">
-											<h4 class="tile-title">Resource Center</h4>
-											<p class="tile-text">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											</p>
-											<input
-												type="text"
-												class="form-control"
-												value="www.xpressreg.net/register/base1217/rrc/start.asp"
-											/>
-										</div>
-									</li>
-								</ul>
+								<div class="table-responsive">
+									<table class="table m-0">
+										<thead class="thead-dark">
+											<tr>
+												<th></th>
+												<th>Type</th>
+												<th>Status</th>
+												<th>Url</th>
+												<th>Username</th>
+												<th>Password</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center" data-toggle="modal" data-target="#exampleModal">
+													<i
+														class="fas fa-info-circle text-secondary"
+														data-toggle="tooltip"
+														title="Click to view notes"
+													></i>
+												</td>
+												<td>Attendee</td>
+												<td><span class="badge badge-light">Live</span></td>
+												<td>
+													<a href="" class="small"
+														>www.xpressreg.net/register/base1217/attendee/start.asp</a
+													>
+												</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="text-center" data-toggle="modal" data-target="#exampleModal">
+													<i
+														class="fas fa-info-circle text-secondary"
+														data-toggle="tooltip"
+														title="Click to view notes"
+													></i>
+												</td>
+												<td>Exhibitor</td>
+												<td><span class="badge badge-light">Preview</span></td>
+												<td>
+													<a href="" class="small"
+														>www.xpressreg.net/register/base1217/exhibitor/start.asp</a
+													>
+												</td>
+												<td>Username</td>
+												<td>Password</td>
+											</tr>
+											<tr>
+												<td class="text-center" data-toggle="modal" data-target="#exampleModal">
+													<i
+														class="fas fa-info-circle text-secondary"
+														data-toggle="tooltip"
+														title="Click to view notes"
+													></i>
+												</td>
+												<td>Resource Center</td>
+												<td>
+													<span class="badge badge-light">Development</span>
+												</td>
+												<td>
+													<a href="" class="small"
+														>www.xpressreg.net/register/base1217/rrc/start.asp</a
+													>
+												</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td class="text-center" data-toggle="modal" data-target="#exampleModal">
+													<i
+														class="fas fa-info-circle text-secondary"
+														data-toggle="tooltip"
+														title="Click to view notes"
+													></i>
+												</td>
+												<td>Inquiry</td>
+												<td><span class="badge badge-light">Live</span></td>
+												<td>
+													<a href="" class="small"
+														>www.xpressreg.net/register/base1217/inquiry/start.asp</a
+													>
+												</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -206,6 +196,46 @@
 
 				<footer></footer>
 			</main>
+		</div>
+
+		<div
+			class="modal fade"
+			id="exampleModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-secondary text-white">
+						<h5 class="modal-title" id="exampleModalLabel">Page Notes</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<ul class="m-0">
+                            <li>1/12 - Released to client</li>
+                            <li>1/6 - Development complete</li>
+                        </ul>
+					</div>
+					<div class="modal-footer bg-light">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
