@@ -1,10 +1,21 @@
 /* global $ */
+/* eslint-disable no-unused-vars */
 
-// Initialize tooltips
-$('[data-toggle="tooltip"]').tooltip();
+var cds = (function() {
+	var options = {
+		flatpickr: {
+			enableCalendar: false,
+			enableTime: true,
+			altInput: true,
+			altFormat: "F j, Y",
+			dateFormat: "Y-m-d",
+		},
+	};
 
-// Initialize "refine" - jquery/custom/refine.js
-$(".refine").refine();
+	return {
+		options: options,
+	};
+})();
 
 $(".nav:not(.nav-tabs):not(.nav-pills) .nav-link").on("click", function() {
 	var element = $(this);
@@ -33,10 +44,6 @@ $(".nav:not(.nav-tabs):not(.nav-pills) .nav-link").on("click", function() {
 	methods.removeActive().setActive();
 });
 
-$("input[type='date']").flatpickr({
-	enableCalendar: false,
-	enableTime: true,
-	altInput: true,
-	altFormat: "F j, Y",
-	dateFormat: "Y-m-d",
-});
+$(".refine").refine();
+$('[data-toggle="tooltip"]').tooltip();
+$("input[type='date']").flatpickr(cds.options.flatpickr);
