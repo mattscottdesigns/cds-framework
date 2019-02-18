@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" href="assets/images/favicon-192x192.png" sizes="192x192" />
-		<title>Client Portal Navigation</title>
+		<title>Client Portal - Home</title>
 	</head>
 
 	<body>
@@ -24,7 +24,7 @@
 		<div class="template">
 			<main>
 				<header>
-					<div class="bg-light shadow position-relative">
+					<div class="bg-light">
 						<div class="container">
 							<ul class="nav nav-light nav-lg align-items-center">
 								<li class="nav-item">
@@ -33,83 +33,85 @@
 									</a>
 								</li>
 								<li class="nav-item flex-fill"></li>
-
-								<li class="nav-item d-none d-md-flex">
-									<ul class="nav nav-lg nav-light">
+								<li class="nav-item  d-none d-md-flex">
+									<ul class="nav nav-light nav-lg">
 										<li class="nav-item">
-											<a class="nav-link" href="#">Link</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link disabled" href="#">Disabled</a>
-										</li>
-										<li class="nav-item">
-											<a
-												class="nav-link dropdown-toggle"
-												data-toggle="dropdown"
-												href="#"
-												role="button"
-												>Link #1</a
+											<a class="nav-link active" href="client-portal.html"
+												>Home</a
 											>
-											<div class="dropdown-menu">
-												<a class="dropdown-item" href="#">Sublink #1</a>
-												<a class="dropdown-item" href="#">Sublink #2</a>
-												<a class="dropdown-item" href="#">Sublink #3</a>
-											</div>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="client-portal-event-links.html"
+												>Event Links</a
+											>
 										</li>
 									</ul>
+								</li>
+								<li class="nav-item nav-space d-flex d-md-none">
+									<a class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="bg-primary">
 						<div class="container">
-							<ul class="nav nav-primary nav-md align-items-center py-3">
-								<li class="nav-item pl-5 pr-2 flex-fill">
-									<select
+							<ul class="nav nav-primary nav-lg align-items-center">
+								<li class="nav-item flex-fill px-5">
+                                    <select
 										class="form-control selectpicker"
 										data-style="btn-white"
 									>
 										<option value="" selected>Client Portal</option>
-										<option value="">Event Admin</option>
-										<option value="">Backend</option>
 										<option value="">Data Sense</option>
-										<option value="">eReg</option>
+										<option value="">Jira</option>
+										<option value="">Register</option>
+										<option value="">Xpress Reports</option>
+										<option value="">Xpress Reg Database</option>
 									</select>
 								</li>
-								<li class="nav-item px-4 dropdown">
+								<li class="nav-item pr-5 dropdown">
 									<a
-										class="text-white"
+										class="dropdown-toggle text-white"
 										data-toggle="dropdown"
 										data-boundary="window"
 										href="#"
 										><i class="fas fa-user-circle fa-2x"></i
 									></a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">
-											<small>Username</small>
-											<h6>mscott</h6>
-										</a>
-										<a class="dropdown-item" href="#">
-											<small>Event</small>
-											<h6>Master Medical 2018</h6>
-										</a>
-										<div class="dropdown-divider"></div>
-										<a href="" class="dropdown-item px-3">
-											<button type="button" class="btn btn-sm btn-primary">
-												Change Event
-											</button>
-											<button type="button" class="btn btn-sm btn-danger">
-												Logout
-											</button>
-										</a>
+									<div class="dropdown-menu p-0">
+										<div class="card m-0">
+											<div class="card-body">
+												<div class="mb-2">
+													<small>Username</small>
+													<h6>mscott</h6>
+												</div>
+												<div>
+													<small>Event</small>
+													<h6>Master Medical 2018</h6>
+												</div>
+											</div>
+											<div class="card-footer">
+												<a
+													class="btn btn-sm btn-primary d-inline-block"
+													href="client-portal-event.html"
+												>
+													Change Event
+												</a>
+												<a
+													class="btn btn-sm btn-danger d-inline-block"
+													href="client-portal-login.html"
+												>
+													Logout
+												</a>
+											</div>
+										</div>
 									</div>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</header>
-				<section class="container p-4 p-md-5">
-					<div class="row row-eq-height">
+				<section class="container p-5">
+					<div class="row">
 						<div class="col-lg-8">
 							<div class="card">
 								<div class="card-body">
@@ -134,12 +136,15 @@
 									<li class="list-group-item">February 14 – 17, 2012</li>
 									<li class="list-group-item">
 										Boston Convention and Exhibition Center
-                                    </li>
+									</li>
 								</ul>
 								<div class="card-body">
-									<button class="btn btn-secondary btn-block">
+									<a
+										class="btn btn-secondary btn-block"
+										href="client-portal-event-links.html"
+									>
 										Event Links
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -174,7 +179,7 @@
 										<div class="tile-icon">
 											<i class="fas fa-chart-pie text-primary"></i>
 										</div>
-										<h4 class="tile-title">DataSense</h4>
+										<h4 class="tile-title">Data Sense</h4>
 										<div class="tile-text">
 											Analyze data from across your events in real-time
 										</div>
@@ -206,6 +211,7 @@
 						</div>
 					</div>
 				</section>
+
 				<footer></footer>
 			</main>
 		</div>
@@ -223,28 +229,6 @@
 		<script src="assets/js/jquery/custom/refine.js"></script>
 		<script src="assets/js/global.js"></script>
 
-		<script>
-			var slideout = $("aside").slideout({
-				content: $("main"),
-				toggle: $(".nav-toggle"),
-			});
-
-			$("input[type='date']").flatpickr({
-				enableCalendar: false,
-				enableTime: true,
-				altInput: true,
-				altFormat: "F j, Y",
-				dateFormat: "Y-m-d",
-			});
-			$('[data-toggle="tooltip"]').tooltip();
-
-			// $("table").DataTable({
-			// 	"bPaginate": false,
-			// 	"bLengthChange": false,
-			// 	"bFilter": false,
-			// 	"bInfo": false,
-			// 	"bAutoWidth": false
-			// });
-		</script>
+		<script></script>
 	</body>
 </html>

@@ -23,67 +23,50 @@
 
 		<div class="template">
 			<main>
-				<!-- <header>
-					<div class="bg-light">
-						<div class="container">
-							<ul class="nav nav-light nav-lg align-items-center">
-								<li class="nav-item">
-									<a class="nav-space logo">
-										<img src="assets/images/logo.png" />
-									</a>
-								</li>
-							</ul>
-						</div>  
-					</div>
-				</header> -->
-				<section class="flex-row align-items-center p-4">
-					<div class="card card-login overflow-hidden">
+			
+				<section class="p-5 flex-row align-items-center">
+					<div class="card card-login">
 						<div class="card-header bg-primary pt-5 pb-3">
 							<div class="login-icon-position">
 								<div class="bg-light border-0" id="login-icon"></div>
 							</div>
 						</div>
-						<div class="card-body p-5">
-							<h1 class="mb-4">Client Portal</h1>
-							<div class="form-group">
-								<input
-									class="form-control form-control-lg"
-									placeholder="Username"
-								/>
-							</div>
-							<div class="form-group">
-								<input
-									class="form-control form-control-lg"
-									placeholder="Password"
-								/>
-							</div>
-							<div>
-								<a class="btn btn-secondary btn-block btn-lg" href="client-portal-event.html">
-									Login</a
-								><a href="#" class="btn btn-link btn-block">
-									Forgot Password?
-								</a>
-							</div>
-						</div>
-						<div class="card-footer">
-							<div class="flex-row flex-fill">
-								<div class="custom-control custom-checkbox">
-									<input
-										type="checkbox"
-										class="custom-control-input"
-										id="customCheck1"
-									/>
-									<label
-										class="custom-control-label text-muted"
-										for="customCheck1"
-										>Remember Me</label
-									>
-								</div>
-							</div>
+						<div class="card-body p-5 text-center">
+							<h3>Select event to manage</h3>
+							<select
+								class="form-control selectpicker mt-3"
+								data-style="btn-light"
+								data-live-search="true"
+							>
+								<option value="" selected>&nbsp;</option>
+								<option
+									value="MMED0216"
+									data-tokens="MMED0216"
+									data-subtext="MMED0216"
+									>Master Medical 2016</option
+								>
+								<option
+									value="MMED0217"
+									data-tokens="MMED0217"
+									data-subtext="MMED0217"
+									>Master Medical 2017</option
+								>
+								<option
+									value="MMED0218"
+									data-tokens="MMED0218"
+									data-subtext="MMED0218"
+									>Master Medical 2018</option
+								>
+								<option
+									value="MMED0219"
+									data-tokens="MMED0219"
+									data-subtext="MMED0219"
+									>Master Medical 2019</option
+								>
+							</select>
 						</div>
 					</div>
 				</section>
-				<!-- <footer></footer> -->
 			</main>
 		</div>
 
@@ -100,6 +83,15 @@
 		<script src="assets/js/jquery/custom/refine.js"></script>
 		<script src="assets/js/global.js"></script>
 
-		<script></script>
+		<script>
+			$(".selectpicker").on("changed.bs.select", function(
+				e,
+				clickedIndex,
+				isSelected,
+				previousValue
+			) {
+				window.location = "client-portal.html"
+			});
+		</script>
 	</body>
 </html>
