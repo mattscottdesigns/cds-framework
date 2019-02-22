@@ -12,19 +12,15 @@
 		.modal-body {
 			padding: 1.5rem;
 		}
-    }
-    
-    .modal-header{
-        padding-left: 1.5rem;
-    }
-    
-    .modal-footer{
-        background: $light;
-    }
-}
+	}
 
-.modal-backdrop {
-	background-color: $gray-900;
+	.modal-header {
+		padding-left: 1.5rem;
+	}
+
+	.modal-footer {
+		background: $light;
+	}
 }
 
 .modal-backdrop.show {
