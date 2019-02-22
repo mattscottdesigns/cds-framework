@@ -1,3 +1,7 @@
+.tile .card{
+    margin-bottom: 0;
+}
+
 ul.tile {
 	display: flex;
 	flex-wrap: wrap;
@@ -9,8 +13,8 @@ ul.tile {
 ul.tile > li {
 	flex: 1;
 	min-width: 15rem;
-	background-color: lighten($gray-100, 3%);
-	border: 1px solid $gray-300;
+	background-color: $gray-100;
+	border: 1px solid $gray-400;
 	border-radius: 0.33rem;
 	padding: 2rem;
 	margin: 0.75rem;
