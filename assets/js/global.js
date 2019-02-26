@@ -1,4 +1,4 @@
-/* global $ */
+/* global $, Slideout */
 /* eslint-disable no-unused-vars */
 
 var cds = (function() {
@@ -12,9 +12,71 @@ var cds = (function() {
 		},
 	};
 
-	return {
+	return Object.freeze({
 		options: options,
-	};
+	});
+})();
+
+var plugins = (function() {
+	var slideout = Object.freeze({
+		create: function(options) {
+			options.padding = options.padding || 275;
+
+			var element = new Slideout(options);
+
+			function checkOpen(e) {
+				if (element.isOpen()) {
+					e.preventDefault();
+					element.close();
+				}
+			}
+
+			function addClick() {
+				options.panel.addEventListener("click", checkOpen);
+			}
+
+			function removeClick() {
+				options.panel.removeEventListener("click", checkOpen);
+			}
+
+			element.on("open", addClick);
+			element.on("close", removeClick);
+			options.toggle.addEventListener("click", function() {
+				element.toggle();
+			});
+
+			return element;
+		},
+		overlap: function(primary, secondary) {
+			var primaryClosed = function() {
+				primary.close();
+			};
+			var secondaryClosed = function() {
+				secondary.close();
+			};
+
+			secondary
+				.on("close", primaryClosed)
+				.on("open", primaryClosed)
+				.on("beforeopen", function() {
+					secondary.menu.style.visibility = "visible";
+					primary.menu.style.visibility = "hidden";
+				});
+
+			primary
+				.on("close", secondaryClosed)
+				.on("open", secondaryClosed)
+				.on("beforeopen", function() {
+					secondary.menu.style.visibility = "hidden";
+					primary.menu.style.visibility = "visible";
+				});
+			return [primary, secondary];
+		},
+	});
+
+	return Object.freeze({
+		slideout: slideout,
+	});
 })();
 
 $(".nav:not(.nav-tabs):not(.nav-pills) .nav-link").on("click", function() {
