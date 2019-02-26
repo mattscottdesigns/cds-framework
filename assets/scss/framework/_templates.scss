@@ -4,16 +4,6 @@
 	overflow-x: hidden;
 	min-height: 100vh;
 
-	> aside {
-		width: $slideout-width;
-		flex-shrink: 0;
-		height: 100%;
-		background-color: $white;
-		z-index: $zindex-popover;
-		box-shadow: $box-shadow;
-		overflow-y: auto;
-		overflow-x: hidden;
-	}
 
 	> main {
         width: 100%;
@@ -26,7 +16,7 @@
         background-attachment: fixed;
 
         > section{
-            flex: 1;
+            @extend .flex-fill;
             display: flex;
             flex-direction: column;
         }
@@ -37,5 +27,12 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+    }
+}
+
+
+.template.template-application{
+    > main{
+        background: $white;
     }
 }
