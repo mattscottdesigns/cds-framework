@@ -22,7 +22,7 @@
 		<![endif]-->
 
 		<div class="template template-application">
-			<aside id="aside-left" class="bg-white">
+			<aside id="aside-left" class="bg-white border-right">
 				<ul class="nav nav-white nav-md flex-column">
 					<li class="nav-item nav-header">Main Menu</li>
 					<li class="nav-item">
@@ -68,10 +68,10 @@
 
 			<aside id="aside-right" class="bg-white"></aside>
 
-			<main id="main" class="shadow">
+			<main id="main">
 				<header>
 					<div class="bg-primary">
-						<div class="container p-0">
+						<div class="container">
 							<ul class="nav nav-primary nav-lg align-items-center">
 								<li class="nav-item nav-space d-flex d-md-none">
 									<a id="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
@@ -161,7 +161,6 @@
 				panel: document.getElementById("main"),
 				toggle: document.getElementById("nav-toggle"),
                 side: "left",
-                tolerance: 1000
 			});
 
 			var slideRight = plugins.slideout.create({

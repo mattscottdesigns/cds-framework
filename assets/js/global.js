@@ -24,6 +24,8 @@ var plugins = (function() {
 
 			var element = new Slideout(options);
 
+			element.options = options;
+
 			function checkOpen(e) {
 				if (element.isOpen()) {
 					e.preventDefault();
@@ -41,6 +43,7 @@ var plugins = (function() {
 
 			element.on("open", addClick);
 			element.on("close", removeClick);
+
 			options.toggle.addEventListener("click", function() {
 				element.toggle();
 			});
@@ -48,28 +51,29 @@ var plugins = (function() {
 			return element;
 		},
 		overlap: function(primary, secondary) {
-			var primaryClosed = function() {
-				primary.close();
-			};
-			var secondaryClosed = function() {
-				secondary.close();
-			};
+			function showPrimary() {
+				primary.menu.style.visibility = "visible";
+				secondary.menu.style.visibility = "hidden";
+			}
 
-			secondary
-				.on("close", primaryClosed)
-				.on("open", primaryClosed)
-				.on("beforeopen", function() {
-					secondary.menu.style.visibility = "visible";
-					primary.menu.style.visibility = "hidden";
-				});
+			function showSecondary() {
+				primary.menu.style.visibility = "hidden";
+				secondary.menu.style.visibility = "visible";
+			}
+
+			function showAll() {
+				primary.menu.style.visibility = "visible";
+				secondary.menu.style.visibility = "visible";
+			}
 
 			primary
-				.on("close", secondaryClosed)
-				.on("open", secondaryClosed)
-				.on("beforeopen", function() {
-					secondary.menu.style.visibility = "hidden";
-					primary.menu.style.visibility = "visible";
-				});
+				.on("open", showPrimary)
+				.on("beforeclose", showAll);
+
+			secondary
+				.on("open", showSecondary)
+				.on("beforeclose", showAll);
+
 			return [primary, secondary];
 		},
 	});
