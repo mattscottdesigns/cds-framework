@@ -12,104 +12,131 @@ var cds = (function() {
 		},
 	};
 
-	return Object.freeze({
+	return {
 		options: options,
-	});
+	};
 })();
 
 var plugins = (function() {
-	var slideout = Object.freeze({
+	var init = function(){
+        $(".refine").refine();
+        $('[data-toggle="tooltip"]').tooltip();
+        $("input[type='date']").flatpickr(cds.options.flatpickr);
+    };
+
+	var slideout = {
 		create: function(options) {
 			options.padding = options.padding || 275;
-
-			var element = new Slideout(options);
-
-			element.options = options;
+			var slide = new Slideout(options);
 
 			function checkOpen(e) {
-				if (element.isOpen()) {
+				if (slide.isOpen()) {
 					e.preventDefault();
-					element.close();
+					slide.close();
 				}
 			}
 
-			function addClick() {
+			function addCloseClick() {
 				options.panel.addEventListener("click", checkOpen);
 			}
 
-			function removeClick() {
+			function removeCloseClick() {
 				options.panel.removeEventListener("click", checkOpen);
 			}
 
-			element.on("open", addClick);
-			element.on("close", removeClick);
+			slide.on("open", addCloseClick);
+			slide.on("close", removeCloseClick);
 
 			options.toggle.addEventListener("click", function() {
-				element.toggle();
+				slide.toggle();
 			});
 
-			return element;
+			return slide;
 		},
-		overlap: function(primary, secondary) {
-			function showPrimary() {
-				primary.menu.style.visibility = "visible";
-				secondary.menu.style.visibility = "hidden";
+		overlap: function(left, right) {
+			function showLeft() {
+				left.menu.style.visibility = "visible";
+				right.menu.style.visibility = "hidden";
 			}
 
-			function showSecondary() {
-				primary.menu.style.visibility = "hidden";
-				secondary.menu.style.visibility = "visible";
+			function showRight() {
+				left.menu.style.visibility = "hidden";
+				right.menu.style.visibility = "visible";
 			}
 
 			function showAll() {
-				primary.menu.style.visibility = "visible";
-				secondary.menu.style.visibility = "visible";
+				left.menu.style.visibility = "visible";
+				right.menu.style.visibility = "visible";
 			}
 
-			primary
-				.on("open", showPrimary)
-				.on("beforeclose", showAll);
+			left.on("open", showLeft).on("beforeclose", showAll);
 
-			secondary
-				.on("open", showSecondary)
-				.on("beforeclose", showAll);
+			right.on("open", showRight).on("beforeclose", showAll);
 
-			return [primary, secondary];
+			return [left, right];
 		},
-	});
+	};
 
-	return Object.freeze({
+	return {
+        init: init,
 		slideout: slideout,
-	});
+	};
 })();
 
-$(".nav:not(.nav-tabs):not(.nav-pills) .nav-link").on("click", function() {
-	var element = $(this);
-	var nav = element.closest(".nav");
-	var collapse = element.closest(".collapse");
+var ui = (function() {
+	var nav = {
+		init: function(active) {
+			$(".nav:not(.nav-tabs):not(.nav-pills) .nav-link").on(
+				"click",
+				function() {
+					var element = $(this);
+					var navigation = element.closest(".nav");
+					var collapse = element.closest(".collapse");
 
-	var methods = {
-		setActive: function() {
-			element.addClass("active");
+					nav
+						.removeActive(navigation)
+						.handleCollapse(collapse)
+						.setActive(element);
+				}
+			);
 
-			if (collapse.length > 0) {
-				collapse.prev().addClass("active");
-			} else {
-				$(".collapse").collapse("hide");
+			if (active) {
+				return this.setActive(active);
 			}
+
 			return this;
 		},
 
-		removeActive: function() {
-			nav.find(".nav-link.active").removeClass("active");
+		setActive: function(element) {
+			$(element).addClass("active");
+
+			return this;
+		},
+
+		removeActive: function(element) {
+			$(element)
+				.find(".nav-link.active")
+				.removeClass("active");
+
+			return this;
+		},
+
+		handleCollapse: function(collapse) {
+			if ($(collapse).length > 0) {
+				$(collapse)
+					.prev()
+					.addClass("active");
+			} else {
+				$(".collapse").collapse("hide");
+			}
 
 			return this;
 		},
 	};
 
-	methods.removeActive().setActive();
-});
+	return {
+		nav: nav,
+	};
+})();
 
-$(".refine").refine();
-$('[data-toggle="tooltip"]').tooltip();
-$("input[type='date']").flatpickr(cds.options.flatpickr);
+ui.nav.init();
