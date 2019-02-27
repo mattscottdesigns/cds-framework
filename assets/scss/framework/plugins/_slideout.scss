@@ -41,8 +41,10 @@ body {
 }
 
 @media screen and (min-width: 780px) {
-	.slideout-panel {
-		margin-left: 275px;
-		transform: translateX(0px);
-	}
+	.slideout-responsive{
+        .slideout-panel {
+            margin-left: 275px;
+            transform: translateX(0px);
+        }
+    }
 }
