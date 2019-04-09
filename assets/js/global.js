@@ -18,11 +18,11 @@ var cds = (function() {
 })();
 
 var plugins = (function() {
-	var init = function(){
-        $(".refine").refine();
-        $('[data-toggle="tooltip"]').tooltip();
-        $("input[type='date']").flatpickr(cds.options.flatpickr);
-    };
+	var init = function() {
+		$(".refine").refine();
+		$('[data-toggle="tooltip"]').tooltip();
+		$("input[type='date']").flatpickr(cds.options.flatpickr);
+	};
 
 	var slideout = {
 		create: function(options) {
@@ -69,16 +69,16 @@ var plugins = (function() {
 				right.menu.style.visibility = "visible";
 			}
 
-			left.on("open", showLeft).on("beforeclose", showAll);
+			left.on("beforeopen", showLeft).on("beforeclose", showAll);
 
-			right.on("open", showRight).on("beforeclose", showAll);
+			right.on("beforeopen", showRight).on("beforeclose", showAll);
 
 			return [left, right];
 		},
 	};
 
 	return {
-        init: init,
+		init: init,
 		slideout: slideout,
 	};
 })();
@@ -112,7 +112,7 @@ var ui = (function() {
 
 			return this;
 		},
-
+        
 		removeActive: function(element) {
 			$(element)
 				.find(".nav-link.active")

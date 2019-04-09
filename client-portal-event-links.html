@@ -36,12 +36,12 @@
 								<li class="nav-item  d-none d-md-flex">
 									<ul class="nav nav-light nav-lg">
 										<li class="nav-item">
-											<a class="nav-link" href="client-portal.html"
-												>Home</a
-											>
+											<a class="nav-link" href="client-portal.html">Home</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link active" href="client-portal-event-links.html"
+											<a
+												class="nav-link active"
+												href="client-portal-event-links.html"
 												>Event Links</a
 											>
 										</li>
@@ -112,12 +112,12 @@
 				</header>
 
 				<section>
-					<div class="container p-5">
+					<div class="container">
 						<div class="card">
 							<div class="card-body">
+								<h3>Master Medical 2019</h3>
+								<hr />
 								<div class="table-responsive">
-									<h3>Master Medical 2019</h3>
-									<hr />
 									<table class="table mb-0 mt-4">
 										<thead class="thead-dark">
 											<tr>
@@ -134,7 +134,7 @@
 												<td
 													class="text-center"
 													data-toggle="modal"
-													data-target="#exampleModal"
+													data-target="#modal-notes"
 												>
 													<i
 														class="fas fa-info-circle text-secondary"
@@ -156,7 +156,7 @@
 												<td
 													class="text-center"
 													data-toggle="modal"
-													data-target="#exampleModal"
+													data-target="#modal-notes"
 												>
 													<i
 														class="fas fa-info-circle text-secondary"
@@ -178,7 +178,7 @@
 												<td
 													class="text-center"
 													data-toggle="modal"
-													data-target="#exampleModal"
+													data-target="#modal-notes"
 												>
 													<i
 														class="fas fa-info-circle text-secondary"
@@ -202,7 +202,7 @@
 												<td
 													class="text-center"
 													data-toggle="modal"
-													data-target="#exampleModal"
+													data-target="#modal-notes"
 												>
 													<i
 														class="fas fa-info-circle text-secondary"
@@ -233,17 +233,17 @@
 		</div>
 
 		<div
-			class="modal fade"
-			id="exampleModal"
+			class="modal modal-primary fade"
+			id="modal-notes"
 			tabindex="-1"
 			role="dialog"
-			aria-labelledby="exampleModalLabel"
+			aria-labelledby="modal-notes"
 			aria-hidden="true"
 		>
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
-					<div class="modal-header bg-primary text-white">
-						<h3 class="modal-title" id="exampleModalLabel">Notes</h3>
+					<div class="modal-header">
+						<h3 class="modal-title">Notes</h3>
 						<button
 							type="button"
 							class="close"
@@ -253,7 +253,7 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<div class="modal-body py-5">
+					<div class="modal-body py-4">
 						<ul class="m-0">
 							<li>1/12 - Released to client</li>
 							<li>1/6 - Development complete</li>
@@ -278,7 +278,7 @@
 		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
 		<script src="assets/js/jquery/plugins/datatables.js"></script>
 		<script src="assets/js/jquery/plugins/slick.js"></script>
-		<script src="assets/js/jquery/custom/slideout.js"></script>
+		<script src="assets/js/jquery/plugins/slideout.js"></script>
 		<script src="assets/js/jquery/custom/overlay.js"></script>
 		<script src="assets/js/jquery/custom/affix.js"></script>
 		<script src="assets/js/jquery/custom/scroll.js"></script>

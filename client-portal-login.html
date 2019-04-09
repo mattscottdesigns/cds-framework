@@ -23,28 +23,14 @@
 
 		<div class="template">
 			<main>
-				<!-- <header>
-					<div class="bg-light">
-						<div class="container">
-							<ul class="nav nav-light nav-lg align-items-center">
-								<li class="nav-item">
-									<a class="nav-space logo">
-										<img src="assets/images/logo.png" />
-									</a>
-								</li>
-							</ul>
-						</div>  
-					</div>
-				</header> -->
-				<section class="flex-row align-items-center p-4">
-					<div class="card card-login overflow-hidden">
-						<div class="card-header bg-primary pt-5 pb-3">
-							<div class="login-icon-position">
-								<div class="bg-light border-0" id="login-icon"></div>
-							</div>
+				<section>
+					<div class="card card-cds">
+						<div class="card-header">
+							<div class="card-cds-logo"></div>
 						</div>
-						<div class="card-body p-5">
+						<div class="card-body">
 							<h1 class="mb-4">Client Portal</h1>
+
 							<div class="form-group">
 								<input
 									class="form-control form-control-lg"
@@ -58,32 +44,35 @@
 								/>
 							</div>
 							<div>
-								<a class="btn btn-secondary btn-block btn-lg" href="client-portal-event.html">
+								<a
+									class="btn btn-secondary btn-block btn-lg"
+									href="client-portal-event.html"
+								>
 									Login</a
 								><a href="#" class="btn btn-link btn-block">
 									Forgot Password?
 								</a>
 							</div>
 						</div>
-						<div class="card-footer">
-							<div class="flex-row flex-fill">
-								<div class="custom-control custom-checkbox">
-									<input
-										type="checkbox"
-										class="custom-control-input"
-										id="customCheck1"
-									/>
-									<label
-										class="custom-control-label text-muted"
-										for="customCheck1"
-										>Remember Me</label
-									>
-								</div>
-							</div>
+						<div
+							class="validation-summary-errors alert alert-danger"
+							data-valmsg-summary="true"
+							style="
+                        margin: 0;
+                    "
+						>
+							<ul
+								style="
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                    "
+							>
+								<li>Invalid login credentials, please try again</li>
+							</ul>
 						</div>
 					</div>
 				</section>
-				<!-- <footer></footer> -->
 			</main>
 		</div>
 
@@ -93,7 +82,7 @@
 		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
 		<script src="assets/js/jquery/plugins/datatables.js"></script>
 		<script src="assets/js/jquery/plugins/slick.js"></script>
-		<script src="assets/js/jquery/custom/slideout.js"></script>
+		<script src="assets/js/jquery/plugins/slideout.js"></script>
 		<script src="assets/js/jquery/custom/overlay.js"></script>
 		<script src="assets/js/jquery/custom/affix.js"></script>
 		<script src="assets/js/jquery/custom/scroll.js"></script>

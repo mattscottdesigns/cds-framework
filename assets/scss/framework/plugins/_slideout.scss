@@ -26,7 +26,7 @@ body {
 	position: relative;
 	z-index: 1;
 	will-change: transform;
-	background-color: #fff; /* A background-color is required */
+	background-color: $white;
 	min-height: 100vh;
 }
 
@@ -41,10 +41,9 @@ body {
 }
 
 @media screen and (min-width: 780px) {
-	.slideout-responsive{
-        .slideout-panel {
-            margin-left: 275px;
-            transform: translateX(0px);
-        }
-    }
+	.slideout-responsive.slideout-panel,
+	.slideout-responsive .slideout-panel {
+		margin-left: 275px;
+		transform: translateX(0px);
+	}
 }

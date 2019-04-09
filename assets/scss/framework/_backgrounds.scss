@@ -1,5 +1,12 @@
 @each $color, $value in $colors {
 	@include bg-variant(".bg-#{$color}", $value);
 	@include bg-variant(".bg-#{$color}-light", lighten($value, 7.5%));
-	@include bg-variant(".bg-#{$color}-dark", darken($value, 7.5%));
+    @include bg-variant(".bg-#{$color}-dark", darken($value, 7.5%));
+    @include bg-variant(".bg-#{$color}-overlay", transparentize($value, 0.9));
+}
+
+@each $color, $value in $theme-colors {
+    @include bg-variant(".bg-#{$color}-light", lighten($value, 7.5%));
+    @include bg-variant(".bg-#{$color}-dark", darken($value, 7.5%));
+    @include bg-variant(".bg-#{$color}-overlay", transparentize($value, 0.9));
 }

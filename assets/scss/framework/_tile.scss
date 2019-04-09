@@ -10,13 +10,16 @@ ul.tile {
 	list-style-type: none;
 }
 
+ul.tile .tile-body{
+    padding: 2rem;
+}
+
 ul.tile > li {
 	flex: 1;
 	min-width: 15rem;
 	background-color: $gray-100;
 	border: 1px solid $gray-400;
 	border-radius: 0.33rem;
-	padding: 2rem;
 	margin: 0.75rem;
 	transition: border-color transition("md"), background-color transition("md");
 

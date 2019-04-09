@@ -24,36 +24,6 @@
 		<div class="template template-application">
 			<aside id="aside-left" class="bg-white border-right">
 				<ul class="nav nav-white nav-md flex-column">
-					<li class="nav-item nav-header">Main Menu</li>
-					<li class="nav-item">
-						<a
-							class="nav-link dropdown-toggle"
-							data-toggle="collapse"
-							data-target="#dropdown1"
-							href="#"
-							role="button"
-							aria-haspopup="true"
-							aria-expanded="false"
-							>Link #1</a
-						>
-						<div id="dropdown1" class="collapse">
-							<ul class="nav nav-dropdown">
-								<li class="nav-item">
-									<a class="nav-link" href="#">Sub Link #1</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Sub Link #2</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Sub Link #3</a>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" href="#">Link #2</a>
-					</li>
-					<li class="nav-item nav-header">Tools</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Link #1</a>
 					</li>
@@ -72,7 +42,7 @@
 				<header>
 					<div class="bg-primary">
 						<div class="container">
-							<ul class="nav nav-primary nav-lg align-items-center">
+							<ul class="nav nav-primary nav-lg align-items-center justify-content-end">
 								<li class="nav-item nav-space d-flex d-md-none">
 									<a id="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
 								</li>
@@ -93,50 +63,47 @@
 										<li class="nav-item d-none d-md-flex">
 											<a class="nav-link">Link #3</a>
 										</li>
+										<li class="nav-item nav-space" id="session-toggle">
+											<a class="text-white" data-boundary="window" href="#"
+												><i class="fas fa-user-circle fa-2x"></i
+											></a>
+											<div class="dropdown-menu p-0">
+												<div class="card m-0">
+													<div class="card-body">
+														<div class="mb-2">
+															<small>Username</small>
+															<h6>mscott</h6>
+														</div>
+														<div>
+															<small>Event</small>
+															<h6>Master Medical 2018</h6>
+														</div>
+													</div>
+													<div class="card-footer">
+														<a
+															class="btn btn-sm btn-primary d-inline-block"
+															href="client-portal-event.html"
+														>
+															Change Event
+														</a>
+														<a
+															class="btn btn-sm btn-danger d-inline-block"
+															href="client-portal-login.html"
+														>
+															Logout
+														</a>
+													</div>
+												</div>
+											</div>
+										</li>
 									</ul>
-								</li>
-
-								<li class="nav-item nav-space" id="session-toggle">
-									<a class="text-white" data-boundary="window" href="#"
-										><i class="fas fa-user-circle fa-2x"></i
-									></a>
-									<div class="dropdown-menu p-0">
-										<div class="card m-0">
-											<div class="card-body">
-												<div class="mb-2">
-													<small>Username</small>
-													<h6>mscott</h6>
-												</div>
-												<div>
-													<small>Event</small>
-													<h6>Master Medical 2018</h6>
-												</div>
-											</div>
-											<div class="card-footer">
-												<a
-													class="btn btn-sm btn-primary d-inline-block"
-													href="client-portal-event.html"
-												>
-													Change Event
-												</a>
-												<a
-													class="btn btn-sm btn-danger d-inline-block"
-													href="client-portal-login.html"
-												>
-													Logout
-												</a>
-											</div>
-										</div>
-									</div>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</header>
 
-				<section class="container">
-					<div class="p-4 p-md-5"></div>
-				</section>
+				<section></section>
 
 				<footer></footer>
 			</main>
@@ -148,7 +115,7 @@
 		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
 		<script src="assets/js/jquery/plugins/datatables.js"></script>
 		<script src="assets/js/jquery/plugins/slick.js"></script>
-		<script src="assets/js/jquery/custom/slideout.js"></script>
+		<script src="assets/js/jquery/plugins/slideout.js"></script>
 		<script src="assets/js/jquery/custom/overlay.js"></script>
 		<script src="assets/js/jquery/custom/affix.js"></script>
 		<script src="assets/js/jquery/custom/scroll.js"></script>
@@ -160,7 +127,7 @@
 				menu: document.getElementById("aside-left"),
 				panel: document.getElementById("main"),
 				toggle: document.getElementById("nav-toggle"),
-                side: "left",
+				side: "left",
 			});
 
 			var slideRight = plugins.slideout.create({
@@ -170,8 +137,7 @@
 				side: "right",
 			});
 
-            plugins.slideout.overlap(slideLeft, slideRight);
-            
+			plugins.slideout.overlap(slideLeft, slideRight);
 		</script>
 	</body>
 </html>

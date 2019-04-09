@@ -16,9 +16,11 @@
         background-attachment: fixed;
 
         > section{
-            @extend .flex-fill;
+            @extend .container;
             display: flex;
             flex-direction: column;
+            flex: 1 1 auto !important;
+            padding: 3rem calc(1.5rem + 15px);
         }
 
         > footer{
@@ -28,11 +30,10 @@
             background-size: cover;
         }
     }
-}
 
-
-.template.template-application{
-    > main{
-        background: $white;
+    &.template-application{
+        > main{
+            background: $white;
+        }
     }
 }
