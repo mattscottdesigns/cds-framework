@@ -5,7 +5,8 @@
 	}
 
 	.close {
-		font-size: 2rem;
+        font-size: 2rem;
+        color: $white !important;
 	}
 
 	.modal-content {
@@ -24,7 +25,7 @@
 }
 
 .modal-backdrop.show {
-	opacity: 0.8;
+	opacity: 0.75;
 }
 
 @each $color, $value in $theme-colors {
@@ -37,11 +38,11 @@
 		}
 
 		.close {
-			color: color-yiq($value);
+			color: color-yiq($value) !important;
 
 			&:not(:disabled):not(.disabled) {
 				@include hover-focus {
-					color: color-yiq($value);
+					color: color-yiq($value) !important;
 				}
 			}
 		}

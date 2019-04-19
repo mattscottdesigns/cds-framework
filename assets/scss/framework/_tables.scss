@@ -16,8 +16,12 @@
 
 @each $color, $value in $theme-colors {
 	.table .thead-#{$color} th {
-		color: #fff;
-		background-color: $value;
-		border-color: darken($value, 7%);
+		color: color-yiq($value) !important;
+		background-color: $value !important;
+        border-color: darken($value, 7%) !important;
+
+        a {
+            color: color-yiq($value) !important;
+        }
 	}
 }

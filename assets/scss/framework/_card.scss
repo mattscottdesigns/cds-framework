@@ -1,12 +1,46 @@
 .card {
 	box-shadow: $box-shadow-sm;
-    margin-bottom: 2rem;
-    border: 1px solid $gray-300;
+	margin-bottom: 2rem;
+	border: 1px solid $gray-300;
 }
 
-.card-login{
+.card-body {
+	padding: 1.5rem;
+}
+
+.card.card-cds {
+
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
+
+	.card-header {
+        background: $primary;
+        padding: 2rem;
+    }
+
+    .card-body{
+        padding: 3rem;
+    }
+
+    .card-cds-logo{
+        width: 100%;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+    }
+
+	.card-cds-logo:after {
+		width: 70px;
+		height: 70px;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
+        content: '';
+		background-image: url(../../assets/images/favicon-192x192.png);
+		background-position: center;
+		background-size: 60% auto;
+		background-repeat: no-repeat;
+		background-color: $light;
+	}
 }

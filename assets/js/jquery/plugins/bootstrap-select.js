@@ -48,7 +48,7 @@
     return array1.length === array2.length && array1.every(function(element, index) {
       return element === array2[index]; 
     });
-  };
+  }
 
   //<editor-fold desc="Shims">
   if (!String.prototype.startsWith) {
@@ -2210,7 +2210,7 @@
           no_results = document.createElement('li');
 
       this.$button.on('click.bs.dropdown.data-api', function () {
-        if (!!that.$searchbox.val()) {
+        if (that.$searchbox.val()) {
           that.$searchbox.val('');
         }
       });

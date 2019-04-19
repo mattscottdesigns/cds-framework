@@ -4,16 +4,6 @@
 	overflow-x: hidden;
 	min-height: 100vh;
 
-	> aside {
-		width: $slideout-width;
-		flex-shrink: 0;
-		height: 100%;
-		background-color: $white;
-		z-index: $zindex-popover;
-		box-shadow: $box-shadow;
-		overflow-y: auto;
-		overflow-x: hidden;
-	}
 
 	> main {
         width: 100%;
@@ -26,9 +16,11 @@
         background-attachment: fixed;
 
         > section{
-            flex: 1;
+            @extend .container;
             display: flex;
             flex-direction: column;
+            flex: 1 1 auto !important;
+            padding: 3rem calc(1.5rem + 15px);
         }
 
         > footer{
@@ -36,6 +28,12 @@
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
+        }
+    }
+
+    &.template-application{
+        > main{
+            background: $white;
         }
     }
 }
