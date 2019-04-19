@@ -10,3 +10,18 @@
     @include bg-variant(".bg-#{$color}-dark", darken($value, 7.5%));
     @include bg-variant(".bg-#{$color}-overlay", transparentize($value, 0.9));
 }
+
+.bg-image-light,
+.bg-image-dark{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-image-light{
+    background: url(../images/home-content-background.jpg);
+}
+
+.bg-image-dark{
+    background: url(../images/footer-background.jpg);
+}

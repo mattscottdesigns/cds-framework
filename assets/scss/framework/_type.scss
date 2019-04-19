@@ -31,27 +31,28 @@ h6,
 
 h1,
 .h1 {
-	letter-spacing: -0.1rem;
+	letter-spacing: -0.075rem;
 }
 
 h2,
 .h2 {
-	letter-spacing: -0.075rem;
+	letter-spacing: -0.05rem;
 }
 
 h3,
 .h3 {
-	letter-spacing: -0.05rem;
+	letter-spacing: -0.025rem;
 }
 
 h4,
 .h4 {
-	letter-spacing: -0.025rem;
+	letter-spacing: -0.015rem;
 }
 
 
 h6,
 .h6 {
+    font-size: 1.1rem;
 	text-transform: uppercase;
 }
 
@@ -67,26 +68,14 @@ h6,
 	font: inherit;
 }
 
-.font-thin {
-	font-weight: 300;
-}
-
 @each $color, $value in $colors {
 	.text-#{$color} {
 		color: $value;
     }
-    
-	.bg-#{$color} {
-		background-color: $value;
-	}
 }
 
 @each $color, $value in $theme-colors {
 	.text-#{$color} {
 		color: $value;
     }
-    
-	.bg-#{$color} {
-		background-color: $value;
-	}
 }
