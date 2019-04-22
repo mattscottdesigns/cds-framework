@@ -49,7 +49,11 @@ var plugins = (function() {
 
 			options.toggle.addEventListener("click", function() {
 				slide.toggle();
-			});
+            });
+            
+            window.addEventListener("resize", function(){
+                slide.close();
+            })
 
 			return slide;
 		},
