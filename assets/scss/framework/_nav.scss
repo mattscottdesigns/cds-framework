@@ -3,12 +3,11 @@
 	color: $dark;
 	z-index: $zindex-dropdown;
 
-    .nav-space,
+	.nav-space,
 	.nav-link,
 	.disabled {
 		color: $dark;
 	}
- 
 
 	.nav-toggle {
 		cursor: pointer;
@@ -19,40 +18,38 @@
 		text-transform: uppercase;
 		padding: 0.75rem 1.5rem;
 		margin-top: 2rem;
-        font-weight: 800;
+		font-weight: 800;
 	}
 
-    .nav-space,
-    .nav-link{
-        padding: 0.75rem 1.5rem;
-        color: inherit;
-        display: flex;
-        align-items: center;
-    }
+	.nav-space,
+	.nav-link {
+		padding: 0.75rem 1.5rem;
+		color: inherit;
+		display: flex;
+		align-items: center;
+	}
 
 	.nav-link {
-		&:hover {
-			.nav-icon {
-				@include animate("tada");
-			}
-		}
-
-		&.active {
-			.nav-icon {
-				@include animate("tada");
-				opacity: 1;
-			}
-		}
+		cursor: pointer;
 
 		&.disabled {
 			opacity: 0.6;
 			cursor: not-allowed;
 		}
 
-		.nav-icon,
-		.nav-link-icon {
-			margin-right: 0.5rem;
+		.nav-icon {
 			opacity: 0.3;
+			font-size: 1.5rem;
+			margin-right: 0.5rem;
+			transition: opacity 0.3s;
+		}
+
+		&:active,
+		&.active {
+			.nav-icon {
+				opacity: 0.9;
+				transition: opacity 0.3s;
+			}
 		}
 	}
 
@@ -66,21 +63,20 @@
 
 		.nav-link.active {
 			border-radius: 0.25rem;
-        }
+		}
 
-        .nav-item{
-            width: 100%;
-        }
+		.nav-item {
+			width: 100%;
+		}
 	}
 
 	.nav-btn {
-        display: block;
+		display: block;
 		padding: 0.25rem 0.75rem;
 		box-shadow: $box-shadow-sm;
 		border-radius: 0.25rem;
-    }
+	}
 }
-
 
 .nav.nav-tabs,
 .nav.nav-pills {
