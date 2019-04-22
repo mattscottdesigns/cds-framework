@@ -1,10 +1,9 @@
 @import "variables";
 @import "mixins";
 @import "functions";
-@import "utilities";
 @import "reboot";
+@import "utilities";
 @import "plugins";
-
 
 @import "backgrounds";
 @import "button";
@@ -15,12 +14,12 @@
 @import "footer";
 @import "grid";
 @import "jumbotron";
-@import "modal";
-@import "nav";
-@import "navbar";
 @import "list-group";
 @import "login";
 @import "logo";
+@import "modal";
+@import "nav";
+@import "navbar";
 @import "tables";
 @import "templates";
 @import "thumbnail"; 
