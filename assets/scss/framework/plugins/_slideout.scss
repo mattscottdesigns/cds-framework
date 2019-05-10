@@ -25,7 +25,6 @@ body {
 .slideout-panel {
 	position: relative;
 	z-index: 1;
-	will-change: transform;
 	background-color: $white;
 	min-height: 100vh;
 }
@@ -33,7 +32,7 @@ body {
 .slideout-open,
 .slideout-open body,
 .slideout-open .slideout-panel {
-	overflow: hidden;
+
 }
 
 .slideout-open .slideout-menu {
@@ -44,6 +43,5 @@ body {
 	.slideout-responsive.slideout-panel,
 	.slideout-responsive .slideout-panel {
 		margin-left: 275px;
-		transform: translateX(0px);
 	}
 }

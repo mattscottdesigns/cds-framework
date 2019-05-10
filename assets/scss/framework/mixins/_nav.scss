@@ -13,7 +13,6 @@
 			> .nav-link.active {
 				color: rgba(color-yiq($value), .95);
 				background: rgba(color-yiq($value), 0.15);
-                box-shadow: 0px 0px 30px rgba($dark, .15);
                 transition: color .1s, background .1s, box-shadow .1s;
                 
 				.nav-icon {
