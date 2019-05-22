@@ -16,11 +16,8 @@
         background-attachment: fixed;
 
         > section{
-            @extend .container;
-            display: flex;
-            flex-direction: column;
-            flex: 1 1 auto !important;
-            padding: 3rem calc(1.5rem + 15px);
+            flex-grow: 1;
+            padding: 3rem;
         }
 
         > footer{
@@ -36,4 +33,20 @@
             background: $white;
         }
     }
+
+    &.template-dashboard{
+        .taskbar.taskbar-dashboard{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+@media (min-width: breakpoint-max("sm")) {
+    .taskbar.taskbar-dashboard{
+        margin-left: $slideout-width;
+    }
+
 }
