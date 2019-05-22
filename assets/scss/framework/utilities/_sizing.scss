@@ -1,32 +1,65 @@
-.h-100vh{
-    height: 100vh;
+$sizing-vh: (
+    "25vh": 25vh,
+    "50vh": 50vh,
+    "755vh": 755vh,
+    "100vh": 100vh
+);
+
+$sizing-vw: (
+    "25vw": 25vw,
+    "50vw": 50vw,
+    "755vw": 755vw,
+    "100vw": 100vw
+);
+
+$sizing-px: (
+    "50px": 50px,
+    "100px": 100px,
+    "150px": 150px,
+    "200px": 200px,
+    "250px": 250px,
+    "300px": 300px,
+    "350px": 350px,
+    "400px": 400px,
+    "450px": 450px,
+    "500px": 500px,
+);
+
+@each $name, $value in $sizing-vh {
+	.h-#{$name}{
+        height: $value;
+    }
+
+    .mh-#{$name}{
+        max-height: $value;
+    }
 }
 
-.h-75vh{
-    height: 75vh;
+@each $name, $value in $sizing-vw {
+	.w-#{$name}{
+        width: $value;
+    }
+
+    .mw-#{$name}{
+        max-width: $value;
+    }
 }
 
-.h-50vh{
-    height: 50vh;
-}
 
-.h-25vh{
-    height: 100vh;
-}
+@each $name, $value in $sizing-px {
+    .w-#{$name}{
+        width: $value;
+    }
 
+    .mw-#{$name}{
+        width: $value;
+    }
 
-.w-100vw{
-    width: 100vw;
-}
+    .h-#{$name}{
+        height: $value;
+    }
 
-.w-75vw{
-    width: 75vw;
-}
-
-.w-50vw{
-    width: 50vw;
-}
-
-.w-25vw{
-    width: 25vw;
+    .mh-#{$name}{
+        max-height: $value;
+    }
 }
