@@ -18,6 +18,15 @@
         > section{
             flex-grow: 1;
             padding: 3rem;
+
+            &.section-center{
+                display: flex;
+                align-items: center;
+                
+                & > *{
+                    width: 100%; // IE11 fix for flexbox overflow
+                }
+            }
         }
 
         > footer{
