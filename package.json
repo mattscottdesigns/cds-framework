@@ -4,11 +4,12 @@
   "description": "Convention Data Services front end framework",
   "main": "index.js",
   "scripts": {
-    "scss:compile": "node-sass --include-path --source-map true assets/scss/main.scss assets/css/main.css",
-    "scss:compile-prod": "node-sass --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.css",
-    "scss:watch": "node-sass --watch --recursive --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.css",
-    "start": "npm run scss:compile && npm run scss:watch",
-    "build": "npm run scss:compile-prod"
+    "compile-prod": "node-sass --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.min.css",
+    "compile-dev": "node-sass --include-path --source-map true assets/scss/main.scss assets/css/main.css",
+    "watch-dev": "node-sass --watch --recursive --include-path --source-map true assets/scss/main.scss assets/css/main.css",
+    "watch-prod": "node-sass --watch --recursive --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.min.css",
+    "start": "npm run build && npm run watch-dev && npm run watch-prod",
+    "build": "npm run compile-prod && npm run compile-dev"
   },
   "author": "Matthew Scott",
   "license": "ISC",
