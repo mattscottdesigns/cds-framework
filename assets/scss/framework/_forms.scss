@@ -17,10 +17,13 @@
 	}
 }
 
+label{
+    margin-bottom: .25rem;
+}
+
 textarea {
 	min-height: 6rem;
 }
-
 
 .form-control{
     color: $dark !important;
