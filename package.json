@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile-dev": "node-sass --include-path --source-map true assets/scss/main.scss assets/css/main.css",
-    "compile-prod": "node-sass --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.min.css",
+    "compile-prod": "node-sass --include-path --output-style compressed assets/scss/main.scss assets/css/main.min.css",
     "watch-dev": "node-sass --watch --recursive --include-path --source-map true assets/scss/main.scss assets/css/main.css",
     "watch-prod": "node-sass --watch --recursive --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.min.css",
     "start": "npm run compile-dev && npm run watch-dev",
