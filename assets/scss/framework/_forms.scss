@@ -1,10 +1,9 @@
-.form-required {
-	label {
-		font-weight: 800;
-		position: relative;
-	}
+.form-group-required label,
+label.label-required {
+	font-weight: 800;
+	position: relative;
 
-	label:after {
+	&:after {
 		font-family: $font-awesome;
 		content: "*";
 		display: block;
@@ -17,14 +16,14 @@
 	}
 }
 
-label{
-    margin-bottom: .25rem;
+label {
+	margin-bottom: 0.25rem;
 }
 
 textarea {
 	min-height: 6rem;
 }
 
-.form-control{
-    color: $dark !important;
+.form-control {
+	color: $dark !important;
 }
