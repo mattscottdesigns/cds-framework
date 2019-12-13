@@ -11,16 +11,20 @@
     @include bg-variant(".bg-#{$color}-overlay", transparentize($value, 0.8));
 }
 
+.bg-image-none{
+    background-image: none !important;
+}
+
+.bg-image-light{
+    background-image: url(../images/home-content-background.jpg);
+}
+
+.bg-image-dark{
+    background-image: url(../images/footer-background.jpg);
+}
+
 [class^="bg-image"]{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.bg-image-light{
-    background: url(../images/home-content-background.jpg);
-}
-
-.bg-image-dark{
-    background: url(../images/footer-background.jpg);
 }
