@@ -1,9 +1,9 @@
-
-
 @import "initialize";
-@import "variables"; 
-@import "fonts"; 
- 
+@import "variables";
+@import "fonts";
+@import "plugins";
+
 .cds-framework {
+	@import "bootstrap";
 	@import "framework/framework";
 }
