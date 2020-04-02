@@ -1,31 +1,38 @@
 {
-  "name": "cds-framework",
-  "version": "1.0.0",
-  "description": "Convention Data Services front end framework",
-  "main": "index.js",
-  "scripts": {
-    "scss:compile": "node-sass --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.css",
-    "scss:watch": "node-sass --watch --recursive --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.css",
-    "start": "npm run scss:compile && npm run scss:watch",
-    "build": "npm run scss:compile"
-  },
-  "author": "Matthew Scott",
-  "license": "ISC",
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
-    "bootstrap": "^4.3.1",
-    "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "jquery": "^3.4.0",
-    "node-sass": "^4.11.0",
-    "popper.js": "^1.15.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mscott087/cds-framework.git"
-  }
+    "name": "cds-framework",
+    "version": "1.0.0",
+    "description": "Convention Data Services front end framework",
+    "main": "index.js",
+    "scripts": {
+        "compile-dev": "node-sass --include-path --source-map true assets/scss/main.scss assets/css/main.css",
+        "compile-prod": "node-sass --include-path --output-style compressed assets/scss/main.scss assets/css/main.min.css",
+        "watch-dev": "node-sass --watch --recursive --include-path --source-map true assets/scss/main.scss assets/css/main.css",
+        "watch-prod": "node-sass --watch --recursive --include-path --source-map true --output-style compressed assets/scss/main.scss assets/css/main.min.css",
+        "start": "npm run compile-dev && npm run watch-dev",
+        "build": "npm run compile-prod && npm run compile-dev"
+    },
+    "author": "Matthew Scott",
+    "license": "ISC",
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.8.1",
+        "bootstrap": "^4.3.1",
+        "eslint": "^5.16.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.17.2",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.1.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "jquery": "^3.4.0",
+        "node-sass": "^4.13.1",
+        "bootstrap-select": "^1.13.12",
+        "datatables": "^1.10.18",
+        "jquery-typeahead": "^2.11.0",
+        "slick-carousel": "^1.8.1",
+        "slideout": "^1.0.1",
+        "typeahead": "^0.2.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mscott087/cds-framework.git"
+    }
 }

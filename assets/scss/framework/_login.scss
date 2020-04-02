@@ -1,21 +1,20 @@
 .login-icon-position {
-    position: absolute;
-    left: 0px;
-    top: 25px;
-    width: 100%;
-    margin: 0 auto;
+	position: absolute;
+	left: 0px;
+	top: 25px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .login-icon {
-    width:70px;
-    height:70px;
-    margin: 0 auto;
-    border-radius:50%;
-    background-image: url(../../assets/images/favicon-192x192.png);
-    background-position: center;
-    background-size:60% auto;
-    background-repeat: no-repeat;
-    background-color: #fff;
-    border: #efefef 2px solid;
+	width: 70px;
+	height: 70px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-image: url(../../assets/images/favicon-192x192.png);
+	background-position: center;
+	background-size: 60% auto;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	border: #efefef 2px solid;
 }
-

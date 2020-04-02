@@ -2,18 +2,27 @@
 	.nav-#{$color} {
         
 		background-color: $value;
-		color: lighten(color-yiq($value), 15%);
+        color: lighten(color-yiq($value), 15%);
+        
+        &.nav-bordered:not(.flex-column){
+            .nav-item:not(:last-of-type){
+                border-right: 1px solid rgba($black, .2)
+            }
+        }
+
+        &.nav-bordered.flex-column{
+            .nav-item:not(:last-of-type){
+                border-bottom: 1px solid rgba($black, .2)
+            }
+        }
 
 		> .nav-item {
             > .nav-link{
-                color: rgba(color-yiq($value), 0.66);
                 transition: color .3s, background .3s, box-shadow .3s;
             }
 
 			> .nav-link.active {
-				color: rgba(color-yiq($value), .95);
 				background: rgba(color-yiq($value), 0.15);
-                box-shadow: 0px 0px 30px rgba($dark, .15);
                 transition: color .1s, background .1s, box-shadow .1s;
                 
 				.nav-icon {

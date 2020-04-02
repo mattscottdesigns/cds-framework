@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="cds-framework" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" href="assets/images/favicon-192x192.png" sizes="192x192" />
+		<title>CDS Framework - Style Guide</title>
+	</head>
+
+	<body>
+		<!--[if lte IE 10]>
+			<p class="browserupgrade">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="https://browsehappy.com/">upgrade your browser</a> to improve
+				your experience and security.
+			</p>
+		<![endif]-->
+
+		<div class="container">
+            <fieldset class="fieldset">
+                <h1>CDS Framework</h1>
+                <hr />
+                <p>The CDS Framework uses Bootstrap 4 as its base. Anything that Bootstrap 4 offers you can still use with this, it has only been modified to reflect the CDS brand. It uses SASS for the build process which allows us to use things like variables, loops, and mixins.</p>
+                <p><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" class="font-weight-bold">Bootstrap 4 Documentation</a></p>
+                <p><a href="https://sass-lang.com/documentation" class="font-weight-bold">SASS/SCSS Documentation</a></p>
+            </fieldset>
+			<fieldset class="fieldset">
+				<h1>Getting Started</h1>
+				<hr />
+				<ol>
+					<li>Install <a href="https://nodejs.org/en/download/" class="font-weight-bold">Node.js</a> if not already installed</li>
+					<li>Open a command window to the root of the project</li>
+					<li><code>npm install</code> to get all project dependencies</li>
+					<li><code>npm start</code> to start development</li>
+					<li>
+						The SCSS files are now being watch for changes and will compile each
+						time a change is made
+					</li>
+				</ol>
+			</fieldset>
+			<fieldset class="fieldset">
+				<h1>File Stucture</h1>
+				<hr />
+				<ul>
+					<li class="my-2">
+						<b>CSS</b>
+					</li>
+					<li class="my-2"><b>Images</b></li>
+					<li class="my-2">
+						<b>JS</b>
+						<div class="small my-1">
+							Required JavaScript files related to the framework such as
+							Bootstrap and jQuery
+                        </div>
+                        <div class="m-3">
+							<u>global.js</u>
+							<div class="small my-1">
+								Used for initializing plugins or wrapping them with new functionality
+							</div>
+                        </div>
+					</li>
+					<li class="my-2">
+						<b>SCSS</b>
+						<div class="small my-1">
+							Contains all framework styling for Bootstrap components
+						</div>
+						<div class="m-3">
+							<u>main.scss</u>
+							<div class="small my-1">
+								Entry point for compiling the SCSS used in the framework. When compiled the output is placed in the CSS folder
+							</div>
+                        </div>
+                        <div class="m-3">
+							<u>variables.scss</u>
+							<div class="small my-1">
+								Imports all variables used in the framework including all of Bootstraps variables. A majority of the framework styling/branding can be done modifying the imported files.
+							</div>
+						</div>
+						<ul>
+							<li class="my-2">
+								<b>Mixins</b>
+								<div class="small my-1">Reuseable SCSS snippets</div>
+							</li>
+							<li class="my-2">
+								<b>Plugins</b>
+								<div class="small my-1">
+									Third party JavaScript plugin styles
+								</div>
+							</li>
+							<li class="my-2">
+								<b>Utilities</b>
+								<div class="small my-1">
+									Helper classes used to reduce the amount of custom styles
+								</div>
+							</li>
+							<li class="my-2">
+								<b>Webfonts</b>
+								<div class="small my-1">
+									SCSS files related to the webfonts being used
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="">
+						<b>Webfonts</b>
+						<div class="small my-1">
+							Font files referenced in SCSS/Webfonts
+						</div>
+					</li>
+				</ul>
+            </fieldset>
+            
+            <fieldset class="fieldset">
+                <h1>Page Templates</h1>
+                <hr />
+                <ul>
+                    <li class="my-2">
+                        <a target="_blank" href="template.html" class="font-weight-bold">Template</a>
+                        <div class="small my-1">Starter template for new page templates</div>
+                    </li>
+                    <li class="my-2">
+                        <a target="_blank" href="template-application.html" class="font-weight-bold">Basic Application</a>
+                        <div class="small my-1">Simple application template with top navigation</div>
+                    </li>
+                    <li class="my-2">
+                        <a target="_blank" href="template-dashboard.html" class="font-weight-bold">Dashboard</a>
+                        <div class="small my-1">Advanced application template with side navigation and top navigation and slideout panels</div>
+                    </li>
+                </ul>
+            </fieldset>
+		</div>
+
+		<script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
+		<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/jquery/plugins/bootstrap-select.js"></script>
+		<script src="assets/js/jquery/plugins/flatpickr.js"></script>
+		<script src="assets/js/jquery/plugins/datatables.js"></script>
+		<script src="assets/js/jquery/plugins/slick.js"></script>
+		<script src="assets/js/jquery/plugins/slideout.js"></script>
+		<script src="assets/js/jquery/custom/overlay.js"></script>
+		<script src="assets/js/jquery/custom/affix.js"></script>
+		<script src="assets/js/jquery/custom/scroll.js"></script>
+		<script src="assets/js/jquery/custom/refine.js"></script>
+		<script src="assets/js/global.js"></script>
+
+		<script></script>
+	</body>
+</html>

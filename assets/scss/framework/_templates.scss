@@ -10,21 +10,27 @@
         min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		background: url(../images/home-content-background.jpg);
+		background-image: url(../images/home-content-background.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
         background-attachment: fixed;
 
         > section{
-            @extend .container;
-            display: flex;
-            flex-direction: column;
-            flex: 1 1 auto !important;
-            padding: 3rem calc(1.5rem + 15px);
+            flex-grow: 1;
+            padding: 3rem;
+
+            &.section-center{
+                display: flex;
+                align-items: center;
+
+                & > *{
+                    width: 100%; // IE11 fix for flexbox overflow
+                }
+            }
         }
 
         > footer{
-            background: url(../images/footer-background.jpg);
+            background-image: url(../images/footer-background.jpg);
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -33,7 +39,23 @@
 
     &.template-application{
         > main{
-            background: $white;
+            background-color: $white;
         }
     }
+
+    &.template-dashboard{
+        .taskbar.taskbar-dashboard{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+@media (min-width: breakpoint-max("sm")) {
+    .taskbar.taskbar-dashboard{
+        margin-left: $slideout-width;
+    }
+
 }

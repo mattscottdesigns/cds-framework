@@ -73,11 +73,10 @@ var plugins = (function() {
 				right.menu.style.visibility = "visible";
 			}
 
-			left.on("beforeopen", showLeft).on("beforeclose", showAll);
-
-			right.on("beforeopen", showRight).on("beforeclose", showAll);
-
-			return [left, right];
+			return [
+                left.on("beforeopen", showLeft).on("beforeclose", showAll),
+                right.on("beforeopen", showRight).on("beforeclose", showAll)
+            ]
 		},
 	};
 
