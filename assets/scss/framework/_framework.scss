@@ -1,14 +1,11 @@
-@import "../../../node_modules/bootstrap/scss/bootstrap";
-
 @import "mixins";
 @import "functions";
 @import "reboot";
 @import "utilities";
-@import "plugins";
 
 @import "backgrounds";
 @import "button";
-@import "card"; 
+@import "card";
 @import "dropdown";
 @import "fieldset";
 @import "forms";
@@ -23,7 +20,6 @@
 @import "navbar";
 @import "tables";
 @import "templates";
-@import "thumbnail"; 
+@import "thumbnail";
 @import "tile";
 @import "type";
- 
